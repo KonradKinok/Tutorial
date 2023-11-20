@@ -7,159 +7,189 @@
     <title>HTML - listy</title>
   </head>
   <body>
-    <div>
-      <h1>Menu do nauki HTML zmiana do GIT 21:56</h1>
-      <p class="description">
-        NAV - znacznik definiuje główną nawigację z linkami do innych sekcji lub
-        stron. Używany tylko do nawigacji głównej, a nie do dowolnej grupy
-        linków w dokumencie
-      </p>
-      <p>Linki do podstron</p>
-      <nav>
-        <!-- Nawigacja do innych stron -->
+      
+      <header>
+          <div>
+              <h1>Menu do nauki HTML</h1>
+              <p class="description">
+                  NAV - znacznik definiuje główną nawigację z linkami do innych sekcji lub
+                  stron. Używany tylko do nawigacji głównej, a nie do dowolnej grupy
+                  linków w dokumencie
+              </p>
+              <p>Linki do podstron</p>
+              <nav>
+                  <!-- Nawigacja do innych stron -->
+                  <ul>
+                      <li><a href="./index.html">Index</a></li>
+                      <li><a href="./listy.html">Listy</a></li>
+                      <li>
+                          <a href="./obrazkiStrona.html">Multimedia</a>
+                          <ul>
+                              <li><a href="./obrazkiStrona.html">Obrazki</a></li>
+                              <li><a href="./obrazkiStrona.html">Film</a></li>
+                              <li><a href="./obrazkiStrona.html">Dźwięk</a></li>
+                          </ul>
+                      </li>
 
-        <ul>
-          <li><a href="/index.html">Index</a></li>
-          <li><a href="/listy.html">Listy</a></li>
-          <li><a href="/obrazkiStrona.html">Multimedia</a></li>
-          <ul>
-            <li><a href="/obrazkiStrona.html">Obrazki</a></li>
-            <li><a href="/obrazkiStrona.html">Film</a></li>
-            <li><a href="/obrazkiStrona.html">Dźwięk</a></li>
-          </ul>
-          <li><a href="/rozneStrona.html">Różne</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <div>
-      <h2>Listy</h2>
-      <p class="description">
-        Listy pozwalają uporządkować kolekcje i zaprezentować je w sposób
-        wizualny i wygodny dla użytkownika. Lista to kontener, którego
-        elementami podrzędnymi mogą być tylko elementy listy, znaczniki "li"
-      </p>
-      <h3>Lista numerowana</h3>
-      <p class="description">
-        Znacznik "ol" - tworzy listę numerowaną (uporządkowaną), to znaczy każdy
-        element listy jest numerowany. Przeglądarka automatycznie numeruje
-        elementy w kolejności, a jeśli usunąć jeden lub więcej elementów takiej
-        listy, pozostałe numery zostaną automatycznie przeliczone. Numerację
-        elementów można kontrolować za pomocą specjalnych atrybutów listy.
-      </p>
-      <p>Szkielet dokumentu HTML (lista)</p>
-      <ol>
-        <li>html</li>
-        <ol>
-          <li>head</li>
-          <ol>
-            <li>title</li>
-            <li>meta</li>
-            <li>meta</li>
-          </ol>
-          <li>body</li>
-          <ol>
-            <li>h1</li>
-            <li>p</li>
-            <ol>
-              <li>a</li>
-            </ol>
-            <li>ul</li>
-            <ol>
-              <li>li</li>
-              <li>li</li>
-              <li>li</li>
-            </ol>
-          </ol>
-        </ol>
-      </ol>
-      <h3>Lista nienumerowana</h3>
-      <p class="description">
-        Znacznik "ul - tworzy listę wypunktowaną (nieuporządkowaną), której
-        każdy element zaczyna się od małego znaku (punktora). Dzięki CSS punktor
-        można usunąć lub zastąpić.
-      </p>
-      <p>Szkielet dokumentu HTML (lista)</p>
-      <ul>
-        <li>html</li>
-        <ul>
-          <li>head</li>
-          <ul>
-            <li>title</li>
-            <li>meta</li>
-            <li>meta</li>
-          </ul>
-          <li>body</li>
-          <ul>
-            <li>h1</li>
-            <li>p</li>
-            <ul>
-              <li>a</li>
-            </ul>
-            <li>ul</li>
-            <ul>
-              <li>li</li>
-              <li>li</li>
-              <li>li</li>
-            </ul>
-          </ul>
-        </ul>
-      </ul>
-      <h3>Atrybuty list</h3>
-      <p class="description">
-        Znaczniki list w HTML posiadają pewne przydatne atrybuty, między innymi:
-        type - określa typ oznaczeń listy numerowanej, np. A, a, I, i start -
-        ustawia numer początkowy dla listy numerowanej reversed - wyświetla
-        listę numerowaną w odwrotnej kolejności (malejąco)
-      </p>
-      <p>Lista A</p>
-      <ol type="A">
-        <li>Litery</li>
-        <ol type="I">
-          <li>Samogloski</li>
-          <ol type="i">
-            <li>A</li>
-            <li>E</li>
-            <li>I</li>
-          </ol>
-          <li>Spółgłoski</li>
-          <ol type="i">
-            <li>B</li>
-            <li>C</li>
-            <li>D</li>
-          </ol>
-        </ol>
-        <li>Cyfry i liczby</li>
-        <ol type="I">
-          <li>Cyfry</li>
-          <ol type="i">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-          </ol>
-          <li>Liczby</li>
-          <ol type="i">
-            <li>10</li>
-            <li>11</li>
-            <li>12</li>
-          </ol>
-        </ol>
-      </ol>
-      <h3>Numeracja odwrotna</h3>
-      <ol>
-        <li>jeden</li>
-        <li>dwa</li>
-        <li>trzy</li>
-        <li>cztery</li>
-        <li>pięć</li>
-      </ol>
-      <ol reversed>
-        <li>jeden</li>
-        <li>dwa</li>
-        <li>trzy</li>
-        <li>cztery</li>
-        <li>pięć</li>
-      </ol>
-    </div>
+                      <li><a href="./rozneStrona.html">Różne</a></li>
+                  </ul>
+              </nav>
+          </div>
+      </header>
+      <main>
+          <div>
+              <h2>Listy</h2>
+              <p class="description">
+                  Listy pozwalają uporządkować kolekcje i zaprezentować je w sposób
+                  wizualny i wygodny dla użytkownika. Lista to kontener, którego
+                  elementami podrzędnymi mogą być tylko elementy listy, znaczniki "li"
+              </p>
+              <h3>Lista numerowana</h3>
+              <p class="description">
+                  Znacznik "ol" - tworzy listę numerowaną (uporządkowaną), to znaczy każdy
+                  element listy jest numerowany. Przeglądarka automatycznie numeruje
+                  elementy w kolejności, a jeśli usunąć jeden lub więcej elementów takiej
+                  listy, pozostałe numery zostaną automatycznie przeliczone. Numerację
+                  elementów można kontrolować za pomocą specjalnych atrybutów listy.
+              </p>
+          </div>
+          <div>
+              <p>Szkielet dokumentu HTML (lista)</p>
+              <ol>
+                  <li>
+                      html
+                      <ol>
+                          <li>
+                              head
+                              <ol>
+                                  <li>title</li>
+                                  <li>meta</li>
+                                  <li>meta</li>
+                              </ol>
+                          <li>
+                              body
+                              <ol>
+                                  <li>h1</li>
+                                  <li>
+                                      p
+                                      <ol>
+                                          <li>a</li>
+                                      </ol>
+                                  <li>
+                                      ul
+                                      <ol>
+                                          <li>li</li>
+                                          <li>li</li>
+                                          <li>li</li>
+                                      </ol>
+                              </ol>
+                      </ol>
+              </ol>
+          </div>
+              <div>
+                  <h3>Lista nienumerowana</h3>
+                  <p class="description">
+                      Znacznik "ul - tworzy listę wypunktowaną (nieuporządkowaną), której
+                      każdy element zaczyna się od małego znaku (punktora). Dzięki CSS punktor
+                      można usunąć lub zastąpić.
+                  </p>
+                  <p>Szkielet dokumentu HTML (lista)</p>
+                  <ul>
+                      <li>
+                          html
+                          <ul>
+                              <li>
+                                  head
+                                  <ul>
+                                      <li>title</li>
+                                      <li>meta</li>
+                                      <li>meta</li>
+                                  </ul>
+                              <li>
+                                  body
+                                  <ul>
+                                      <li>h1</li>
+                                      <li>
+                                          p
+                                          <ul>
+                                              <li>a</li>
+                                          </ul>
+                                      <li>
+                                          ul
+                                          <ul>
+                                              <li>li</li>
+                                              <li>li</li>
+                                              <li>li</li>
+                                          </ul>
+                                  </ul>
+                          </ul>
+                  </ul>
+              </div>
+              <div>
+                  <h3>Atrybuty list</h3>
+                  <p class="description">
+                      Znaczniki list w HTML posiadają pewne przydatne atrybuty, między innymi:
+                      type - określa typ oznaczeń listy numerowanej, np. A, a, I, i start -
+                      ustawia numer początkowy dla listy numerowanej reversed - wyświetla
+                      listę numerowaną w odwrotnej kolejności (malejąco)
+                  </p>
+                  <p>Lista A</p>
+                  <ol type="A">
+                      <li>
+                          Litery
+                          <ol type="I">
+                              <li>
+                                  Samogloski
+                                  <ol type="i">
+                                      <li>A</li>
+                                      <li>E</li>
+                                      <li>I</li>
+                                  </ol>
+                              <li>
+                                  Spółgłoski
+                                  <ol type="i">
+                                      <li>B</li>
+                                      <li>C</li>
+                                      <li>D</li>
+                                  </ol>
+                          </ol>
+                      <li>
+                          Cyfry i liczby
+                          <ol type="I">
+                              <li>
+                                  Cyfry
+                                  <ol type="i">
+                                      <li>1</li>
+                                      <li>2</li>
+                                      <li>3</li>
+                                  </ol>
+                              <li>
+                                  Liczby
+                                  <ol type="i">
+                                      <li>10</li>
+                                      <li>11</li>
+                                      <li>12</li>
+                                  </ol>
+                          </ol>
+                  </ol>
+              </div>
+          <div>
+              <h3>Numeracja odwrotna</h3>
+              <ol>
+                  <li>jeden</li>
+                  <li>dwa</li>
+                  <li>trzy</li>
+                  <li>cztery</li>
+                  <li>pięć</li>
+              </ol>
+              <ol reversed>
+                  <li>jeden</li>
+                  <li>dwa</li>
+                  <li>trzy</li>
+                  <li>cztery</li>
+                  <li>pięć</li>
+              </ol>
+          </div>
+      </main>
   </body>
 </html>

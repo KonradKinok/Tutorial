@@ -9,49 +9,274 @@
   </head>
 
   <body>
-    <div>
-      <h1>Menu do nauki HTML</h1>
-      <p class="description">
-        NAV - znacznik definiuje główną nawigację z linkami do innych sekcji lub
-        stron. Używany tylko do nawigacji głównej, a nie do dowolnej grupy
-        linków w dokumencie
-      </p>
-      <p>Linki do podstron</p>
-      <nav>
-        <!-- Nawigacja do innych stron -->
+    <header>
+      <div>
+        <h1>Menu do nauki HTML</h1>
+        <p class="description">
+          NAV - znacznik definiuje główną nawigację z linkami do innych sekcji
+          lub stron. Używany tylko do nawigacji głównej, a nie do dowolnej grupy
+          linków w dokumencie
+        </p>
+        <p>Linki do podstron</p>
+        <nav>
+          <!-- Nawigacja do innych stron -->
+          <ul>
+            <li><a href="./index.html">Index</a></li>
+            <li><a href="./listy.html">Listy</a></li>
+            <li><a href="./tabele.html">Tabele</a></li>
+            <li>
+              <a href="./obrazkiStrona.html">Multimedia</a>
+              <ul>
+                <li><a href="./obrazkiStrona.html#obrazki">Obrazki</a></li>
+                <li><a href="./obrazkiStrona.html#filmy">Film</a></li>
+                <li><a href="./obrazkiStrona.html">Dźwięk</a></li>
+              </ul>
+            </li>
+            <li><a href="./linki.html">Linki</a></li>
+            <li><a href="./rozneStrona.html">Różne</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>Znaczniki H 1-6 (blokowe)</h2>
+        <p class="description">
+          Definiują nagłówki tekstowe sekcji semantycznych różnych poziomów,
+          które wskazują znaczenie sekcji treści znajdującej się po nich. Jest
+          to narzędzie do strukturyzacji treści tekstowych. Znacznik "h1"" jest
+          najczęściej używany tylko raz, jako nagłówek strony głównej. Reszta
+          nagłówków może być używana wiele razy ale z uwzględnieniem hierarchi
+        </p>
+        <p>Przykłady:</p>
+        <h1>H1 - Ha jeden</h1>
+        <h2>H2 - Ha dwa</h2>
+        <h3>H3 - Ha trzy</h3>
+        <h3>H4 - Ha cztery</h3>
+        <h3>H5 - Ha pięć</h3>
+        <h3>H6 - Ha sześć</h3>
+      </section>
+      <section>
+        <h2>Znaczniki "article"</h2>
+        <p class="description">
+          Niezależna, odłączalna i znacząca część dokumentu. Na przykład post na
+          forum, tweet, artykuł na blogu, widżet reklamowy, historia na
+          Instagramie, karta produktu w sklepie. Jeśli sekcja dokumentu ma swój
+          nagłówek i po przeniesieniu całej sekcji nadal nie traci ona swojego
+          sensu - to jest "article" ("article" z definicji jest odłączalny tzn.
+          możemy go używać poza stroną w przeciwieństwie do "section"). Nagłówek
+          jest wymagany.
+        </p>
+        <article>
+          <h3>Artykuł 1</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem,
+            debitis.
+          </p>
+        </article>
+        <article>
+          <h3>Artykuł 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            nobis eligendi officiis veniam alias ea quibusdam, aspernatur
+            laboriosam recusandae fugiat.
+          </p>
+        </article>
+        <article>
+          <h3>Artykuł 3</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
+            in tempore fuga nisi? Deserunt eveniet rem perferendis cum autem
+            ipsum, vero vel ullam tempore voluptatibus distinctio voluptas animi
+            dolorem ea.
+          </p>
+        </article>
+      </section>
+      <section>
+        <h3>Znacznik "dl"</h3>
+        <p class="description">
+          Znacznik "dl" (description list) jest to kontener na listę par
+          terminów i ich opisów, czyli słownik. Istnieje znacznik "dt" do
+          tagowania terminów i znacznik "dd" do opisów. Służy do zaznaczania
+          (tagowania) listy definicji, na przykład podczas tworzenia
+          glosariusza, książki telefonicznej itp.
+        </p>
+        <dl>
+          <dt>JPEG</dt>
+          <dd>
+            Large files that do not require transparent backgrounds or
+            animations. This format is ideal for vivid photorealistic
+            photographs as it can contain millions of colors.
+          </dd>
+          <dt>PNG</dt>
+          <dd>
+            Has an additional parameter for describing transparency - the alpha
+            channel. Suitable for images with transparent or monochrome
+            backgrounds. Used for icons and decorative items.
+          </dd>
+          <dt>webP</dt>
+          <dd>
+            A replacement format for PNG and JPEG, but with incomplete browser
+            support. When equal image quality, the compressed files will be
+            smaller than PNG and JPEG on average by 25%.
+          </dd>
+        </dl>
+      </section>
+      <section>
+        <h3>Znacznik "span"</h3>
+        <p class="description">
+          Uniwersalny kontener dla małej zawartości tekstowej, takiej jak
+          pojedyncze słowa, fragmenty słów lub frazy w tablicy tekstowej.
+          Podobnie jak znacznik "div", nie ma znaczenia semantycznego i służy do
+          dodatkowej stylizacji.
+        </p>
+        <p>
+          Znacznik <span class="spanClass">span</span> jest to uniwersalny
+          pojemnik na małą zawartość tekstową.
+        </p>
+      </section>
+      <section>
+        <h3>Znacznik "pre"</h3>
+        <p class="description">
+          Domyślnie przeglądarka ignoruje podziały wierszy i więcej niż jedną
+          spację z rzędu. Ten znacznik umożliwia dodanie przeformatowanego
+          tekstu z wymuszonymi znakami końca wiersza. Na przykład zaznaczanie
+          tekstu piosenki lub wiersza.
+        </p>
+        <pre>
+  Wyatt resteth here, that quick could never rest;
+  Whose heavenly gifts increased by disdain,
+  And virtue sank the deeper in his breast;
+  Such profit he by envy could obtain.
+      </pre
+        >
+        <pre>
+  A head where wisdom mysteries did frame,
+  Whose hammers beat still in that lively brain
+  As on a stithy where that some work of fame
+  Was daily wrought, to turn to Britain's gain.
+</pre
+        >
+      </section>
+      <section>
+        <h3>Znaki specjalne</h3>
+        <p class="description">
+          Nie wszystkie znaki można wpisać na klawiaturze. Na przykład
+          zastrzeżony znak towarowy ®, znak handlowy ™, znak praw autorskich ©.
+          Aby wprowadzić takie znaki, używa się znaków specjalnych.
+        </p>
 
         <ul>
-          <li><a href="./index.html">Index</a></li>
-          <li><a href="./listy.html">Listy</a></li>
           <li>
-            <a href="./obrazkiStrona.html">Multimedia</a>
-            <ul>
-              <li><a href="./obrazkiStrona.html">Obrazki</a></li>
-              <li><a href="./obrazkiStrona.html">Film</a></li>
-              <li><a href="./obrazkiStrona.html">Dźwięk</a></li>
-            </ul>
+            <a
+              href="https://html.spec.whatwg.org/multipage/named-characters.html"
+              target="_blank"
+              rel="noreferrer noopener"
+              >html.spec.whatwg.org
+            </a>
           </li>
-
-          <li><a href="./rozneStrona.html">Różne</a></li>
+          <li>
+            <a
+              href="https://www.toptal.com/designers/htmlarrows/symbols/"
+              target="_blank"
+              rel="noreferrer noopener"
+              >www.toptal.com
+            </a>
+          </li>
         </ul>
-      </nav>
-    </div>
-    <div>
-      <h2>Znaczniki H 1-6 (blokowe)</h2>
-      <p class="description">
-        Definiują nagłówki tekstowe sekcji semantycznych różnych poziomów, które
-        wskazują znaczenie sekcji treści znajdującej się po nich. Jest to
-        narzędzie do strukturyzacji treści tekstowych. Znacznik "h1"" jest
-        najczęściej używany tylko raz, jako nagłówek strony głównej. Reszta
-        nagłówków może być używana wiele razy ale z uwzględnieniem hierarchi
-      </p>
-      <p>Przykłady:</p>
-      <h1>H1 - Ha jeden</h1>
-      <h2>H2 - Ha dwa</h2>
-      <h3>H3 - Ha trzy</h3>
-      <h3>H4 - Ha cztery</h3>
-      <h3>H5 - Ha pięć</h3>
-      <h3>H6 - Ha sześć</h3>
-    </div>
+        <h4>Przykład:</h4>
+        <p>
+          &copy; &reg; &Hopf; &numero; &#8481; &#8507; &#8522; &#9728; &#9731;
+          &#9736; &phone; &#9743; &#9745; &#9755; &#9762; &#9773; &#9786;
+          &#9816; &#9822; &clubs; &#9836; &#9892; &#9993; &#10078; &#10105;
+          &#10150; &dollar; &sum;
+        </p>
+      </section>
+      <section>
+        <h3>Znaczniki "sup" i "sub"</h3>
+        <p class="description">
+          Przeznaczone do wyświetlania znaków w górnym ("sup", skrót od
+          superscript) i dolnym ("sub", skrót od subscript) indeksie. Na
+          przykład do oznaczania prostych wzorów matematycznych lub chemicznych.
+        </p>
+        <p>Formula of water - H<sub>2</sub>O</p>
+        <p>Total area of the room - 150m<sup>2</sup>.</p>
+        <p>Solve the equation a<sup>3</sup>+a<sup>2</sup>=4</p>
+      </section>
+      <section>
+        <h3>Znacznik "time"</h3>
+        <p lass="description">
+          Datę i godzinę można zapisać zwykłym tekstem, ale lepiej jest użyć
+          specjalnego znacznika "time". Data dla osoby to tekst wewnątrz
+          znacznika, a dla maszyny - wartość atrybutu datetime w formacie ISO
+          8601.
+        </p>
+        <p>
+          Najnowsze wiadomości
+          <time datetime="2019-12-14">14 grudnia 2019 roku</time>.
+        </p>
+        <p>
+          Spotkanie odbyło się o
+          <time datetime="2018-07-14T11:30">11:30 rano</time>.
+        </p>
+      </section>
+      <section>
+        <h3>Pozostałe znaczniki</h3>
+        <ol class="description">
+          <li>
+            Znaczniki "strong" i "b"<br />Używane do podkreślenia ważnego słowa
+            lub całej frazy w tekście. Wizualnie oba znaczniki pogrubiają tekst
+            i na pierwszy rzut oka nie ma między nimi różnicy, ale tak nie jest.
+            Znacznik "strong" semantycznie podkreśla tekst jako ważny i
+            wskazuje, że jest to znaczące słowo lub fraza. Na przykład zaznaczyć
+            ostrzeżenie lub dowolną część tekstu, na którą użytkownik powinien
+            najpierw zwrócić uwagę. Znacznik "b" (skrót od bold) powoduje, że
+            tekst jest tylko wizualnie pogrubiony, przyciąga uwagę, ale nie
+            przywiązuje szczególnej wagi. W przypadku technologii asystujących,
+            takich jak czytnik ekranu, tekst zawinięty w "strong" ma szczególne
+            znaczenie i będzie dodatkowo wyróżniony intonacją.
+          </li>
+          <li>
+            Znaczniki "em" i "i"<br />
+            Używane do akcentowania uwagi na fragmentach tekstu. Wizualnie oba
+            znaczniki sprawiają, że tekst jest kursywą i na pierwszy rzut oka
+            nie ma między nimi różnicy, ale tak nie jest. Znacznik "em" (skrót
+            od emphasis) semantycznie podkreśla tekst, na który kładzie się
+            specjalny nacisk, który zmienia znaczenie frazy. Na przykład można
+            podkreślić sarkazm. Znacznik "i" (skrót od italic) sprawia, że tekst
+            jest tylko wizualnie kursywą, zwraca na siebie uwagę, ale nie
+            przywiązuje szczególnej wagi. Na przykład wydzielić terminy w
+            zdaniu.
+          </li>
+        </ol>
+        <h4>Przykład:</h4>
+        <p><strong>Uwaga!-strong</strong> <b>Uwaga!-bold</b> Normalny tekst</p>
+        <p><em>Uwaga!-emphasis</em> <i>Uwaga!-italic</i> Normalny tekst</p>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <a
+          href="https://lukaszkonik.pl"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img src="./images/konikMaly24x24Squoosh.png" alt="logo" />
+        </a>
+        <address>
+          <ul>
+            <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+            <li><a href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+          </ul>
+        </address>
+        <a
+          href="./download/Supplicia - instrukcja użytkownika - oryginał.pdf"
+          download
+          >Pobierz instrukcję
+        </a>
+        <p>All rights reserved &copy;Konrad</p>
+      </div>
+    </footer>
   </body>
 </html>

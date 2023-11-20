@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nauka podstaw HTML5 dla początkujących" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tabele</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Menu do nauki HTML</h1>
+        <p class="description">
+          NAV - znacznik definiuje główną nawigację z linkami do innych sekcji
+          lub stron. Używany tylko do nawigacji głównej, a nie do dowolnej grupy
+          linków w dokumencie
+        </p>
+        <p>Linki do podstron</p>
+        <nav>
+          <!-- Nawigacja do innych stron -->
+          <ul>
+            <li><a href="./index.html">Index</a></li>
+            <li><a href="./listy.html">Listy</a></li>
+            <li><a href="./tabele.html">Tabele</a></li>
+            <li>
+              <a href="./obrazkiStrona.html">Multimedia</a>
+              <ul>
+                <li><a href="./obrazkiStrona.html#obrazki">Obrazki</a></li>
+                <li><a href="./obrazkiStrona.html#filmy">Film</a></li>
+                <li><a href="./obrazkiStrona.html">Dźwięk</a></li>
+              </ul>
+            </li>
+            <li><a href="./linki.html">Linki</a></li>
+            <li><a href="./rozneStrona.html">Różne</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h2>Tabele</h2>
+      <p class="description">
+        Tabela to zbiór wierszy z komórkami. Przyjrzyjmy się podstawowym
+        znacznikom.
+      </p>
+      <ol class="description">
+        <li>"table" - określa całą tabelę, kontener dla zawartości.</li>
+        <li>
+          "tr" - wiersz tabeli (table row). Nie może być pusty, musi zawierać co
+          najmniej jedną komórkę.
+        </li>
+        <li>
+          "td" - komórka tabeli (table data). Może być używana tylko wewnątrz
+          wiersza. Każdy wiersz tabeli musi mieć taką samą liczbę komórek.
+        </li>
+      </ol>
+      <section>
+        <h3>Tabela zwykła</h3>
+        <p>Dane podmiotów:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Lp.</th>
+              <th>PESEL</th>
+              <th>Imię i nazwisko</th>
+              <th>Kod pocztowy</th>
+              <th>Miejscowość</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>1</td>
+            <td>18293039289</td>
+            <td>DITA OSTROWSKA</td>
+            <td>61-680</td>
+            <td>POZNAŃ</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>50041144407</td>
+            <td>RESHMA CZAPNIK</td>
+            <td>66-400</td>
+            <td>GORZÓW WIELKOPOLSKI</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>90020882265</td>
+            <td>TSVETELINA SITNICKA</td>
+            <td>66-400</td>
+            <td>GORZÓW WIELKOPOLSKI</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>68101598033</td>
+            <td>JAYDAN KARKOCHA</td>
+            <td>66-400</td>
+            <td>GORZÓW WIELKOPOLSKI</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>50052681272</td>
+            <td>VACHIK MIKUŁA</td>
+            <td>58-312</td>
+            <td>STARE BOGACZOWICE</td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <h3>Sekcje tabeli</h3>
+        <p class="description">
+          Aby ulepszyć semantykę znaczników tabeli, istnieje kilka znaczników
+          strukturalnych.
+        </p>
+        <ul class="description">
+          <li>
+            "caption" który powinien znajdować się wewnątrz tabeli jako pierwszy
+            element.
+          </li>
+          <li>
+            "thead" - nagłówek, który opakowuje grupę wierszy tabeli w obszarze
+            nagłówka.
+          </li>
+          <li>"tbody" - ciało, opakowuje główną grupę wierszy tabeli.</li>
+          <li>
+            "tfoot" - stopka, oznacza grupę wierszy tabeli w obszarze
+            stopki./li>
+          </li>
+        </ul>
+
+        <table>
+          <caption>
+            Dane podmiotów
+          </caption>
+          <thead>
+            <tr>
+              <th>Lp.</th>
+              <th>PESEL</th>
+              <th>Imię i nazwisko</th>
+              <th>Kod pocztowy</th>
+              <th>Miejscowość</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>18293039289</td>
+              <td>DITA OSTROWSKA</td>
+              <td>61-680</td>
+              <td>POZNAŃ</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>50041144407</td>
+              <td>RESHMA CZAPNIK</td>
+              <td>66-400</td>
+              <td>GORZÓW WIELKOPOLSKI</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>90020882265</td>
+              <td>TSVETELINA SITNICKA</td>
+              <td>66-400</td>
+              <td>GORZÓW WIELKOPOLSKI</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>68101598033</td>
+              <td>JAYDAN KARKOCHA</td>
+              <td>66-400</td>
+              <td>GORZÓW WIELKOPOLSKI</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>50052681272</td>
+              <td>VACHIK MIKUŁA</td>
+              <td>58-312</td>
+              <td>STARE BOGACZOWICE</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h3>Łączenie komórek</h3>
+        <p class="description">
+          Aby rozszerzyć komórkę w poziomie, używa się atrybutu colspan, w
+          pionie - rowspan. Następnie konieczne jest usunięcie komórek, które
+          stały się niepotrzebne po prawej stronie i / lub na dole.
+        </p>
+        <table>
+          <caption>
+            Dane podmiotów
+          </caption>
+          <thead>
+            <tr>
+              <th rowspan="2">Lp.</th>
+              <th colspan="2">Dane osobowe</th>
+              <th colspan="2">Adres</th>
+            </tr>
+            <tr>
+              <th>PESEL</th>
+              <th>Imię i nazwisko</th>
+              <th>Kod pocztowy</th>
+              <th>Miejscowość</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>18293039289</td>
+              <td>DITA OSTROWSKA</td>
+              <td>61-680</td>
+              <td>POZNAŃ</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>50041144407</td>
+              <td>RESHMA CZAPNIK</td>
+              <td>66-400</td>
+              <td>GORZÓW WIELKOPOLSKI</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>90020882265</td>
+              <td>TSVETELINA SITNICKA</td>
+              <td>66-400</td>
+              <td>GORZÓW WIELKOPOLSKI</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>68101598033</td>
+              <td>JAYDAN KARKOCHA</td>
+              <td>66-400</td>
+              <td>GORZÓW WIELKOPOLSKI</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>50052681272</td>
+              <td>VACHIK MIKUŁA</td>
+              <td>58-312</td>
+              <td>STARE BOGACZOWICE</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <td colspan="4">Suma osób</td>
+            <td>5</td>
+          </tfoot>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>

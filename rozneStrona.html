@@ -9,6 +9,34 @@
   </head>
 
   <body>
+    <header>
+      <div>
+        <h1>Menu do nauki HTML</h1>
+        <p class="description">
+          NAV - znacznik definiuje główną nawigację z linkami do innych sekcji
+          lub stron. Używany tylko do nawigacji głównej, a nie do dowolnej grupy
+          linków w dokumencie
+        </p>
+        <p>Linki do podstron</p>
+        <nav>
+          <!-- Nawigacja do innych stron -->
+          <ul>
+            <li><a href="./index.html">Index</a></li>
+            <li><a href="./listy.html">Listy</a></li>
+            <li>
+              <a href="./obrazkiStrona.html">Multimedia</a>
+              <ul>
+                <li><a href="./obrazkiStrona.html">Obrazki</a></li>
+                <li><a href="./obrazkiStrona.html">Film</a></li>
+                <li><a href="./obrazkiStrona.html">Dźwięk</a></li>
+              </ul>
+            </li>
+
+            <li><a href="./rozneStrona.html">Różne</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <!--komentarz-->
     <!--komentarz-->
     <h1>Cześć</h1>
@@ -35,37 +63,15 @@
       perspiciatis quibusdam officia eius saepe enim? Quasi alias dignissimos ab
       repudiandae?
     </h6>
-    <!--Obrazek Oryginalny-->
-    <img
-      src="images/sprowadzonyZagranicaNowy1920x1920Oryginal.png"
-      alt="Obrazek po squoosh .png"
-      height="300"
-    />
-    <p>Obrazek oryginalny bez podpisu .png</p>
-    <!--Obrazek po squoosh-->
-    <img
-      src="images/sprowadzonyZagranicaNowy1920x1920.png"
-      alt="Obrazek po squoosh .png"
-      height="300"
-    />
-    <p>Obrazek po squoosh bez podpisu .png</p>
-    <!--Obrazek po squoosh z podpisem-->
-    <figure>
-      <!-- Dowolna treść graficzna: zdjęcie, wykres, diagram itp. -->
-      <img
-        src="images/sprowadzonyZagranicaNowy1920x1920.png"
-        alt="Obrazek po squoosh z podpisem.png"
-        height="300"
-      />
-      <figcaption>Obrazek po squoosh z podpisem.png</figcaption>
-    </figure>
-    <!--Obrazek z internetu-->
-    <img
-      src="https://images.pexels.com/photos/67112/pexels-photo-67112.jpeg"
-      alt="(obrazek z internetu) Macbook Air na szarym drewnianym stole"
-      width="400"
-    />
-    <p>Obrazek z internetu</p>
+    <p>
+      Hello. My name is Konrad Konik. I am 46 years old. I live in Gorzow Wlkp.
+      I have been working in the office for 20 years. I finished my studies in
+      computer science 2 years ago. I have been learning C# programming language
+      for the last 2 years. I enjoy writing computer programs. One of them is
+      currently used in my work. I also like making furniture. Cabinets,
+      cupboards.
+    </p>
+
     <input id="Checkbox1" type="checkbox" />
     <input id="Button1" type="button" value="button" />
     <h2>Jak zaparzyć herbatę?!!!</h2>
@@ -88,11 +94,14 @@
     <ul>
       <li>zielona</li>
       <li>brązowa</li>
-      <li>czarna</li>
-      <ul>
-        wdwdwdddw
-        <li>fdsfsd sfdsfds</li>
-      </ul>
+      <li>
+        czarna
+        <ul>
+          wdwdwdddw
+          <li>fdsfsd sfdsfds</li>
+        </ul>
+      </li>
+
       <li>cytrynowa</li>
       <li>owocowa</li>
       <li></li>

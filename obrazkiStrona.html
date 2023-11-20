@@ -6,5 +6,218 @@
     <link rel="stylesheet" href="styles.css" />
     <title>HTML Obrazki</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div>
+        <h1>Menu do nauki HTML</h1>
+        <p class="description">
+          NAV - znacznik definiuje główną nawigację z linkami do innych sekcji
+          lub stron. Używany tylko do nawigacji głównej, a nie do dowolnej grupy
+          linków w dokumencie
+        </p>
+        <p>Linki do podstron</p>
+        <nav>
+          <!-- Nawigacja do innych stron -->
+          <ul>
+            <li><a href="./index.html">Index</a></li>
+            <li><a href="./listy.html">Listy</a></li>
+            <li>
+              <a href="./obrazkiStrona.html">Multimedia</a>
+              <ul>
+                <li><a href="./obrazkiStrona.html">Obrazki</a></li>
+                <li><a href="./obrazkiStrona.html">Film</a></li>
+                <li><a href="./obrazkiStrona.html">Dźwięk</a></li>
+              </ul>
+            </li>
+
+            <li><a href="./rozneStrona.html">Różne</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h2 id="obrazki">Obrazki</h2>
+        <!-- Obrazki -->
+        <div>
+          <!--Obrazek Oryginalny-->
+          <img
+            src="images/sprowadzonyZagranicaNowy1920x1920Oryginal.png"
+            alt="Obrazek po squoosh .png"
+            height="300"
+          />
+          <p>Obrazek oryginalny bez podpisu .png</p>
+        </div>
+        <div>
+          <!--Obrazek po squoosh-->
+          <img
+            src="images/sprowadzonyZagranicaNowy1920x1920.png"
+            alt="Obrazek po squoosh .png"
+            height="300"
+          />
+          <p>Obrazek po squoosh bez podpisu .png</p>
+        </div>
+        <div>
+          <!--Obrazek po squoosh z podpisem-->
+          <figure>
+            <!-- Dowolna treść graficzna: zdjęcie, wykres, diagram itp. -->
+            <img
+              src="images/sprowadzonyZagranicaNowy1920x1920.png"
+              alt="Obrazek po squoosh z podpisem.png"
+              height="300"
+            />
+            <figcaption>Obrazek po squoosh z podpisem.png</figcaption>
+          </figure>
+        </div>
+        <div>
+          <!--Obrazek z internetu-->
+          <img
+            src="https://images.pexels.com/photos/67112/pexels-photo-67112.jpeg"
+            alt="(obrazek z internetu) Macbook Air na szarym drewnianym stole"
+            width="400"
+          />
+          <p>Obrazek z internetu</p>
+        </div>
+      </section>
+      <section>
+        <!-- <a name="filmy">(opis_kotwicy)</a> -->
+        <h2 id="filmy">Filmy</h2>
+        <div class="description">
+          <h3>Atrybuty:</h3>
+          <ul>
+            <li>src - wskazuje adres pliku wideo</li>
+            <li>
+              poster - adres obrazu, który jest używany jako plakat, jeśli wideo
+              nie zostało załadowane lub nie jest jeszcze odtwarzane
+            </li>
+            <li>
+              width i height - ustawiają wysokość i szerokość, jak w obrazie
+            </li>
+            <li>
+              controls - atrybut "flaga", jeśli występuje, dodają się elementy
+              sterujące wideo
+            </li>
+            <li>
+              autoplay - atrybut "flaga", jeśli jest obecny, rozpocznie się
+              odtwarzanie wideo jak tylko ono będzie dostępne
+            </li>
+            <li>
+              loop - atrybut "flaga", jeśli jest obecny, wideo zostanie
+              powtórzone w pętli
+            </li>
+            <li>
+              preload wskazuje tryb wstępnego ładowania wideo. Jego wartość
+              wpływa na to, jakie informacje zostaną załadowane. Wartość
+              domyślna zależy od przeglądarki, w której została otwarta strona
+              internetowa.
+              <ul>
+                <li>none - nie pobierać wideo z wyprzedzeniem</li>
+                <li>
+                  metadata - pobrać informacje o usłudze ładowania (czas trwania
+                  itp.)
+                </li>
+                <li>auto - pobrać całe wideo z wyprzedzeniem</li>
+              </ul>
+            </li>
+          </ul>
+          <h4>Przykład:</h4>
+          <video
+            src="./film/SuppliciaV.2.0.mp4"
+            poster="./film/SuppliciaLogo.png"
+            width="640"
+            controls
+            autoplay
+            preload="auto"
+          ></video>
+        </div>
+        <div class="description">
+          <h3>Formaty video:</h3>
+          <p>
+            Pobranie tylko jednego formatu pliku wideo nie wystarczy, niektóre
+            przeglądarki mogą go nie obsługiwać, a użytkownik nie będzie mógł
+            obejrzeć wideo. Istnieje kilka popularnych formatów wideo, które
+            należy udostępnić przeglądarce do wyboru: webm, mp4 i ogg. Aby to
+            zrobić, trzeba usunąć atrybut src z znacznika "video" i dodać nowy
+            znacznik "source" dla każdego formatu. W atrybucie src należy ukazać
+            adres pliku wideo, natomiast w atrybucie type format wideo.
+            Przeglądarka wybierze pierwszy z listy, który obsługuje i załaduje,
+            ignorując resztę.
+          </p>
+          <h4>Przykład:</h4>
+          <video poster="./film/Supplicia.jpg" width="640" controls>
+            <source
+              src="http://techslides.com/demos/sample-videos/small.webm"
+              type="video/webm"
+            />
+            <source
+              src="http://techslides.com/demos/sample-videos/small.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="http://techslides.com/demos/sample-videos/small.ogg"
+              type="video/ogg"
+            />
+            Your browser does not support the <code>video</code> element.
+          </video>
+        </div>
+      </section>
+      <section>
+        <h2 id="dzwiek">Dźwięk</h2>
+        <div>
+          <p class="description">
+            Znacznik "audio" jest używany do oznaczania treści audio
+          </p>
+          <h3>Atrybuty:</h3>
+          <ul class="description">
+            <li>src - wskazuje adres pliku audio</li>
+            <li>
+              controls - atrybut "flaga", jeśli występuje, dodają się elementy
+              sterujące audio
+            </li>
+            <li>
+              autoplay - atrybut "flaga", jeśli jest obecny, rozpocznie się
+              odtwarzanie audio jak tylko ono będzie dostępne
+            </li>
+            <li>
+              loop - atrybut "flaga", jeśli jest obecny, audio zostanie
+              powtórzone w pętli
+            </li>
+            <li>
+              preload wskazuje tryb wstępnego ładowania pliku audio. Jego
+              wartość wpływa na to, jakie informacje zostaną załadowane. Wartość
+              domyślna zależy od przeglądarki, w której została otwarta strona
+              internetowa
+              <ul>
+                <li>none - nie pobierać audio z wyprzedzeniem</li>
+                <li>
+                  metadata - pobrać informacje o usłudze ładowania (czas trwania
+                  itp.)
+                </li>
+                <li>auto - pobrać całe audio z wyprzedzeniem</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Przykład:</h3>
+          <ul>
+            <li>
+              <audio controls>
+                <source src="./music/Aylex - Energizer (freetouse.com).mp3" type="audio/mpeg" preload="auto" />
+                <!-- <source src="song.ogg" type="audio/ogg" /> -->
+                Your browser does not support the <code>audio</code> element.
+              </audio>
+            </li>
+            <li>
+              <audio controls>
+                <source src="./music/Aylex - Storm (freetouse.com).mp3" type="audio/mpeg" preload="auto" />
+                <!-- <source src="song.ogg" type="audio/ogg" /> -->
+                Your browser does not support the <code>audio</code> element.
+                </audio>
+              </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
