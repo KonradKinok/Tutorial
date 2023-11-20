@@ -26,3 +26,16 @@ span{
 .menu > li{
     border: 1px solid tomato;
 }
+
+a[href="./obrazkiStrona.html"] {
+    color: rgb(125, 41, 146);
+}
+
+.colorSection {
+    background-color: rgb(1, 6, 68);
+    color: white;
+}
+section:hover {
+    background-color: rgb(1, 6, 68);
+    color: white;
+}
