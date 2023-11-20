@@ -15,6 +15,14 @@ body {font-family: sans-serif;
     color: green;
 }
 
+span{
+    font-size: 24px;
+    font-weight: 500;
+    color:black;
+}
 .spanClass{
     color:blue;
+}
+.menu > li{
+    border: 1px solid tomato;
 }
