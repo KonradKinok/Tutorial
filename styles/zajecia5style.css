@@ -1,0 +1,30 @@
+:root{
+    --body-background: rgb(84, 110, 255);
+    --navigation-background: rgb(210, 230, 190);
+    --link-hover-forecolor: rgb(224, 237, 248);
+    --white: rgb(255, 255, 255);
+    --black: rgb(0,0,0);
+    --blue: rgb(0, 0, 255);
+    --red: rgb(255,0,0);
+    --yellow: rgb(255, 255, 0);
+}
+
+body{
+    font-family: 'Helvetica Neue', 'Roboto', 'Verdana', 'Tahoma', sans-serif;
+    background: var(--body-background);
+    color: rgb(45, 46, 48);
+    line-height: 1.5;
+    font-size: 20px;
+    font-weight: 400;
+    font-style:normal;
+
+}
+
+.list{
+    list-style: none;
+}
+span{
+   font-family: 'Roboto', serif;
+   font-size: 25px;
+    font-weight: 800; 
+}

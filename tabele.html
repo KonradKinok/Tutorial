@@ -54,10 +54,10 @@
           wiersza. Każdy wiersz tabeli musi mieć taką samą liczbę komórek.
         </li>
       </ol>
-      <section>
+      <div>
         <h3>Tabela zwykła</h3>
         <p>Dane podmiotów:</p>
-        <table>
+        <table class="schedule-borderSeparate">
           <thead>
             <tr>
               <th>Lp.</th>
@@ -67,43 +67,45 @@
               <th>Miejscowość</th>
             </tr>
           </thead>
-          <tr>
-            <td>1</td>
-            <td>18293039289</td>
-            <td>DITA OSTROWSKA</td>
-            <td>61-680</td>
-            <td>POZNAŃ</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>50041144407</td>
-            <td>RESHMA CZAPNIK</td>
-            <td>66-400</td>
-            <td>GORZÓW WIELKOPOLSKI</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>90020882265</td>
-            <td>TSVETELINA SITNICKA</td>
-            <td>66-400</td>
-            <td>GORZÓW WIELKOPOLSKI</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>68101598033</td>
-            <td>JAYDAN KARKOCHA</td>
-            <td>66-400</td>
-            <td>GORZÓW WIELKOPOLSKI</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>50052681272</td>
-            <td>VACHIK MIKUŁA</td>
-            <td>58-312</td>
-            <td>STARE BOGACZOWICE</td>
-          </tr>
+          <tbody class="schedule-body">
+            <tr>
+              <td>1</td>
+              <td>18293039289</td>
+              <td>DITA OSTROWSKA</td>
+              <td>61-680</td>
+              <td>POZNAŃ</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>50041144407</td>
+              <td>RESHMA CZAPNIK</td>
+              <td>66-400</td>
+              <td>GORZÓW WIELKOPOLSKI</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>90020882265</td>
+              <td>TSVETELINA SITNICKA</td>
+              <td>66-400</td>
+              <td>GORZÓW WIELKOPOLSKI</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>68101598033</td>
+              <td>JAYDAN KARKOCHA</td>
+              <td>66-400</td>
+              <td>GORZÓW WIELKOPOLSKI</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>50052681272</td>
+              <td>VACHIK MIKUŁA</td>
+              <td>58-312</td>
+              <td>STARE BOGACZOWICE</td>
+            </tr>
+          </tbody>
         </table>
-      </section>
+      </div>
       <section>
         <h3>Sekcje tabeli</h3>
         <p class="description">
@@ -185,7 +187,7 @@
           pionie - rowspan. Następnie konieczne jest usunięcie komórek, które
           stały się niepotrzebne po prawej stronie i / lub na dole.
         </p>
-        <table>
+        <table class="schedule-borderColapse">
           <caption>
             Dane podmiotów
           </caption>
@@ -202,7 +204,7 @@
               <th>Miejscowość</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="schedule-body">
             <tr>
               <td>1</td>
               <td>18293039289</td>
@@ -239,7 +241,7 @@
               <td>STARE BOGACZOWICE</td>
             </tr>
           </tbody>
-          <tfoot>
+          <tfoot class="schedule-foot">
             <td colspan="4">Suma osób</td>
             <td>5</td>
           </tfoot>

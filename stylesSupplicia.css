@@ -1,0 +1,16 @@
+:root{
+    --colorBody:#292625;
+    --color2:#464241;
+    --color3:#464541;
+    --color4:#454641;
+    --color5:#424641;
+    --color6:#414642;
+    --color7: #414645;
+
+}
+
+body {
+    font-family: sans-serif;
+    text-align: justify;
+    background-color: var(--colorBody);
+}

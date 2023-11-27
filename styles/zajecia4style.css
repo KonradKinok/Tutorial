@@ -1,0 +1,83 @@
+:root{
+    --body-background: rgb(52, 82, 22);
+    --navigation-background: rgb(210, 230, 190);
+    --link-hover-forecolor: rgb(224, 237, 248);
+    --white: rgb(255, 255, 255);
+    --black: rgb(0,0,0);
+    --blue: rgb(0, 0, 255);
+    --red: rgb(255,0,0);
+    --yellow: rgb(255, 255, 0);
+}
+
+body{
+    font-family: 'Helvetica Neue', 'Roboto', 'Verdana', 'Tahoma', sans-serif;
+    background: var(--body-background);
+    color: rgb(110, 180, 4);
+    line-height: 1.5;
+    font-size: 20px;
+    font-weight: 600;
+    font-style:italic;
+
+}
+
+.link{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.link:visited{
+    color:var(--body-background);
+}
+
+.link:hover,
+.link:focus{
+color: var(--link-hover-forecolor);
+background: var(--body-background);
+}
+
+.list{
+    list-style: none;
+    background: var(--navigation-background);
+}
+
+.text-nav{
+    text-indent: 100px;
+}
+
+.h-one{
+    letter-spacing: 50px;
+}
+
+.contener-shadow{
+    background: var(--white);
+}
+
+.contener-shadow-text{
+    color: var(--black);
+    text-shadow: 2px 2px 4px var(--red);
+}
+
+.contener-shadow-text1{
+    color: var(--blue);
+    text-shadow: 2px 2px 8px var(--black);
+
+}
+.contener-shadow-text1::first-letter {
+    font-family: 'Tahoma', serif;
+    font-size: 32px;
+    color: #f44336;
+  }
+  .contener-shadow-text1::selection {
+    color: var(--white);
+    background-color: var(--yellow);
+  } 
+.contener-shadow-text2{
+    color: var(--white);
+    text-shadow: 2px 2px 8px var(--black);
+
+}
+
+.contener-shadow-text3{
+    color: #ffffff;
+  text-shadow: 2px 2px 20px #ff0000, 5px 5px 5px #000000;
+}

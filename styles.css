@@ -1,10 +1,33 @@
-body {font-family: sans-serif;
-    text-align:justify;}
+:root{
+--pages-color: rgb(201, 201, 233); 
+}
+body {
+    font-family: sans-serif;
+    text-align:justify;
+    background: var(--pages-color);
+}
+
+
+
+.list >li{
+    list-style: none;
+    
+}
+
+.link{
+    text-decoration: none;
+    
+}
+
+
+
 
 .text {
     background-color: tomato;
     color: white;
     text-align: center;
+    font-size: 24px;
+    font-weight: 500;
 }
 
 .success {
@@ -27,10 +50,17 @@ span{
     border: 1px solid tomato;
 }
 
-a[href="./obrazkiStrona.html"] {
-    color: rgb(125, 41, 146);
+a{
+font-size: 12px;
 }
-
+a[href^="./obrazkiStrona.html"] {
+    color: rgb(53, 62, 187);
+    background-color: rgb(12, 243, 12);
+    
+}
+a:hover{
+    background-color: rgb(152, 160, 161);
+}
 .colorSection {
     background-color: rgb(1, 6, 68);
     color: white;
@@ -38,4 +68,29 @@ a[href="./obrazkiStrona.html"] {
 section:hover {
     background-color: rgb(1, 6, 68);
     color: white;
+}
+
+/* Tabele */
+.schedule-borderSeparate {
+    border-collapse:separate;
+}
+.schedule-borderColapse {
+    border-collapse:collapse;
+}
+.schedule-borderSeparate th,
+.schedule-borderSeparate td,
+.schedule-borderColapse th,
+.schedule-borderColapse td {
+    padding: 8px;
+    border: 1px solid #212121;
+}
+.schedule-body > tr:hover{
+    background-color: tomato;
+    color:white;
+    cursor: pointer;
+}
+.schedule-foot>tr:hover {
+    background-color: rgb(15, 235, 26);
+    /* color: white; */
+    cursor: pointer;
 }
