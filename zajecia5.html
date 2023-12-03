@@ -105,6 +105,301 @@
           <li class="box-radius-five">Box5</li>
         </ul>
       </section>
+      <section>
+        <div class="container">
+          <h2>Element-pojemnik</h2>
+          <p>
+            <span>Pojemnik, opakowanie, wrapper</span> - to wszystko to są nazwy
+            standardowego blokowego elementu-pojemnika, który ogranicza
+            szerokość i wyśrodkowuje zawartość strony.
+          </p>
+          <p>
+            CSS tworzy klasę container, którą można przypisać do dowolnego
+            elementu, ale w praktyce zawsze będzie to klasa niesemantyczna
+            "div". Pojemnik musi ustawić szerokość (stałą lub zmienną), zgodnie
+            z siatką z układu, automatyczne marginesy w poziomie i opcjonalne
+            dopełnienia, również zgodnie z układem.
+          </p>
+          <ul class="box-radius">
+            <li class="box-radius-one">Box1</li>
+            <li class="box-radius-two">Box2</li>
+            <li class="box-radius-three">Box3</li>
+            <li class="box-radius-four">Box4</li>
+            <li class="box-radius-five">Box5</li>
+          </ul>
+        </div>
+      </section>
+      <section class="section-koty">
+        <div class="card">
+          <img
+            class="card-image"
+            src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=240&w=320"
+            alt="A cat"
+          />
+          <h2 class="card-heading">Card title 1</h2>
+        </div>
+        <div class="card">
+          <img
+            class="card-image no-gap"
+            src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=240&w=320"
+            alt="A cat"
+          />
+          <h2 class="card-heading">Card title 2</h2>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <h2>Elementy liniowo-blokowe (inline-block)</h2>
+          <p>
+            Hybryda między elementami blokowymi i liniowymi, która łączy to, co
+            najlepsze.
+          </p>
+          <ul class="list">
+            <li>Ustawiona dla nich właściwość display: inline-block.</li>
+            <li>
+              Ich szerokość i wysokość zależą od zawartości, ale możesz wyraźnie
+              ustawić właściwości width i height.
+            </li>
+            <li>
+              Są umieszczane w linii, o ile jest w niej wystarczająco dużo
+              miejsca, po czym nowe są zawijane do następnej linii.
+            </li>
+            <li>
+              Można ustawić dowolne właściwości geometrii elementu: szerokość,
+              wysokość, dopełnienie, obramowanie i marginesy.
+            </li>
+          </ul>
+          <p>
+            Są używane, gdy konieczne jest dodanie efektów dekoracyjnych do
+            elementów liniowych. Na przykład ustawić dla linku dopełnienie
+            pionowe, margines lub szerokość z wysokością, wizualnie tworząc z
+            niego przycisk, lub zamienić "span" na ikonę o stałym rozmiarze.
+          </p>
+          <p>
+            Zmieniamy typ elementu za pomocą właściwości display. Teraz link,
+            pierwotnie element liniowy, może posiadać właściwości padding
+            (dopełnienie) oraz inne elementy geometrii elementu.
+          </p>
+          <div>
+            <a href="" class="link-liniowo-blokowy">Dowiedz się więcej</a>
+          </div>
+        </div>
+      </section>
+      <section class="section-ukrywamyelementy">
+        <div class="container">
+          <h2>Ukrywamy elementy</h2>
+          <p>
+            Wartość display: none pozwala całkowicie ukryć element poprzez
+            zwolnienie jego przestrzeni dla innych. Taki element jest usuwany z
+            obiegu dokumentów, jest wizualnie ukrywany i nie uczestniczy w
+            układzie strony.
+          </p>
+          <div class="tabs">
+            <div class="controls">...</div>
+
+            <div class="pane is-active">
+              1 - Lorem ipsum dolor sit amet consectetur.
+            </div>
+            <div class="pane">2 - Lorem ipsum dolor sit amet consectetur.</div>
+            <div class="pane">3 - Lorem ipsum dolor sit amet consectetur.</div>
+          </div>
+        </div>
+      </section>
+      <section class="section-pseudoklasy">
+        <div class="container">
+          <h2>Pseudoklasy :first-child i :last-child</h2>
+          <p>
+            Umożliwiają wybranie pierwszego lub ostatniego elementu w kolekcji
+            sąsiadów. Na przykład, jeśli ustawisz dolny margines dla każdego
+            elementu listy, ostatni też będzie go miał. Dobrą praktyką jest
+            usuwanie ekstremalnej geometri. Mając listę i robiąc odstępy od
+            poszczególnych elementów za pomocą margin-bottom zadbaj o to żeby
+            ostatni element miał wyzerowany margin odpowiadający za odstęp,
+            ponieważ takie odstępy mogą w sposób nieoczywisty wypaść lub
+            rozszerzyć rodzica.
+          </p>
+          <ul class="list">
+            <li class="list-item-pseudoklasy">HTML</li>
+            <li class="list-item-pseudoklasy">CSS</li>
+            <li class="list-item-pseudoklasy">JavaScript</li>
+            <li class="list-item-pseudoklasy">React</li>
+          </ul>
+        </div>
+        <div class="container">
+          <h2>Pseudoklasa :not(selector)</h2>
+          <p>
+            Umożliwia wybranie wszystkich elementów, które nie pasują do
+            kryterium - prosty selektor w nawiasach. Selektor prosty to selektor
+            ogólny, selektor typu, identyfikatora, atrybutu, klasy lub selektor
+            pseudoklasy. Zasadę stosowania dolnego marginesu na wszystkie
+            elementy poza ostatnim można zapisać następująco.
+          </p>
+          <p>
+            Czyta się: zastosuj style do wszystkich elementów z klasą list-item,
+            które nie są ostatnim elementem w kolekcji sąsiadów.
+          </p>
+          <ul class="list">
+            <li class="list-item-pseudoklasy1">HTML</li>
+            <li class="list-item-pseudoklasy1">CSS</li>
+            <li class="list-item-pseudoklasy1">JavaScript</li>
+            <li class="list-item-pseudoklasy1">React</li>
+          </ul>
+        </div>
+        <div class="container">
+          <h2>Pseudoklasa :nth-child(an+b)</h2>
+          <p>
+            Wybiera elementy w kolekcji sąsiadów według liczby podanej w
+            nawiasach przy użyciu pętli an+b, która pozwala określić regułę dla
+            сiągu elementów.
+          </p>
+          <ul>
+            <li>a - okres pętli. Dowolna liczba</li>
+            <li>
+              n - licznik pętli. Zaczyna się od zera i zwiększa się o jeden z
+              każdą iteracją.
+            </li>
+            <li>b - przesunięcie. Dowolna liczba.</li>
+          </ul>
+          <p>
+            Na przykład jeśli a = 2, a b = 1, to an+b = 2n+1. Ta formuła
+            wybierze wszystkie nieparzyste elementy.
+          </p>
+          <ul class="list-nth-child nth-child-5">
+            <li class="list-item-nth-child">1</li>
+            <li class="list-item-nth-child">2</li>
+            <li class="list-item-nth-child">3</li>
+            <li class="list-item-nth-child">4</li>
+            <li class="list-item-nth-child">5</li>
+            <li class="list-item-nth-child">6</li>
+            <li class="list-item-nth-child">7</li>
+            <li class="list-item-nth-child">8</li>
+            <li class="list-item-nth-child">9</li>
+            <li class="list-item-nth-child">10</li>
+          </ul>
+          <ul class="list-nth-child nth-child-parzyste">
+            <li class="list-item-nth-child">1</li>
+            <li class="list-item-nth-child">2</li>
+            <li class="list-item-nth-child">3</li>
+            <li class="list-item-nth-child">4</li>
+            <li class="list-item-nth-child">5</li>
+            <li class="list-item-nth-child">6</li>
+            <li class="list-item-nth-child">7</li>
+            <li class="list-item-nth-child">8</li>
+            <li class="list-item-nth-child">9</li>
+            <li class="list-item-nth-child">10</li>
+          </ul>
+          <ul class="list-nth-child nth-child-nieparzyste">
+            <li class="list-item-nth-child">1</li>
+            <li class="list-item-nth-child">2</li>
+            <li class="list-item-nth-child">3</li>
+            <li class="list-item-nth-child">4</li>
+            <li class="list-item-nth-child">5</li>
+            <li class="list-item-nth-child">6</li>
+            <li class="list-item-nth-child">7</li>
+            <li class="list-item-nth-child">8</li>
+            <li class="list-item-nth-child">9</li>
+            <li class="list-item-nth-child">10</li>
+          </ul>
+          <ul class="list-nth-child nth-child-ostatnie">
+            <li class="list-item-nth-child">1</li>
+            <li class="list-item-nth-child">2</li>
+            <li class="list-item-nth-child">3</li>
+            <li class="list-item-nth-child">4</li>
+            <li class="list-item-nth-child">5</li>
+            <li class="list-item-nth-child">6</li>
+            <li class="list-item-nth-child">7</li>
+            <li class="list-item-nth-child">8</li>
+            <li class="list-item-nth-child">9</li>
+            <li class="list-item-nth-child">10</li>
+          </ul>
+          <ul class="list-nth-child nth-child-pierwsze">
+            <li class="list-item-nth-child">1</li>
+            <li class="list-item-nth-child">2</li>
+            <li class="list-item-nth-child">3</li>
+            <li class="list-item-nth-child">4</li>
+            <li class="list-item-nth-child">5</li>
+            <li class="list-item-nth-child">6</li>
+            <li class="list-item-nth-child">7</li>
+            <li class="list-item-nth-child">8</li>
+            <li class="list-item-nth-child">9</li>
+            <li class="list-item-nth-child">10</li>
+          </ul>
+          <ul class="list-nth-child nth-child-trzecie">
+            <li class="list-item-nth-child">1</li>
+            <li class="list-item-nth-child">2</li>
+            <li class="list-item-nth-child">3</li>
+            <li class="list-item-nth-child">4</li>
+            <li class="list-item-nth-child">5</li>
+            <li class="list-item-nth-child">6</li>
+            <li class="list-item-nth-child">7</li>
+            <li class="list-item-nth-child">8</li>
+            <li class="list-item-nth-child">9</li>
+            <li class="list-item-nth-child">10</li>
+          </ul>
+          <ul class="list-nth-child nth-child-odkonca">
+            <li class="list-item-nth-child">1</li>
+            <li class="list-item-nth-child">2</li>
+            <li class="list-item-nth-child">3</li>
+            <li class="list-item-nth-child">4</li>
+            <li class="list-item-nth-child">5</li>
+            <li class="list-item-nth-child">6</li>
+            <li class="list-item-nth-child">7</li>
+            <li class="list-item-nth-child">8</li>
+            <li class="list-item-nth-child">9</li>
+            <li class="list-item-nth-child">10</li>
+          </ul>
+        </div>
+        <div class="container">
+          <h2>Dodatkowe pseudoklasy</h2>
+          <p>
+            Te pseudoklasy są używane w bardzo rzadkich lub bardzo specyficznych
+            sytuacjach
+          </p>
+          <ul class="list">
+            <li>:first-of-type - wybiera pierwszy selektor danego typu.</li>
+            <li>:last-of-type - wybiera ostatni selektor danego typu.</li>
+            <li>
+              :only-of-type - wybiera element, który jest jedynym elementem
+              podrzędnym tego typu w kolekcji sąsiadów.
+            </li>
+            <li>
+              :nth-of-type(an+b) - wybiera numer selektora podany w nawiasach,
+              używając formuły an+b
+            </li>
+            <li>
+              :nth-last-of-type(an+b) - analog :nth-of-type() z tą różnicą, że
+              odliczanie jest od końca kolekcji (ostatniego elementu).
+            </li>
+            <li>
+              :only-child - wybiera element, który jest jedynym dzieckiem z
+              takim selektorem w kolekcji sąsiadów.
+            </li>
+            <li>
+              :empty - wybiera puste elementy, czyli bez potomków i bez tekstu.
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <div class="contener-shadow-text2">
+        <h2>Footer</h2>
+        <div class="display-footer">
+          <a
+            class="link-footer"
+            href="https://lukaszkonik.pl"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <img src="./images/konikMaly24x24Squoosh.png" alt="logo" />
+          </a>
+          <div class="display-footer2">
+            <p class="footer-selection">All rights reserved &copy;</p>
+            <p>Konrad</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

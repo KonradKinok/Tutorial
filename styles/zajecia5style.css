@@ -62,6 +62,13 @@ body{
     font-style:normal;
 }
 
+.container {
+    min-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+    border: 2px dashed #2a2a2a;
+}
+
 .nav{
     border: 4px outset var(--white);
     padding: 5px;
@@ -95,8 +102,13 @@ color: var(--yellow);
     background: rgb(29, 52, 199);
     color: rgb(255, 255, 136)
 }
-.list{
-    list-style: none;
+
+.section-ukrywamyelementy{
+    background: rgb(148, 149, 158);
+}
+
+.section-pseudoklasy{
+    background: rgb(140, 241, 252);
 }
 
 span{
@@ -193,6 +205,9 @@ span{
     border-left-width: 9px;
     border-left-style: dashed;
     border-left-color: green;
+
+    text-align: center;
+    margin: 0 auto;
 }
 
 .box-radius{
@@ -213,6 +228,7 @@ span{
     height: 100px;
     border-radius: 20%;
     background-color: #2196f3;
+    text-align: center;
 }
 
 .box-radius-three{
@@ -221,6 +237,8 @@ span{
     height: 120px;
     border-radius: 50%;
     background-color: #4caf50;
+    text-align: center;
+    margin: 0 auto;
 }
 .box-radius-four {
     padding: 10px;
@@ -247,4 +265,214 @@ span{
     /* dolny lewy róg */
     border-bottom-left-radius: 55px;
     background-color: #a1bd27;
+}
+
+/* Koty */
+.section-koty{
+    font-family: sans-serif;
+        line-height: 1.5;
+        background-color: #f9f9fd;
+}
+
+.card {
+    max-width: 200px;
+    margin: 0 auto;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #f44336;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.card-image {
+    max-width: 100%;
+}
+.card-image.no-gap {
+    display: inline;
+}
+
+.card-heading {
+    margin: 0;
+    padding: 20px;
+    font-weight: 500;
+    background-color: #03a9f4;
+}
+
+.card +.card{
+    margin-top: 20px;
+}
+
+.list {
+    list-style-position: inside;
+    list-style-image: none;
+    list-style-type:circle;
+}
+
+.link-liniowo-blokowy {
+    display: inline-block;
+    padding: 16px 32px;
+
+    border-radius: 3px;
+    background-color: teal;
+    color: white;
+
+    font-family: sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.pane {
+    display: none;
+    padding: 8px;
+    border: 1px solid blue;
+    border-radius: 3px;
+}
+
+.is-active {
+    display: block;
+}
+
+/* Pseudoklasy */
+.list-item-pseudoklasy {
+    margin-bottom: 12px;
+}
+
+.list-item-pseudoklasy:first-child {
+    margin-top: 0;
+    color: #212ff3;
+}
+.list-item-pseudoklasy:last-child {
+    margin-bottom: 0;
+    color:#2196f3;
+}
+
+.list-item-pseudoklasy:first-child {
+    margin-top: 0;
+    color: #212ff3;
+}
+
+.list-item-pseudoklasy1:not(:last-child) {
+    color: #aaf321;
+}
+
+.list-nth-child{
+    display: flex;
+    padding: 10px;
+    gap: 10px
+
+}
+.list-item-nth-child{
+    background-color: rgb(0, 4, 255);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+        
+}
+
+.nth-child-5 :nth-child(5) {
+    background-color: orange;
+}
+
+.nth-child-parzyste :nth-child(even){
+    background-color: orange;
+}
+
+.nth-child-nieparzyste :nth-child(odd) {
+    background-color: orange;
+}
+
+.nth-child-ostatnie :nth-child(n+6) {
+    background-color: orange;
+}
+
+.nth-child-pierwsze :nth-child(-n+5) {
+    background-color: orange;
+}
+
+.nth-child-pierwsze :nth-child(-n+5) {
+    background-color: orange;
+}
+
+.nth-child-trzecie :nth-child(3n+1) {
+    background-color: orange;
+}
+
+.nth-child-odkonca :nth-last-child(3) {
+    background-color: orange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+.footer {
+    background: #301212;;
+    padding: 10px 0;
+    color:cornsilk;
+}
+
+.contener-shadow-text2 {
+    color: var(--white);
+    text-shadow: 2px 2px 8px var(--white);
+
+}
+
+
+
+.link-footer{
+    display: inline-block;
+}
+
+.display-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+    text-align: center;
+    
+}
+
+.display-footer2{
+    display: flex;
+    text-align: center;
+}
+
+.footer-selection::selection{
+color: var(--white);
+    text-shadow: 2px 2px 8px var(--white);
+    background: var(--black);
 }
