@@ -97,7 +97,9 @@
           <h3>Właściwość <span>justify-content</span></h3>
           <p>
             Steruje pozycjonowaniem elementów na głównej osi, od main-start do
-            main-end.
+            main-end. Prawdopodobnie najczęstszym zastosowaniem jest centrowanie
+            elementów w pionie w wierszu, zwłaszcza jeśli elementy mają różne
+            wysokości.
           </p>
           <ul class="list-description">
             <li class="list-item">
@@ -124,6 +126,243 @@
               <span>space-evenly</span> - elementy są rozmieszczone w taki
               sposób, aby odległość między elementami i od elementów
               krawędziowych do granic kontenera była taka sama.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="">
+        <div
+          class="container background-color-container-four section4-flex-div"
+        >
+          <div class="section4-flex-div2">
+            <h3 class="section4-h3">Właściwość align-items</h3>
+            <p class="section4-p">
+              Steruje rozmieszczeniem elementów wzdłuż osi poprzecznej. Jest to
+              analog justify-content dla osi głównej.
+            </p>
+            <p class="section4-p2">
+              align-items: stretch | flex-start | flex-end | center | baseline
+            </p>
+          </div>
+          <ul class="section4-flex-ul">
+            <li class="section4-flex-item">
+              stretch - elementy rozciągają się na całą długość osi. Ta wartość
+              jest domyślna
+            </li>
+            <li>flex-start - elementy są dociskane do początku osi.</li>
+            <li>flex-end - elementy są dociskane do końca osi.</li>
+            <li>center - elementy są wyśrodkowane na osi.</li>
+            <li>
+              baseline - elementy są wyrównane po linii bazowej ich zawartości
+              tekstowej.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- section5 -->
+      <section>
+        <div
+          class="container background-color-container-five section5-inlineblock"
+        >
+          <h3 class="section5-h3">Właściwość flex-wrap</h3>
+          <p class="section5-p">
+            Domyślnie tworzony jest jednowierszowy kontener, a elementy są
+            rozmieszczane w jednym wierszu, zmniejszając się w razie potrzeby.
+            Właściwość flex-wrap pozwala na zmianę kontenera jednowierszowego w
+            kontener wielowierszowy. Elementy będą dodawane do wiersza, o ile
+            jest w nim miejsce, po czym automatycznie zostanie utworzony kolejny
+            wiersz.
+          </p>
+          <p class="section5-p">flex-wrap: nowrap | wrap | wrap-reverse</p>
+          <ul class="section5-flex-ul">
+            <li class="section5-flex-item">
+              nowrap - wszystkie elementy będą w jednym wierszu. Ta wartość jest
+              domyślna.
+            </li>
+            <li class="section5-flex-item">
+              wrap - umożliwia elementom przeskakiwanie do innych wierszy, które
+              są domyślnie ustawione od góry do dołu (wzdłuż osi poprzecznej).
+            </li>
+            <li class="section5-flex-item">
+              wrap-reverse - pozwala elementom przeskoczyć do innych wierszy
+              umieszczonych od dołu do góry (wzdłuż osi poprzecznej)
+            </li>
+          </ul>
+          <ul class="section5-flex-ul2">
+            <li>
+              1. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Inventore, commodi.
+            </li>
+            <li>
+              2. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptatibus natus aliquam ipsum officiis aperiam veniam?
+            </li>
+            <li>
+              3. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Mollitia ullam magni quaerat doloribus dolore sequi delectus
+              quisquam deleniti, blanditiis dolorum!
+            </li>
+            <li>
+              4. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              odit quod officiis repellat eos, aperiam nostrum id placeat
+              dolores dicta.
+            </li>
+            <li>
+              5. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint,
+              illo accusamus? Repellat similique ratione odit sequi dolorem,
+              doloremque voluptas culpa molestiae non fugiat ex nisi!
+            </li>
+            <li>
+              6. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              similique nihil, vitae cupiditate magni sequi soluta, ipsam ad
+              fuga, adipisci fugiat impedit a? Esse in quod nesciunt tenetur
+              voluptatibus reprehenderit?
+            </li>
+            <li>
+              7. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+              repellendus qui voluptatem dolorum nesciunt doloribus ipsa
+              inventore autem, culpa impedit asperiores commodi eligendi harum
+              aspernatur debitis ab vitae. Aperiam dolore, magni repellat amet
+              vero temporibus.
+            </li>
+            <li>
+              8. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+              nulla ratione eveniet necessitatibus eaque nam? Sed, eius
+              voluptas! Illo, molestias quam. Quos fugiat enim eius animi
+              ducimus vitae numquam sed accusantium porro, voluptatum laboriosam
+              magnam voluptatibus error, molestiae sapiente iste.
+            </li>
+            <li>
+              9. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+              iusto autem eaque asperiores rem non enim soluta neque, recusandae
+              voluptatem fuga nostrum nemo natus dolor veniam aspernatur hic
+              rerum modi odio, tempora obcaecati maiores in exercitationem. Eum
+              voluptates iure amet doloremque velit praesentium nostrum cum.
+            </li>
+            <li>
+              10. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident dolore, asperiores, voluptatum quaerat distinctio
+              reiciendis debitis laboriosam, pariatur quod accusamus nobis
+              quidem nulla consectetur nostrum ullam sunt optio illum repellat
+              tenetur. A laborum rem provident illo fugit distinctio nostrum
+              voluptate dolore consequatur vitae earum omnis, enim porro
+              cupiditate voluptatibus illum?
+            </li>
+            <li>
+              11. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Molestiae nihil labore veritatis? Eos est voluptatum, ducimus
+              facilis sapiente expedita! Id placeat, fugit et est facere
+              ducimus. Voluptatem at perspiciatis dolorum. Labore totam quis
+              nobis asperiores est, nemo ut nam perspiciatis beatae architecto,
+              doloremque voluptas, eaque hic magni a! Eius, architecto?
+              Architecto magni sed laudantium iste sint quos suscipit dicta
+              amet.
+            </li>
+            <li>
+              12. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Suscipit dolor blanditiis reprehenderit quaerat, omnis, autem
+              similique ipsa fuga ea perspiciatis voluptatibus laudantium iure
+              aperiam ad recusandae cum possimus. Ipsum, repellat fuga nisi
+              autem placeat nulla ullam et quis nihil perferendis neque eius
+              facilis, soluta magni ea a? Eos voluptates est laboriosam
+              doloremque, illum aspernatur nobis, perferendis voluptatibus
+              animi, dignissimos quia odio labore temporibus alias aut?
+            </li>
+            <li>
+              13. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aliquid at tempore enim impedit dolorem odit fugiat. Inventore at
+              rerum cumque quod. Alias id sed necessitatibus incidunt totam amet
+              et laudantium voluptatibus. Accusantium voluptatem quod possimus
+              recusandae explicabo error, nostrum inventore veritatis mollitia,
+              sapiente officiis hic tempora facilis perspiciatis ipsa ad facere
+              cupiditate maxime dolorum! Possimus sit ab explicabo! Nesciunt
+              consectetur rem magni aut voluptatem tempore porro fugit
+              architecto vel perferendis!
+            </li>
+            <li>
+              14. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Dignissimos eveniet placeat alias, dolorum facilis tempora
+              doloribus enim iusto dicta sequi voluptatem officiis blanditiis
+              quam quas nesciunt. Velit ad fugiat incidunt libero suscipit est
+              tenetur dolore accusamus, ut ducimus explicabo at eos eligendi
+              quos perspiciatis quis obcaecati dolorum. Iusto voluptatem natus
+              sed accusantium. Ab aliquid earum voluptatum tempore nostrum
+              facere, cupiditate odio impedit nisi id ducimus iure aut,
+              doloribus odit corrupti quia fugiat ipsam architecto error.
+            </li>
+            <li>
+              15. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus nemo officia perferendis nostrum corrupti
+              exercitationem rerum maiores at, mollitia voluptatibus architecto
+              fuga temporibus hic modi accusamus sint corporis facilis ea
+              dolorem. Suscipit aspernatur numquam minima quidem velit esse quam
+              cum totam culpa facere, quaerat officia ad sunt amet excepturi qui
+              eaque beatae recusandae ut? Iusto expedita quam unde quasi commodi
+              impedit architecto, ullam quo cum doloribus nobis placeat eum
+              accusantium saepe quibusdam veniam error repudiandae ab in
+              dignissimos, delectus libero.
+            </li>
+            <li>
+              16. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Labore nulla praesentium consectetur maiores eius cum, earum quo
+              accusamus quasi dolores voluptates fugit. Dolore, mollitia sit?
+              Placeat nam dolor, tenetur blanditiis laboriosam eveniet atque eos
+              debitis repellendus fugit corporis porro esse officia nihil,
+              quisquam fugiat reiciendis velit quidem ab pariatur nemo
+              dignissimos adipisci! Recusandae fugiat dignissimos earum expedita
+              possimus quasi inventore.
+            </li>
+            <li>
+              17. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+              dolorem odio, quas vero dolores ipsa enim adipisci tenetur
+              deleniti dolorum cupiditate, sit at amet quos, repellat in
+              possimus quod. Voluptatum sunt dolorem atque ipsum eligendi
+              molestiae aliquam, amet nisi consequatur, alias reprehenderit
+              deleniti omnis, delectus maxime perspiciatis illum dolorum ipsam
+              molestias? Laboriosam quibusdam saepe ut iste quidem dolore quos
+              odit maiores amet deleniti, incidunt dolor vel enim dignissimos
+              dolores nostrum eius reprehenderit debitis veritatis reiciendis
+              nisi blanditiis ea repudiandae at. Quidem ipsum ducimus cum omnis!
+            </li>
+            <li>
+              18. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Commodi quis fugit possimus eveniet molestiae nobis voluptas,
+              minus unde rerum, omnis laborum dicta. Perspiciatis consequatur,
+              sapiente deleniti nihil dolor praesentium adipisci id voluptatum
+              dignissimos consectetur sit, necessitatibus ipsam, odit modi
+              velit. Vero a ex tempora facere distinctio, dolores harum quasi
+              temporibus repudiandae iste nisi, maxime, fugit quaerat nesciunt
+              neque. Ex deserunt excepturi officiis, esse magni sit aperiam quia
+              praesentium dolorum maxime iste blanditiis labore eos at porro
+              reprehenderit libero facilis qui, delectus in vitae. Ea, id.
+            </li>
+            <li>
+              19. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Aliquid quos earum, aspernatur repellendus cupiditate ratione
+              minus perferendis ullam autem facilis dolorem neque porro rerum
+              possimus repudiandae! Voluptatem sed ut ab nostrum sunt libero,
+              veniam maiores, esse corrupti aut ullam, ex eligendi recusandae.
+              Rerum perferendis aspernatur dolorum, placeat enim quam maxime
+              porro ipsum! Nostrum rem amet ratione quos. Repellat debitis
+              totam, eius nam facilis, nesciunt praesentium assumenda sapiente,
+              culpa dolore iste voluptatum modi ullam beatae velit? Rem cum vel
+              deleniti temporibus aliquam sapiente voluptate, rerum repellat
+              quibusdam, hic quia, commodi ipsa.
+            </li>
+            <li>
+              20. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Saepe dolores sed, non, enim distinctio perferendis ipsum
+              consectetur natus laborum tenetur quam asperiores consequuntur
+              debitis iste voluptas nostrum aliquid expedita ullam eaque a
+              possimus culpa. Cum, beatae quam accusamus magnam veritatis
+              voluptates cupiditate saepe quae eaque repudiandae optio rerum
+              autem mollitia deleniti labore sunt ipsa, veniam vero consequatur?
+              Accusamus similique facere praesentium reprehenderit? Eaque unde
+              magni dolorum distinctio ipsum, veritatis nobis tenetur illum
+              tempora natus ipsa impedit! Ab tenetur corporis ex porro
+              asperiores reprehenderit unde dolor. Expedita voluptates dolores
+              porro deserunt molestiae, nulla, architecto iusto eius alias
+              dolorem laudantium officiis nobis?
             </li>
           </ul>
         </div>
