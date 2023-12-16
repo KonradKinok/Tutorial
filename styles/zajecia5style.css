@@ -237,6 +237,9 @@ span{
 }
 
 .box-radius-one{
+    display: flex;
+    align-items: center;
+        justify-content: center;
     width: 140px;
     height: 80px;
     border-radius: 10px;
@@ -357,6 +360,9 @@ span{
 /* Pseudoklasy */
 .list-item-pseudoklasy {
     margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+        justify-content: center;
 }
 
 .list-item-pseudoklasy:first-child {

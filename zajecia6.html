@@ -7,8 +7,8 @@
       name="description"
       content="Supplicia Konrad Konik Nauka podstaw HTML5 dla początkujących"
     />
-    <link rel="stylesheet" href="styles/zajecia6style.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/zajecia6.1style.css" />
+    <title>Zajęcia 6</title>
   </head>
   <body>
     <header>
@@ -45,7 +45,12 @@
             <li><a class="link" href="./supplicia.html">Supplicia</a></li>
             <li><a class="link" href="./zajecia4.html">Zajęcia4</a></li>
             <li><a class="link" href="./zajecia5.html">Zajęcia5</a></li>
-            <li><a class="link" href="./zajecia6.html">Zajęcia6</a></li>
+            <li>
+              <a class="link" href="./zajecia6.html">Zajęcia6</a>
+              <ul>
+                <li><a class="link" href="./zajecia6.1.html">Zajęcia6.1</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>
@@ -365,6 +370,251 @@
               dolorem laudantium officiis nobis?
             </li>
           </ul>
+        </div>
+      </section>
+      <!-- section6 -->
+      <section>
+        <div class="container background-color-container-six section6-div">
+          <h3>Siatka</h3>
+          <p>
+            calc((100% - number_of_gaps_in_row * value_of_one_gap) /
+            number_of_elements_in_row)
+          </p>
+        </div>
+      </section>
+      <!-- section7 -->
+      <section>
+        <div class="container background-color-container-seven section7-div">
+          <div class="section7-div2">
+            <h3>Właściwość align-content</h3>
+            <p>
+              align-content: flex-start | flex-end | center | space-between |
+              space-around | space-evenly | stretch
+            </p>
+          </div>
+          <div class="section7-div3">
+            <ul class="section7-ul">
+              <li>
+                stretch - wiersze rozciągają się równomiernie, aby zająć całą
+                przestrzeń. Domyślna wartość
+              </li>
+              <li>flex-start - wiersze są dociskane do początku osi.</li>
+              <li>flex-end - wiersze są dociskane do końca osi.</li>
+              <li>center - wiersze są wyśrodkowane na osi</li>
+            </ul>
+            <p class="text">
+              Wartości space-between, space-around i space-evenly działają
+              podobnie do właściwości justify-content, ale tylko dla wierszy i
+              są rzadko używane.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- section8 -->
+      <section>
+        <div class="container background-color-container-eight section8-div">
+          <h2>Właściwości elementu</h2>
+          <p>
+            Flex-elementy - to elementy dzieci flex-kontenera, elementy
+            zagnieżdżenia pierwszego poziomu. Flex-elementy (dalej po prostu
+            elementy) przestają być zgodne ze standardowym obiegiem dokumentu,
+            tracą swój typ (blokowy, liniowy itp.) i postępują zgodnie z
+            regułami ustawionego modelu Flexbox.
+          </p>
+        </div>
+      </section>
+      <!-- section9 -->
+      <section>
+        <div class="container background-color-container-nine section9-div">
+          <h3>Właściwość flex-basis</h3>
+          <p>
+            Określa początkowy rozmiar elementu przed przydzieleniem wolnego
+            miejsca. Wartością może być dowolna prawidłowa wartość: piksele,
+            procenty, rem itp. Dla flex-elementów jest to zamiennik właściwości
+            width, ale z pewnymi cechami. W przykładach w tej lekcji wszystkie
+            elementy flex zostały ustawione na flex-basis, a nie width.
+          </p>
+          <p class="text">flex-basis: auto | wartość</p>
+          <ul class="section9-ul">
+            <li>
+              Jeśli określono obie właściwości, flex-basis i width, to
+              właściwość width jest ignorowana
+            </li>
+            <li>
+              Właściwość flex-basis nie jest ostatecznym rozmiarem elementu, ale
+              rozmiar przed przydzieleniem wolnego miejsca.
+            </li>
+            <li>
+              Właściwości min-width i max-width działają jak ograniczenia
+              rozmiaru elementu nawet jeśli ma on flex-basis, a nie width.
+            </li>
+            <li>
+              Właściwość flex-basis może określić wysokość, a nie szerokość
+              elementu. Dzieje się tak, gdy główna oś jest pionowa.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- section10 -->
+      <section>
+        <div class="container background-color-container-ten section10-div">
+          <h2>Właściwość flex-grow</h2>
+          <p>
+            Określa zdolność elementu, w zależności od potrzeb, do zajmowania
+            większej ilości miejsca (rosnąć) niż jego rozmiar początkowy.
+            Wartość jest określana jako proporcja (ułamek) wolnego miejsca w
+            kontenerze.
+          </p>
+          <p>flex-grow: ułamek</p>
+          <p>
+            Domyślnie wszystkie elementy są ustawione na 0, to znaczy elementy
+            nie próbują zajmować dodatkowego wolnego miejsca, nawet jeśli takie
+            istnieje. Nie można określić wartości ujemnych. Na przykład, jeśli
+            wszystkie elementy mają tę samą wartość tej właściwości, one zajmą
+            taką samą ilość miejsca w kontenerze. Ale jeśli ustawisz dla
+            wszystkich wartość 1, i dla jednego elementu 2, wtedy on będzie
+            próbował zająć dwa razy więcej miejsca niż jakikolwiek inny element.
+          </p>
+          <ul class="section10-ul">
+            <li class="jeden">1</li>
+            <li class="dwa">2</li>
+            <li class="trzy">3</li>
+            <li class="jeden">1</li>
+            <li class="dwa">2</li>
+            <li class="trzy">3</li>
+          </ul>
+          <div class="cards-container">
+            <div class="card-container">
+              <div class="content">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque,
+                cum sint obcaecati reiciendis dignissimos quod quaerat ducimus
+                et placeat doloremque.
+              </div>
+              <div class="meta">Card footer</div>
+            </div>
+            <div class="card-container">
+              <div class="content">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Asperiores in similique quos eveniet harum dolorum illum
+                dignissimos, consequuntur esse commodi, optio maxime vel et quas
+                inventore eius? Similique velit reprehenderit ullam facilis
+                perferendis id ab impedit in sed quasi quos soluta ea debitis at
+                iste, dignissimos, natus, eos nulla eum.
+              </div>
+              <div class="meta">Card footer</div>
+            </div>
+            <div class="card-container">
+              <div class="content">Lorem</div>
+              <div class="meta">Card footer</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container background-color-container-eleven container11">
+          <h3>Właściwość align-self</h3>
+          <p>
+            Umożliwia elementowi zmianę jego położenia na osi poprzecznej przez
+            zastąpienie wartości właściwości align-items z kontenera. Nie ma
+            odpowiednika dla osi głównej; element może przemieszczać się tylko
+            na osi poprzecznej.
+          </p>
+          <p>
+            align-self: auto | flex-start | flex-end | center | baseline |
+            stretch
+          </p>
+          <p>
+            Wróćmy do naszej przykładowej karty z obrazem i treścią. Aby
+            rozwiązać problem pionowego rozciągnięcia obrazu, wykorzystaliśmy
+            właściwość align-items kontenera. Właściwość align-self pozwala na
+            dokładniejsze rozwiązanie tego problemu, poprzez nadpisanie wartości
+            align-items tylko dla obrazu.
+          </p>
+          <div class="section11-cards-container">
+            <div class="section11-card-container">
+              <img
+                class="section11-img1"
+                src="./images/sprowadzenieUe1920x1920.png"
+                alt=""
+                width="240px"
+              />
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. At,
+                molestiae quia nam enim quam illo voluptatum atque? Ipsa animi,
+                est atque debitis autem alias rerum nihil, odit soluta quae
+                delectus neque consequuntur? Distinctio inventore magnam fugit
+                consequatur tenetur. Nobis, eum numquam quia voluptatem
+                necessitatibus officiis ipsam error dolore odio optio rem
+                repellat sint illum incidunt laborum deleniti voluptatibus
+                facilis, tenetur officia excepturi reiciendis! Ea nihil et quos
+                vel a omnis ipsum, quidem, eius debitis officiis, laudantium
+                ipsam possimus corrupti! Ab voluptas molestiae id laborum error
+                libero deleniti distinctio nisi unde doloremque consequatur
+                tempora consectetur aut, numquam odit, doloribus qui debitis.
+              </p>
+            </div>
+            <div class="section11-card-container">
+              <img
+                class="section11-img2"
+                src="./images/sprowadzenieUe1920x1920.png"
+                alt=""
+                width="240px"
+              />
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Incidunt perspiciatis, enim cumque quia corrupti vero repellat
+                dolor nisi a sunt eos cum ex asperiores magni voluptatem
+                repudiandae dolorum! Mollitia ipsam nisi perspiciatis vero
+                quidem temporibus exercitationem alias laboriosam nam labore
+                necessitatibus repellat ipsa, minima unde numquam ratione
+                tempora dignissimos esse!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container background-color-container-twelve container12">
+          <h3>Właściwość order</h3>
+          <p>
+            Domyślnie elementy są ułożone w kolejności, w jakiej pojawiają się w
+            pliku HTML. Korzystając z właściwości order można wizualnie zmienić
+            kolejność elementów wzdłuż głównej osi. Jednak w kodzie HTML nic się
+            nie zmieni.
+          </p>
+          <p>order: pozycja</p>
+          <p>
+            Ta właściwość nie jest często używana, ponieważ narusza połączenie
+            między wizualną kolejnością elementów a sposobem ich wyświetlania
+            przez przeglądarkę i technologie wspomagające.
+          </p>
+          <ul class="section12-list">
+            <li class="">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li class="section12-order">5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div class="container background-color-container-thirteen">
+          <h3>Zajęcia</h3>
+          <div class="section13-wrapper">
+            <div class="section13-flex-container">
+              <div class="section13-box">1</div>
+              <div class="section13-box">2</div>
+              <div class="section13-box">3</div>
+            </div>
+          </div>
+        </div>
+        <div class="container background-color-container-thirteen">
+          <div></div>
         </div>
       </section>
     </main>

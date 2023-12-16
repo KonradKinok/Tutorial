@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;700&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <!-- <style type="text/css">	@import url(./styles/stylStartowy.css);	</style> -->
+    <link rel="stylesheet" href="/styles/stylStartowy.css" />
+    <link rel="stylesheet" href="./styles/zajecia7style.css" />
+    <title>Zajęcia 7</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <div class="header-container">
+          <h1 class="text">Tło elementu</h1>
+          <p class="text">
+            Tło jest nie tylko efektem dekoracyjnym dla stylizacji, ale także
+            pomocą w zrozumieniu znaczenia, wskazówką dotyczącą zawartości
+            elementu. Na przykład kolor zielony jest powiązany z akcją pomyślną,
+            a czerwony - z błędem.
+          </p>
+          <p class="text">
+            Jeśli tekst jest jasny, tło powinno być ciemne (i odwrotnie), w
+            przeciwnym razie czytanie stanie się trudne lub niemożliwe. Tekst z
+            nazwą firmy na tle palm i nadmorskiej plaży szybko zasugeruje pole
+            działania i pomoże zdecydować, czy kontynuować eksplorację treści.
+          </p>
+          <p class="text">
+            Uwaga Domyślnie tło elementu rozpowszechnia się na content i
+            padding. Na margin nigdy nie rozpowszechnia się, to jest odstęp
+            zewnętrzny.
+          </p>
+        </div>
+        <nav class="nav-container">
+          <!-- Nawigacja do innych stron -->
+          <ul class="nav-list-container">
+            <li><a class="link" href="./index.html">Index</a></li>
+            <li><a class="link" href="./listy.html">Listy</a></li>
+            <li><a href="./tabele.html">Tabele</a></li>
+            <li>
+              <a href="./obrazkiStrona.html">Multimedia</a>
+              <ul>
+                <li><a href="./obrazkiStrona.html#obrazki">Obrazki</a></li>
+                <li><a href="./obrazkiStrona.html#filmy">Film</a></li>
+                <li><a href="./obrazkiStrona.html">Dźwięk</a></li>
+              </ul>
+            </li>
+            <li><a href="./linki.html">Linki</a></li>
+            <li><a href="./rozneStrona.html">Różne</a></li>
+            <li><a href="./supplicia.html">Supplicia</a></li>
+            <li><a href="./zajecia4.html">Zajęcia4</a></li>
+            <li><a href="./zajecia5.html">Zajęcia5</a></li>
+            <li>
+              <a href="./zajecia6.html">Zajęcia6</a>
+              <ul>
+                <li><a href="./zajecia6.1.html">Zajęcia6.1</a></li>
+              </ul>
+            </li>
+            <li><a href="./zajecia7.html">Zajęcia 7</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h3 class="text">Właściwość background-color</h3>
+        <p class="text">
+          Ustawia kolor tła elementu. Wartością może być słowo zastrzeżone lub
+          kolor zapisany w formacie RGB, RGBA lub HEX.
+        </p>
+        <p class="text">background-color: kolor</p>
+      </section>
+      <section class="section1">
+        <div class="text text-color">
+          <h3>Właściwość background-image</h3>
+          <p>
+            Ustawia obraz tła elementu, którego adres jest określony przez
+            argument funkcji url(). Może to być ścieżka względna lub
+            bezwzględna.
+          </p>
+          <p>background-image: url('adres zdjęcia');</p>
+          <p>
+            Możesz od razu ustawić kolor tła i obraz tła, który będzie na
+            wierzchu tła. Na przykład w przypadku, gdy obraz tła nie został
+            załadowany, użytkownik zobaczy przynajmniej kolor tła, a nie puste
+            miejsce.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div>
+          <div>
+            <h3>Właściwość background-repeat</h3>
+            <p>
+              Steruje powtarzaniem obrazu tła. Domyślnie powtarza się poziomo i
+              pionowo. Jest to zauważalne, jeśli obraz jest mniejszy niż rozmiar
+              elementu.
+            </p>
+            <p>background-repeat: repeat | repeat-x | repeat-y | no-repeat</p>
+            <ul>
+              <li>repeat - powtarzać wzdłuż X i Y. Wartość domyślna</li>
+              <li>repeat-x - powtarzać tylko wzdłuż X, czyli poziomo.</li>
+              <li>repeat-y - powtarzać tylko wzdłuż Y, czyli pionowo.</li>
+              <li>no-repeat - nie powtarzać.</li>
+            </ul>
+          </div>
+          <div></div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

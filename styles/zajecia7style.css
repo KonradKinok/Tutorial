@@ -1,0 +1,43 @@
+.text{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.header-container:last-child{
+margin-bottom: 40px;
+}
+
+.nav-list-container{
+    display: flex;
+    justify-content:flex-start;
+    gap: 0 5px;
+    padding: 0 30px;
+    background: blueviolet;
+}
+
+.nav-list-container a {
+    display: flex;
+    background: beige;
+    gap: 10px;
+    margin: 10px auto;
+        padding: 10px;
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+                0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+
+.nav-list-container a:hover {
+color:black;
+background: blueviolet;
+    text-decoration: dashed;
+}
+
+.section1{
+    border: 2px solid #fd7e14;
+    background-color: #eed9d9;
+        background-image: url("../images/chmury.jpg");
+}
+
+.section1 .text{
+    color: rgb(28, 0, 128);
+}
