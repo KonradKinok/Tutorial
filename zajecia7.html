@@ -101,7 +101,7 @@
       </section>
       <section>
         <div>
-          <div>
+          <div class="section2 text">
             <h3>Właściwość background-repeat</h3>
             <p>
               Steruje powtarzaniem obrazu tła. Domyślnie powtarza się poziomo i
@@ -116,7 +116,138 @@
               <li>no-repeat - nie powtarzać.</li>
             </ul>
           </div>
-          <div></div>
+          <div>
+            <ul class="section2-list">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <div>
+            <div class="section3-container text">
+              <h3>Właściwość background-position</h3>
+              <p>
+                Kontroluje położenie obrazu tła względem granic elementu przy
+                użyciu dwóch współrzędnych - poziomej x i pionowej y.
+              </p>
+              <p>background-position: x y</p>
+            </div>
+            <div>
+              <ul class="section3-list">
+                <li class="item section3-list-item1"></li>
+                <li class="item section3-list-item2"></li>
+                <li class="item section3-list-item3"></li>
+                <li class="item section3-list-item4"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="section3-container text">
+            <h4>Pozycja offsetowa (przesunięcie)</h4>
+            <p>
+              Aby nie przywiązywać się do wymiarów elementu i nie ustalać
+              sztywnego położenia tła, można użyć składni przesunięcia pozycji.
+            </p>
+            <p>background-position: x przesunięcie-x y przesunięcie-y</p>
+            <p>
+              Na przykład, jeśli chcesz umieścić tło w prawym dolnym rogu
+              elementu o dowolnych rozmiarach tak, aby tło pozostawało poza
+              granicami o 30px po prawej stronie i 20px od dołu.
+            </p>
+            <p>background-position: right 30px bottom 20px;</p>
+          </div>
+          <div>
+            <ul class="section3-list flex-align">
+              <li class="one-background"></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- section4 -->
+      <section>
+        <div>
+          <div class="text">
+            <h3>Właściwość background-size</h3>
+            <p>
+              Domyślnie przeglądarka nie zmienia rozmiaru obrazu tła. Jeśli
+              obraz jest większy lub mniejszy niż rozmiar elementu, będzie puste
+              miejsce nie zajęte przez tło lub odwrotnie, tło będzie widoczne
+              tylko częściowo.
+            </p>
+            <p>background-size: auto | wartość | cover | contain</p>
+            <p>
+              Ta właściwość umożliwia dostosowanie wymiarów obrazu poprzez
+              określenie wymaganej szerokości i wysokości. Jeśli nie podasz
+              wysokości, zostanie ona obliczona automatycznie, zachowując
+              proporcje.
+            </p>
+            <ul class="section4-list">
+              <li class="item1"></li>
+              <li class="item2"></li>
+              <li class="item3"></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <div class="text">
+            <h3>Wartości contain i cover</h3>
+            <p>
+              Wartością mogą być również dwa zastrzeżone słowa - contain i
+              cover. Starają się maksymalnie umieścić obraz tła do całego
+              kontenera, w którym się znajdują.
+            </p>
+            <table class="table-border">
+              <thead class="table-head">
+                <tr>
+                  <th>Lp.</th>
+                  <th>Contain</th>
+                  <th>Cover</th>
+                </tr>
+              </thead>
+              <tbody class="table-body">
+                <tr>
+                  <td>1</td>
+                  <td>Gwarantowane zachowanie proporcji obrazu.</td>
+                  <td>Gwarantowane zachowanie proporcji obrazu.</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>
+                    Obraz jest ustawiony na maksymalny możliwy rozmiar (nie
+                    większy niż oryginał), przy którym całkowicie pasuje do
+                    elementu.
+                  </td>
+                  <td>
+                    Obraz jest ustawiony na minimalny rozmiar, przy którym
+                    wypełni tło całego elementu.
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>
+                    Obraz może nie pokrywać całego tła elementu w pionie lub
+                    poziomie, jeśli proporcje bloku i obrazu nie pasują do
+                    siebie.
+                  </td>
+                  <td>
+                    Jeśli proporcje obrazu i elementu są różne, część obrazu, w
+                    pionie lub w poziomie, jest wizualnie obcinana.
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot class="table-foot">
+                <td></td>
+                <td class="table-contain"></td>
+                <td class="table-cover"></td>
+              </tfoot>
+            </table>
+          </div>
         </div>
       </section>
     </main>

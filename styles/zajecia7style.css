@@ -32,12 +32,259 @@ background: blueviolet;
     text-decoration: dashed;
 }
 
+/* section1 */
 .section1{
     border: 2px solid #fd7e14;
     background-color: #eed9d9;
         background-image: url("../images/chmury.jpg");
 }
 
-.section1 .text{
+.text{
     color: rgb(28, 0, 128);
+}
+
+/* section2 */
+.section2.text{
+    color: rgb(28, 0, 128);
+}
+
+.section2-list{
+    
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 30px 10px;
+}
+
+.section2-list li{
+    flex-basis: calc(100% / 4 - 10px);
+    position: relative;
+    height: 200px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 4px;
+    background-image: url("../images/konikMaly24x24.png");
+}
+
+.section2-list li::before {
+    position: absolute;
+    top:-30px;
+    width:100%;
+    text-align: center;
+    color:chartreuse;
+}
+
+.section2-list :nth-child(1) {
+    background-repeat: repeat;
+}
+
+.section2-list :nth-child(1)::before {
+    content: "repeat";
+}
+
+.section2-list :nth-child(2) {
+    background-repeat: repeat-x;
+}
+.section2-list :nth-child(2)::before {
+    content: "repeat-x";
+}
+
+.section2-list :nth-child(3) {   
+background-repeat: repeat-y;
+}
+
+.section2-list :nth-child(3)::before {
+content: "repeat-y";
+}
+
+.section2-list :nth-child(4) {
+background-repeat: no-repeat;
+}
+
+.section2-list :nth-child(4)::before {
+    content: "no-repeat";
+}
+
+/* section3 */
+.section3-container{
+margin-bottom: 50px;
+}
+
+.section3-list {
+    display: flex;
+    padding: 0 30px;
+    gap: 0 10px;
+}
+
+.section3-list .item {
+    flex-basis: calc(100% / 4 - 10px);
+    position: relative;
+    height: 200px;
+    
+    border: 2px solid black;
+    border-radius: 4px;
+    background-image: url("../images/balloons-sky.jpg");
+    background-size: 30%;
+    background-repeat: no-repeat;
+}
+
+.section3-list .item::before {
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    text-align: center;
+    color: chartreuse;
+}
+
+.section3-list-item1{
+    background: white;
+    background-position: 50% 50%;
+    
+}
+
+.section3-list-item1::before {
+    content: "Wyśrodkuje obraz tła";
+}
+
+.section3-list-item2 {
+    background: white;
+    background-position: 10px 20px;
+}
+
+.section3-list-item2::before {
+    content: "Umieści obraz tła 10px od lewej strony i 20px od góry";
+}
+
+.section3-list-item3 {
+    background: white;
+    background-position: right bottom;
+}
+
+.section3-list-item3::before {
+    content: "Umieści obraz tła w prawym dolnym rogu";
+}
+
+.section3-list-item4 {
+    background: white;
+    background-position: left top;
+}
+
+.section3-list-item4::before {
+    content: "Umieści obraz tła w lewym górnym rogu";
+}
+
+/* Section3 - Pozycja offsetowa (przesunięcie) */
+.flex-align{
+justify-content: center;
+}
+
+.section3-list .one-background {
+    width: 50%;
+    position: relative;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 4px;
+    background: white;
+    background-image: url("../images/balloons-sky.jpg");
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: right 30px bottom 20px;
+}
+
+.section3-list .one-background::before {
+    position: absolute;
+    content: "Na przykład, jeśli chcesz umieścić tło w prawym dolnym rogu elementu o dowolnych rozmiarach tak,        aby tło pozostawało poza granicami o 30px po prawej stronie i 20px od dołu.";
+    top: -50px;
+    left: -50%;
+    width: 200%;
+    text-align: center;
+    color: chartreuse;
+}
+
+/* section4 */
+.section4-list {
+    display: flex;
+    padding: 0 30px;
+    gap: 0 10px;
+}
+
+.section4-list li {
+    flex-basis: calc(100% / 3 - 10px);
+    position: relative;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 4px;
+    background: white;
+    background-image: url("../images/balloons-sky.jpg");
+    
+    background-repeat: no-repeat;
+}
+
+.section4-list li::before {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    color: chartreuse;
+} 
+
+.section4-list .item1 {
+    background-size:auto auto;
+}
+
+.section4-list .item1::before {
+    content: "Wyjściowe wymiary obrazu, wartość domyślna (auto auto)";
+}
+
+.section4-list .item2 {
+    background-size: 200px;;
+}
+
+.section4-list .item2::before {
+    content: "WSzerokość 200px, wysokość będzie proporcjonalna";
+}
+
+.section4-list .item3 {
+    background-size: 200px 300px;
+}
+
+.section4-list .item3::before {
+    content: "Szerokość 200px, wysokość 300px";
+}
+
+/* Tabele */
+.table-border{
+    padding: 0 20px;
+}
+
+.table-border th,
+.table-border td
+{
+    padding: 8px;
+    border: 1px solid #5a5757;
+}
+
+.table-body>tr:hover {
+    background-color: tomato;
+    color: white;
+    cursor: pointer;
+}
+
+.table-head>tr:hover {
+    background-color: rgb(15, 235, 26);
+    cursor: pointer;
+}
+
+.table-foot td{
+    height: 200px;
+    background-image: url("../images/balloons-sky.jpg");
+        background-repeat: no-repeat;
+}
+
+.table-contain{
+    background-size: contain;
+}
+
+.table-cover{
+    background-size: cover;
 }
