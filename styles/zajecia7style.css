@@ -124,7 +124,7 @@ margin-bottom: 50px;
     border: 2px solid black;
     border-radius: 4px;
     background-image: url("../images/balloons-sky.jpg");
-    background-size: 30%;
+    background-size: 70%;
     background-repeat: no-repeat;
 }
 
@@ -275,12 +275,20 @@ justify-content: center;
     cursor: pointer;
 }
 
-.table-foot td{
+.table-foot td:not(:first-child){
     height: 200px;
     background-image: url("../images/balloons-sky.jpg");
         background-repeat: no-repeat;
 }
 
+.table-foot td:first-child {
+    -ms-writing-mode: tb-rl;
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        white-space: nowrap;
+       
+}
 .table-contain{
     background-size: contain;
 }
@@ -288,3 +296,113 @@ justify-content: center;
 .table-cover{
     background-size: cover;
 }
+
+/* section5 */
+.section5-text{
+    margin-top:40px;
+}
+
+.section5-list{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+
+.section5-list li{
+    width: 50%;
+    background-size: cover;
+    background-size: contain;
+    box-shadow: 2px 2px 2px 2px rgba(247, 234, 234, 0.14);
+    text-shadow: 2px 2px 8px black;
+}
+
+.section5-fixed-background{
+    margin:20px 1%;
+    
+    background-image: url("../images/balloons-sky.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.section5-list-background{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 80px;
+margin: 20px 0;
+}
+
+.section5-list-background li{
+    width: 50%;
+    height: 200px;
+    
+    background: yellow;
+}
+
+.section5-list-background li:nth-child(even) {
+background: red;
+}
+
+.section5-list-background li:first-child {
+    margin-top: 20px;
+}
+
+.section5-list-background li:last-child {
+    margin-bottom: 20px;
+}
+
+.section5-layered-background{
+    height: 500px;
+    background-image: url("../images/konikMaly24x24.png"),url("../images/balloons-sky.jpg") ;
+    background-size: 50px 50px, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom 10px right 10px, bottom 0 right 0;
+    margin-bottom: 20px;
+}
+
+
+/* section6 */
+.section6-text-color{
+    background-color: #0848d3;
+    padding: 10px;
+    margin: 0 20px;
+    box-shadow: 5px 5px 5px 5px black;
+}
+
+.section6-text-color:hover {
+box-shadow: 1px 1px 1px 1px black;
+}
+
+.section6-list-images{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.thumb{
+    height: 663px;
+    width: 100%;
+    border: 2px dashed #2a2a2a;
+        border-radius: 4px;
+
+}
+
+.thumb > li{
+display: block;
+    height: 100%;
+    width: 100%;
+
+}
+
+.figure-card{
+    margin: 20px 0 0 20px;
+        flex-basis: calc(100% / 2 - 20px);
+        background: white;
+}
+

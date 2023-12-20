@@ -242,7 +242,7 @@
                 </tr>
               </tbody>
               <tfoot class="table-foot">
-                <td></td>
+                <td>Obrazek</td>
                 <td class="table-contain"></td>
                 <td class="table-cover"></td>
               </tfoot>
@@ -250,7 +250,217 @@
           </div>
         </div>
       </section>
+      <!-- section5 -->
+      <section>
+        <div>
+          <div class="text section5-text">
+            <h3>Właściwość background-attachment</h3>
+            <p>
+              Domyślnie obraz tła przewija się wraz z zawartością elementu. Za
+              pomocą właściwości background-attachment możesz ustalić tło na
+              miejscu i zapobiec jego przewijaniu podczas scrollowania.
+            </p>
+            <p>background-attachment: scroll| fixed | inherit</p>
+            <ul class="section5-list">
+              <li>
+                scroll - tło przewija się wraz z zawartością. To jest ustawienie
+                domyślne.
+              </li>
+              <li>fixed - tło nie przewija się, jest ustalone na miejscu.</li>
+            </ul>
+          </div>
+          <div class="section5-fixed-background">
+            <ul class="section5-list-background">
+              <li></li>
+              <li></li>
+              <li>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
+                nihil nobis vel quisquam illum veniam eligendi aut deleniti
+                facere suscipit sapiente alias blanditiis temporibus modi at
+                commodi eum, iusto similique iste quos, tempore magnam impedit.
+                Sed, inventore iure dolorum expedita, eveniet quaerat, tenetur
+                laudantium veritatis neque voluptas id mollitia impedit!
+              </li>
+              <li></li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+                sint nostrum illum eligendi vel quos, nihil repellendus facere
+                unde ullam totam fugit sed vero deserunt aut dolor voluptatem,
+                eveniet qui recusandae earum quas non placeat ducimus officiis!
+                Quae vitae, voluptas placeat ad est amet non aspernatur aliquid!
+                Officiis omnis tempora repudiandae ipsam, esse voluptate, optio
+                officia vel eius quaerat laboriosam recusandae quibusdam nam
+                explicabo eum! Repellat atque corporis iusto nihil modi minima
+                in magni autem, tenetur quibusdam tempore nemo incidunt
+                reprehenderit sint praesentium eaque amet nesciunt nam sed eos
+                harum expedita porro laboriosam? Vel, reiciendis voluptates fuga
+                consequatur odio dolorum.
+              </li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <div class="text">
+            <h3>Warstwowe tło</h3>
+            <p>
+              Elementowi można ustawić kilka obrazów tła w tym samym czasie.
+              Wystarczy je wymienić we właściwości background-image oddzielając
+              przecinkami. Dla każdego obrazu można również ustawić wartości
+              innych właściwości tła, również oddzielone przecinkami w każdej
+              właściwości.
+            </p>
+            <pre>
+              background-image: url('obraz-1'), url('obraz-2');
+              background-size: 100px, cover; background-position: top right, center;
+               background-repeat: repeat-x, no-repeat;
+            </pre>
+          </div>
+          <div class="section5-layered-background"></div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <div class="text">
+            <h3>Właściwość background</h3>
+            <p>
+              Właściwość która pozwala nam ustawić wszystkie wartości jakie
+              chcemy dla naszego tła bez koieczności powtarzania za pomocą
+              jednej reguły CSS.
+            </p>
+            <p>
+              background: background-color background-image background-repeat
+              background-position background-attachment
+            </p>
+            <p>
+              Jeśli jakikolwiek składnik nie zostanie określony, przyjęta
+              zostanie jego wartość domyślna.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- section6 -->
+      <section>
+        <div>
+          <h2 class="text">Właściwości object-fit i object-position</h2>
+          <p class="text">
+            Zdarzają się sytuacje, gdy obraz z treścią jest większy lub mniejszy
+            niż kontener, w którym należy go umieścić, lub obraz ma inne
+            proporcje. Na przykład, częstym zadaniem jest stworzenie
+            dopasowanych zdjęć do sekcji z produktami, która ma określoną
+            wysokość a więc potrzebujesz ładnie dopasować zdjęcie produktu o
+            dowolnym rozmiarze.
+          </p>
+          <div class="text">
+            <h3>Właściwość object-fit</h3>
+            <p>
+              Określa, jak zawartość "img" (lub "video") zmieści się w
+              kontenerze, jeśli ich wymiary lub proporcje nie są takie same.
+              Właściwość object-fit przycina, rozciąga lub skaluje obraz z
+              treścią. Działa to jak background-size dla obrazów dodawanych na
+              przykład za pomocą "img".
+            </p>
+            <p>object-fit: fill | contain | cover | scale-down | none</p>
+            <ul class="section6-text-color">
+              <li>
+                fill - obraz jest przeskalowany bez zachowania proporcji, aby
+                całkowicie wypełnić kontener. Wartość jest domyślna.
+              </li>
+              <li>
+                contain - obraz jest skalowany z zachowaniem proporcji, aby
+                maksymalnie wypełnić kontener.
+              </li>
+              <li>
+                cover - obraz jest skalowany z zachowaniem proporcji, aby
+                całkowicie wypełnić kontener.
+              </li>
+              <li>
+                scale-down - będzie wybrana wartość none albo contain, aby obraz
+                był najmniejszy.
+              </li>
+              <li>
+                none - wyjściowe wymiary obrazu są zachowane, określona wysokość
+                i szerokość nie mają wpływu.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="section6-list-images">
+              <li>
+                <figure class="figure-card">
+                  <div class="thumb">
+                    <img src="./images/lions.jpg" alt="" />
+                    <figcaption>Original image</figcaption>
+                  </div>
+                </figure>
+              </li>
+              <li>
+                <figure class="figure-card">
+                  <div class="thumb">
+                    <img src="./images/lions.jpg" alt="" />
+                    <figcaption>object-fit: fill</figcaption>
+                  </div>
+                </figure>
+              </li>
+              <li>
+                <figure class="figure-card">
+                  <div class="thumb">
+                    <img src="./images/lions.jpg" alt="" />
+                    <figcaption>object-fit: contain</figcaption>
+                  </div>
+                </figure>
+              </li>
+              <li>
+                <figure class="figure-card">
+                  <div class="thumb">
+                    <img src="./images/lions.jpg" alt="" />
+                    <figcaption>object-fit: cover</figcaption>
+                  </div>
+                </figure>
+              </li>
+              <li>
+                <figure class="figure-card">
+                  <div class="thumb">
+                    <img src="./images/lions.jpg" alt="" />
+                    <figcaption>object-fit: scale-down</figcaption>
+                  </div>
+                </figure>
+              </li>
+              <li>
+                <figure class="figure-card">
+                  <div class="thumb">
+                    <img src="./images/lions.jpg" alt="" />
+                    <figcaption>object-fit: none</figcaption>
+                  </div>
+                </figure>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer class="container footer">
+      <div class="contener-shadow-text2">
+        <h2>Footer</h2>
+        <div class="display-footer">
+          <a
+            class="link-footer"
+            href="https://lukaszkonik.pl"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <img src="./images/konikMaly24x24Squoosh.png" alt="logo" />
+          </a>
+          <div class="display-footer2">
+            <p class="footer-selection">All rights reserved &copy;</p>
+            <p>Konrad</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

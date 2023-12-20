@@ -70,3 +70,42 @@ a {
     text-decoration: none;
     
     }
+
+
+
+        /* Footer */
+        .footer {
+            background: #301212;
+    
+            padding: 10px 0;
+            color: cornsilk;
+        }
+    
+        .contener-shadow-text2 {
+            color: var(--white);
+            text-shadow: 2px 2px 8px var(--white);
+    
+        }
+    
+        .link-footer {
+            display: inline-block;
+        }
+    
+        .display-footer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 48px 24px;
+            text-align: center;
+    
+        }
+    
+        .display-footer2 {
+            display: flex;
+            text-align: center;
+        }
+    
+        .footer-selection::selection {
+            color: var(--white);
+            text-shadow: 2px 2px 8px var(--white);
+            background: var(--black);
+        }
