@@ -369,6 +369,9 @@ background: red;
 
 
 /* section6 */
+.section6{
+    margin-bottom: 20px;
+}
 .section6-text-color{
     background-color: #0848d3;
     padding: 10px;
@@ -387,26 +390,92 @@ box-shadow: 1px 1px 1px 1px black;
 }
 
 .figure-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 20px 0 0 20px;
     flex-basis: calc(100% / 2 - 20px);
     background: white;
-    padding: 10px;
+    padding: 0;
 }
 
-.thumb{
-    height: 663px;
+.thumb-original {
+    height: 643px;
     width: 100%;
+    border: 2px dashed #2a2a2a;
+    border-radius: 4px;
+}
+.thumb{
+    height: 320px;
+    width: 300px;
     
 border: 2px dashed #2a2a2a;
     border-radius: 4px;
+    
 }
 
 .thumb > li{
-display: block;
+display: flex;
     height: 100%;
     width: 100%;
 
 }
 
+.thumb > img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
 
 
+
+
+.img-fill{
+    object-fit: fill
+}
+
+.img-contain{
+object-fit: contain
+}
+
+.img-cover{
+object-fit: cover
+}
+
+.img-scale-down{
+object-fit: scale-down;
+}
+
+.img-none{
+    object-fit: none;
+}
+
+/* section7 */
+
+
+
+/* section8 */
+.section8-box{
+    margin: 20px;
+}
+
+.section8-box::before {
+    content: 'To jest tekst w ::before';
+    font-size: 40px;
+    color: orange;
+}
+
+.section8-box::after {
+    content: 'To jest tekst w ::after';
+    font-size: 30px;
+    color: teal;
+}
+
+.section8-box:hover::before {
+    color: green;
+}
+
+/* Zastosuj style do pseudoelementu .box::after podczas najechania kursorem na element .box */
+.section8-box:hover::after {
+    color: tomato;
+}

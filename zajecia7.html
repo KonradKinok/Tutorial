@@ -345,7 +345,7 @@
       </section>
       <!-- section6 -->
       <section>
-        <div>
+        <div class="section6">
           <h2 class="text">Właściwości object-fit i object-position</h2>
           <p class="text">
             Zdarzają się sytuacje, gdy obraz z treścią jest większy lub mniejszy
@@ -392,16 +392,18 @@
             <ul class="section6-list-images">
               <li>
                 <figure class="figure-card">
-                  <div class="thumb">
+                  <div class="thumb-original">
                     <img src="./images/lions.jpg" alt="" />
                   </div>
                   <figcaption>Original image</figcaption>
                 </figure>
               </li>
-              <li>
+            </ul>
+            <ul class="section6-list-images">
+              <li class="section6-list-item-images">
                 <figure class="figure-card">
                   <div class="thumb">
-                    <img src="./images/lions.jpg" alt="" />
+                    <img class="img-fill" src="./images/lions.jpg" alt="" />
                   </div>
                   <figcaption>object-fit: fill</figcaption>
                 </figure>
@@ -409,7 +411,7 @@
               <li>
                 <figure class="figure-card">
                   <div class="thumb">
-                    <img src="./images/lions.jpg" alt="" />
+                    <img class="img-contain" src="./images/lions.jpg" alt="" />
                   </div>
                   <figcaption>object-fit: contain</figcaption>
                 </figure>
@@ -417,7 +419,7 @@
               <li>
                 <figure class="figure-card">
                   <div class="thumb">
-                    <img src="./images/lions.jpg" alt="" />
+                    <img class="img-cover" src="./images/lions.jpg" alt="" />
                   </div>
                   <figcaption>object-fit: cover</figcaption>
                 </figure>
@@ -425,20 +427,116 @@
               <li>
                 <figure class="figure-card">
                   <div class="thumb">
-                    <img src="./images/lions.jpg" alt="" />
+                    <img
+                      class="img-scale-down"
+                      src="./images/lions.jpg"
+                      alt=""
+                    />
                   </div>
                   <figcaption>object-fit: scale-down</figcaption>
                 </figure>
               </li>
-              <li>
+              <li class="section6-list-images">
                 <figure class="figure-card">
                   <div class="thumb">
-                    <img src="./images/lions.jpg" alt="" />
+                    <img class="img-none" src="./images/lions.jpg" alt="" />
                   </div>
                   <figcaption>object-fit: none</figcaption>
                 </figure>
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+      <!-- section7 -->
+      <section>
+        <div>
+          <div class="text">
+            <h3>Właściwość object-position</h3>
+            <p>
+              Uzupełnia właściwość object-fit, aby umożliwić położenie obrazu w
+              kontenerze wzdłuż osi X i Y. Jest to podobne do
+              background-position, ale dotyczy obrazów z treścią.
+            </p>
+            <p>object-position: position | initial | inherit</p>
+            <p>
+              Wartością właściwości mogą być słowa zastrzeżone, jednostki
+              bezwzględne lub względne. Wartością domyślną jest 50% 50%, czyli
+              wyśrodkowane w pionie i poziomie.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- section7 -->
+      <section>
+        <div>
+          <div class="text">
+            <h2>Pseudoelementy</h2>
+            <p>
+              Pseudoelementy ::before i ::after służą do dodawania efektów
+              dekoracyjnych (ikon, tabliczek, nakładek) bez konieczności
+              tworzenia dodatkowych pustych tagów w znacznikach.
+            </p>
+            <ul>
+              <li>
+                ::before - tworzy pseudoelement przed całą zawartością elementu
+                (na początku).
+              </li>
+              <li>
+                ::after - tworzy pseudoelement po całej zawartości elementu (na
+                końcu).
+              </li>
+            </ul>
+            <p>
+              Domyślnie są to elementy liniowe. Aby ustawić geometrię pionową
+              pseudoelementowi, należy zmienić jego typ na blokowy lub
+              najczęściej na liniowo-blokowy.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- section8 -->
+      <section>
+        <div class="text">
+          <div>
+            <h3>Właściwość content</h3>
+            <p>
+              Ta wymagana właściwość umożliwia dodawanie treści tekstowej do
+              pseudoelementu. Nawet jeśli treść tekstowa nie jest potrzebna, jej
+              wartość musi być ustawiona na pusty wiersz, w przeciwnym razie
+              przeglądarka po prostu nie utworzy pseudoelementu.
+            </p>
+            <p>
+              W selektorze można użyć tylko jednego pseudoelementu, który należy
+              dodać po prostym selektorze (po tagu, klasie, identyfikatorze).
+            </p>
+            <p>
+              Nie używaj pseudoelementów do dodawania treści tekstowych, jest to
+              naruszenie specyfikacji, służą one wyłącznie do dekoracji. Tekst
+              wewnątrz pseudoelementu nie jest postrzegany przez technologie
+              wspomagające i indeksatory, a także będzie niedostępny dla
+              użytkownika, jeśli arkusz stylów nie jest załadowany.
+            </p>
+          </div>
+          <div class="section8-box">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias
+            dolor esse fugit ipsam, at fugiat provident mollitia animi. Tempore
+            voluptas architecto ipsam. Quam deserunt veniam id beatae incidunt
+            officiis pariatur quidem eos impedit totam, non quae perferendis ad
+            sint laborum magnam? Soluta sunt quaerat exercitationem, praesentium
+            inventore doloremque sequi doloribus!
+          </div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <div class="text">
+            <h3>Pseudoklasa :hover</h3>
+            <p>
+              Aby zmienić style pseudoelementu, gdy na elemencie rodzicielskim
+              wystąpi zdarzenie, na przykład najechanie kursorem, musisz użyć
+              następującego selektora.
+            </p>
           </div>
         </div>
       </section>
