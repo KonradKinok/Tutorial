@@ -87,7 +87,7 @@ a {
 }
 
 .main{
-    height: 2200px;
+    height: 1400px;
 }
 
 .div{
@@ -129,4 +129,9 @@ a {
 .picture-list .link:hover .picture-overlay-text,
 .picture-list .link:focus .picture-overlay-text {
     transform: translateY(0);
+}
+
+.click{
+    color: white;
+    text-align: center;
 }
