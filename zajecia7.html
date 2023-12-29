@@ -528,6 +528,7 @@
           </div>
         </div>
       </section>
+      <!-- section9 -->
       <section>
         <div>
           <div class="text">
@@ -539,6 +540,274 @@
             </p>
           </div>
         </div>
+      </section>
+      <!-- section10 -->
+      <section>
+        <div>
+          <div class="text">
+            <h3>Pseudoelement ikona</h3>
+            <p>
+              Używając pseudoelementów, dodamy ikony przed i po linkach na
+              liście. Niech ::before będzie zawsze widoczne, a ::after tylko
+              przy najechaniu kursorem na link.
+            </p>
+            <p>
+              Najważniejsze znajduje się w tej regule CSS. Zmieniamy typ
+              elementu na liniowo-blokowy i ustawiamy stałą wysokość i
+              szerokość. Nie zapomnijmy również określić właściwości content z
+              pustym wierszem, aby przeglądarka utworzyła pseudoelement.
+            </p>
+          </div>
+          <ul class="section10-list">
+            <li class="section10-list-item">
+              <a href="" class="section10-list-link">Home</a>
+            </li>
+            <li class="section10-list-item">
+              <a href="" class="section10-list-link">Portfolio</a>
+            </li>
+            <li class="section10-list-item">
+              <a href="" class="section10-list-link">Team</a>
+            </li>
+            <li class="section10-list-item">
+              <a href="" class="section10-list-link">About</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- section11 -->
+      <section>
+        <div class="text">
+          <div>
+            <h2>Gradient</h2>
+            <p>
+              Gradient - przejście z jednego koloru na inny. Gradient w CSS jest
+              obrazem tła, więc jest ustawiany we właściwości background-image.
+              Ta funkcja pozwoli nam robić bardzo interesujące rzeczy, mieszając
+              gradient z tłem. Gradient może być liniowy, promieniowy(radialny)
+              lub stożkowy.
+            </p>
+            <h3>Gradient liniowy</h3>
+            <p>
+              Jest tworzony przy użyciu dwóch lub więcej kolorów, dla których
+              ustawiono kierunek rozproszenia. Format wartości koloru może być
+              dowolny - słowa kluczowe, rgb, rgba lub hex i można je mieszać.
+            </p>
+            <p>
+              linear-gradient("kierunek", "kolor-1", "kolor-2", "kolor-3", ...)
+            </p>
+            <p>
+              Kierunek gradientu można określić za pomocą słów kluczowych to
+              top, to right, to bottom, to left i ich kombinacji. Jeśli nie
+              określono kierunku, używana jest wartość domyślna - od góry do
+              dołu (to bottom). W przypadku, gdy kierunek jest określony przez
+              parę słów kluczowych, np. to top left, punkt początkowy gradientu
+              będzie znajdował się w przeciwległym rogu - w prawym dolnym rogu,
+              jak w przykładzie.
+            </p>
+            <p>
+              Kierunek można również określić za pomocą kąta nachylenia w
+              stopniach - jednostką jest deg. Wartość 0deg jest taka sama, jak
+              to top. Zwiększenie kąta powoduje obrócenie kierunku linii
+              gradientu, prostej przechodzącej przez środek bloku i wzdłuż
+              której rozdzielają się kolory, zgodnie z ruchem wskazówek zegara.
+            </p>
+          </div>
+          <div class="section11-container">
+            <div class="section11-container-item section11-box1">to bottom</div>
+            <div class="section11-container-item section11-box2">to top</div>
+            <div class="section11-container-item section11-box3">to right</div>
+            <div class="section11-container-item section11-box4">
+              to top left
+            </div>
+            <div class="section11-container-item section11-box5">20deg</div>
+            <div class="section11-container-item section11-box6">-30deg</div>
+          </div>
+        </div>
+      </section>
+      <!-- section12 -->
+      <section>
+        <div class="text">
+          <h3>Color-stop</h3>
+          <p>
+            Domyślnie kolory gradientu są równomiernie rozłożone, ale można to
+            kontrolować za pomocą color-stop - punktów przerwania, do których
+            będzie rozprzestrzeniać się określony kolor. Wartością mogą być
+            piksele lub procenty.
+          </p>
+          <p>
+            W takim gradiencie: czerwony (#f44336) rozprzestrzeni się od 0% do
+            15% zielony (#09792b) rozprzestrzeni się od 15% do 40% niebieski
+            (#00b9ff) rozprzestrzeni się od 40% do 65% żółty (#ffb800)
+            rozprzestrzeni się od 65% do 100%
+          </p>
+        </div>
+        <div class="section12-container">
+          <div class="section12-item"></div>
+        </div>
+      </section>
+      <!-- section13 -->
+      <section>
+        <div class="text">
+          <h3>Ciągły gradient</h3>
+          <p>
+            Gradient to płynne przejście między kolorami, ale jeśli dwa
+            sąsiednie kolory są ustawione na jednakowe color-stop, otrzymujemy
+            ciągłe kolory i ostre przejście między nimi. Można to wykorzystać do
+            stworzenia tła w paski.
+          </p>
+          <p>
+            W takim gradiencie: czerwony (#f44336) rozprzestrzeni się od 0% do
+            15% zielony (#09792b) rozprzestrzeni się od 15% do 40% niebieski
+            (#00b9ff) rozprzestrzeni się od 40% do 65% żółty (#ffb800)
+            rozprzestrzeni się od 65% do 100%
+          </p>
+        </div>
+        <div class="section12-container">
+          <div class="section12-item-continuous-gradient-good"></div>
+          <div class="section12-item-continuous-gradient-bad"></div>
+        </div>
+      </section>
+      <!-- section14 -->
+      <section>
+        <div>
+          <div class="text">
+            <h3>Gradient radialny</h3>
+            <p>
+              Gradient radialny różni się od gradientu liniowego tym, że kolory
+              wychodzą ze środka gradientu i są równomiernie rozłożone na
+              zewnątrz, przybierając kształt elipsy.
+            </p>
+            <p>
+              radial-gradient("typ" "środek", "kolor-1", "kolor-2", "kolor-3",
+              ...);
+            </p>
+            <p>
+              Kształt gradientu jest określany za pomocą słów kluczowych circle
+              lub ellipse (wartość jest domyślna), więc jeśli element nie jest
+              kwadratem, gradient będzie miał domyślnie kształt elipsy. Pozycja
+              środkowa jest określana przez słowa kluczowe center (wartość jest
+              domyślna), top, bottom, right, i left, z dodanym przedrostkiem at.
+            </p>
+          </div>
+          <div class="section14-container">
+            <div class="section14-container-items section14-radial-gradient1">
+              elipse at center
+            </div>
+            <div class="section14-container-items section14-radial-gradient2">
+              circle at center
+            </div>
+            <div class="section14-container-items section14-radial-gradient3">
+              circle at top right
+            </div>
+            <div class="section14-container-items section14-radial-gradient4">
+              circle at bottom left
+            </div>
+          </div>
+          <p>
+            Gradient radialny może być również jednolity (ciągły), wystarczy
+            poprawnie ustawić color-stop.
+          </p>
+          <div class="section14-container">
+            <div
+              class="section14-container-items section14-radial-gradient-color-separate1"
+            >
+              elipse at center
+            </div>
+            <div
+              class="section14-container-items section14-radial-gradient-color-separate2"
+            >
+              circle at center
+            </div>
+            <div
+              class="section14-container-items section14-radial-gradient-color-separate3"
+            >
+              circle at top right
+            </div>
+            <div
+              class="section14-container-items section14-radial-gradient-color-separate4"
+            >
+              circle at bottom left
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section15 -->
+      <section>
+        <div>
+          <div class="text">
+            <h3>Powtarzający się gradient</h3>
+            <p>
+              Powtarzający się gradient może być liniowy lub radialny i może
+              służyć do tworzenia interesujących efektów dekoracyjnych.
+              Najczęściej jest robiony ciągły powtarzający się gradient.
+            </p>
+            <p>
+              Rozmiar gradientu jest określany przez ostatni color-stop. W tym
+              przykładzie jest to 40 pikseli, więc szerokość powtarzanego
+              gradientu wynosi 40 pikseli. W przykładzie zastosowano tylko dwa
+              kolory, ale ich liczba nie jest ograniczona, najważniejsze jest
+              ustawić color-stop prawidłowo.
+            </p>
+          </div>
+          <div class="section15-container">
+            <div class="section15-container-items">to right</div>
+            <div class="section15-container-items">to bottom</div>
+            <div class="section15-container-items">to top right</div>
+            <div class="section15-container-items">to bottom right</div>
+          </div>
+        </div>
+      </section>
+      <!-- section16 -->
+      <section>
+        <div>
+          <div class="text">
+            <h3>Nagłówki w paski</h3>
+            <p>
+              Powtarzający się gradient może służyć do tworzenia interesujących
+              efektów, takich jak nagłówki w paski lub dowolny inny element.
+            </p>
+          </div>
+          <div class="section16-container">
+            <div class="section16-container-items">
+              <h2 class="section16-h6 section16-h2-background-first">striped header</h2>
+              <p class="section16-p">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam doloremque cum repellendus. Possimus unde iure ab, sequi doloremque quasi esse.
+              </p>
+            </div>
+            <div class="section16-container-items">
+              <h2 class="section16-h6 section16-h2-background-second">striped header</h2>
+              <p class="section16-p">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic architecto ut magni, deleniti eos sunt recusandae labore minus fugit. Ipsa quia quidem, quaerat eum mollitia ipsum voluptatum unde dolores. Tenetur placeat, ipsum magni laborum optio autem vel perferendis iusto exercitationem.
+              </p>
+            </div>
+            <div class="section16-container-items">
+              <h2 class="section16-h6 section16-h2-background-third">striped header</h2>
+              <p class="section16-p">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis magnam ipsum, nulla rem totam ab accusantium quae rerum provident mollitia nihil fugit labore inventore modi facere reiciendis eligendi ut? Fugit tenetur atque cumque aspernatur saepe obcaecati, harum quidem inventore repellat exercitationem totam dolore quaerat? Nisi qui soluta ad minus sunt commodi nostrum, autem deserunt voluptas numquam. Iste repellat nulla voluptatibus sapiente dolore eum ut neque nemo. Voluptas provident aspernatur velit, alias rem eveniet quae ducimus doloremque numquam adipisci impedit nesciunt!
+              </p>
+            </div>
+            <div class="section16-container-items">
+              <h2 class="section16-h6 section16-h2-background-fourth">striped header</h2>
+              <p class="section16-p">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quas ratione asperiores iusto soluta maxime.
+              </p>
+            </div>
+        </div>
+      </section>
+      <!-- section17 -->
+      <section>
+        <div>
+          <div class="text">
+            <h3>Conical gradients</h3>
+          </div>
+          <div class="section17-container">
+            <div class="section17-container-items">text</div>
+            <div class="section17-container-items">text</div>
+            <div class="section17-container-items">text</div>
+            <div class="section17-container-items">text</div>
+          </div>
+        </div>
+
       </section>
     </main>
     <footer class="container footer">
