@@ -888,3 +888,186 @@ justify-content: center;
     background: conic-gradient(rgb(183, 0, 255) 70%, rgba(206, 68, 123, 0.459) 0);
     border-radius: 50%;
 }
+
+/* section18 */
+.section18-list{
+    margin: 0 40px;
+    padding: 20px;
+    text-align: left;
+}
+
+.section18-main-container{
+    display: flex;
+align-items: stretch;
+    justify-content: space-evenly;
+    gap: 10px 20px;
+    margin: 15px 30px 50px;
+}
+
+.section18-container {
+    flex-basis: calc((100% - 1*20px) / 2);
+    background-color: #e99db4;
+    border: solid 5px #da0e4b;
+    border-radius: 15px;
+    
+}
+.section18-container-shadow {
+    box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.6);
+}
+
+.section18-container-h4 {
+text-decoration: underline solid #d10d48;
+text-align: center;
+height: 15%;
+padding: 5px;
+margin-bottom: 10px;
+
+}
+
+.section18-container-p {
+    height: 85%;
+    padding: 5px 5px;
+    border-top: solid 3px #0d31d1;
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom: solid 5px #da0e4b;
+    color: white;
+    text-shadow: 2px 2px 8px black;
+}
+
+/* section19 */
+.section19-main-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    gap: 20px 20px;
+    
+    padding: 30px;
+    background-color: white;
+    width: 100%;
+}
+
+.section19-container {
+    flex-basis: calc((100% - 1*20px) / 2);
+    background-color:white;
+    padding: 20px;
+    text-align: center;
+}
+
+.section19-container:nth-child(1){
+box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.section19-container:nth-child(2) {
+    box-shadow: 10px 0 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.section19-container:nth-child(3) {
+    box-shadow: -10px 0 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.section19-container:nth-child(4) {
+    box-shadow: 0 -10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* section20 */
+.section20-main-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    gap: 20px 20px;
+
+    padding: 30px;
+    background-color: white;
+    width: 100%;
+}
+
+.section20-container {
+    flex-basis: calc((100% - 1*20px) / 2);
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.section20-container:nth-child(1) {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.section20-container:nth-child(2) {
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* section21 */
+.section21-main-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    gap: 20px 20px;
+
+    padding: 50px 30px 150px;
+    background-color: white;
+    width: 100%;
+}
+
+.section21-container {
+    flex-basis: calc((100% - 1*20px) / 2);
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.section21-container:nth-child(1) {
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+            0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+            0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+            0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.section21-container:nth-child(2) {
+    box-shadow: 0 2.8px 2.2px red, 0 6.7px 5.3px blue, 0 12.5px 10px green,
+            0 22.3px 17.9px purple, 0 41.8px 33.4px orange, 0 100px 80px teal;
+}
+
+/* section22 */
+.section22-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background-color: #f9f9fd;
+}
+
+.section22-container {
+    position: relative;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 4px;
+    line-height: 1.5;
+    font-family: sans-serif;
+    background-color: #fff;
+}
+
+.section22-container::before,
+.section22-container::after {
+    z-index: -1;
+    position: absolute;
+    content: "temp text";
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    max-width: 300px;
+    background: #777;
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(-3deg);
+}
+
+.section22-container::after {
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
+}
