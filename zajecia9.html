@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;700&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <!-- <style type="text/css">	@import url(./styles/stylStartowy.css);	</style> -->
+    <link rel="stylesheet" href="/styles/stylStartowy.css" />
+    <link rel="stylesheet" href="./styles/zajecia9style.css" />
+    <title>Zajęcia 9</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav-container">
+        <!-- Nawigacja do innych stron -->
+        <ul class="nav-list-container">
+          <li><a class="link" href="./index.html">Index</a></li>
+          <li><a class="link" href="./listy.html">Listy</a></li>
+          <li><a href="./tabele.html">Tabele</a></li>
+          <li>
+            <a href="./obrazkiStrona.html">Multimedia</a>
+            <ul>
+              <li><a href="./obrazkiStrona.html#obrazki">Obrazki</a></li>
+              <li><a href="./obrazkiStrona.html#filmy">Film</a></li>
+              <li><a href="./obrazkiStrona.html">Dźwięk</a></li>
+            </ul>
+          </li>
+          <li><a href="./linki.html">Linki</a></li>
+          <li><a href="./rozneStrona.html">Różne</a></li>
+          <li><a href="./supplicia.html">Supplicia</a></li>
+          <li><a href="./zajecia4.html">Zajęcia4</a></li>
+          <li><a href="./zajecia5.html">Zajęcia5</a></li>
+          <li>
+            <a href="./zajecia6.html">Zajęcia6</a>
+            <ul>
+              <li><a href="./zajecia6.1.html">Zajęcia6.1</a></li>
+            </ul>
+          </li>
+          <li><a href="./zajecia7.html">Zajęcia 7</a></li>
+          <li><a href="./zajecia8.html">Zajęcia 8</a></li>
+          <li><a href="./zajecia9.html">Zajęcia 9</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="body-container">
+      <!-- section1 -->
+      <section>
+        <div>
+          <div class="text section1-container">
+            <h3>Pozycjonowanie elementów</h3>
+            <p>
+              Domyślnie elementy na stronie są rozmieszczone od lewej do prawej
+              i od góry do dołu. Jak zrobić żeby napis był na zdjęciu produktu,
+              pokazać jeden element na drugim po najechaniu kursorem lub
+              sprawić, by menu zawsze było dołączone do górnej części rzutni,
+              nawet podczas przewijania? Aby rozwiązać takie problemy, istnieje
+              właściwość position, która pozwala dosłownie podnieść element i
+              umieścić go na innym.
+            </p>
+            <div class="section1-div-img">
+              <img
+                class="section1-img"
+                src="./images/staticRelativeAbsoluteFixed.jpg"
+                alt=""
+              />
+            </div>
+            <p>
+              Statyczne pozycjonowanie (static) to początkowy stan wszystkich
+              elementów strony internetowej. Model blokowy i flexbox umieszczają
+              elementy w tym statycznym przepływie strony. Względne (relative),
+              bezwzględne (absolute) oraz ustalone (fixed) pozycjonowania
+              pozwalają na podniesienie elementu nad przepływem strony i ręczne
+              pozycjonowanie za pomocą układu współrzędnych, którego początek
+              zależy od rodzaju pozycjonowania.
+            </p>
+            <p>
+              Zdecydowana większość elementów powinna być ułożona zgodnie ze
+              standardowym statycznym przepływem strony. Inne schematy
+              pozycjonowania stosowane są do efektów dekoracyjnych oraz w
+              przypadku, gdy nie jest możliwe inne pozycjonowanie.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- section2 -->
+      <section>
+        <div>
+          <div class="text">
+            <h3>Właściwość position</h3>
+            <p>
+              Zmienia typ pozycjonowania elementu. Wartość domyślna to static.
+              Aby wskazać pozycję elementu, używane są właściwości top, left,
+              bottom albo right, które nie mają zastosowania do elementów bez
+              position.
+            </p>
+            <p>
+              position: static | relative | absolute | fixed | sticky | inherit
+            </p>
+            <p>
+              Element z wartością właściwości position inną niż static nazywany
+              jest „elementem pozycjonowanym”.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- section3 -->
+      <section>
+        <div class="text section2-container">
+          <div>
+            <h3>Pozycjonowanie względne</h3>
+            <p>
+              Przy pozycjonowaniu względnym element pozostaje w przepływie
+              strony, czyli elementy sąsiednie nie zajmują jego miejsca. Jednak
+              wizualnie element można przesunąć względem jego pierwotnego
+              położenia, podczas gdy on może zachodzić na swoich sąsiadów.
+            </p>
+          </div>
+
+          <div class="section2-div-img">
+            <img
+              class="section2-img"
+              src="./images/relativePositioning.jpg"
+              alt=""
+              height="300px"
+            />
+          </div>
+          <p>
+            Właściwości top, left, bottom i right pozwalają określić
+            przesunięcie elementu (wizualnie) w stosunku do jego pierwotnej
+            pozycji. Mogą przyjmować wartości ujemne.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <div class="contener-shadow-text2">
+        <h2>Footer</h2>
+        <div class="display-footer">
+          <a
+            class="link-footer"
+            href="https://lukaszkonik.pl"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <img src="./images/konikMaly24x24Squoosh.png" alt="logo" />
+          </a>
+          <div class="display-footer2">
+            <p class="footer-selection">All rights reserved &copy;</p>
+            <p>Konrad</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
