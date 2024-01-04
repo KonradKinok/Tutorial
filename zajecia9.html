@@ -140,6 +140,676 @@
             przesunięcie elementu (wizualnie) w stosunku do jego pierwotnej
             pozycji. Mogą przyjmować wartości ujemne.
           </p>
+
+          <div class="section2-div-img2">
+            <img
+              class="section2-img"
+              src="./images/relativeElement.jpg"
+              alt=""
+              height="300px"
+            />
+          </div>
+          <p>
+            Samo pozycjonowanie względne nie jest używane, ponieważ element nie
+            wyłamuje się z przepływu strony, nadal zajmując miejsce. Używane
+            tylko w połączeniu z pozycjonowaniem bezwzględnym.
+          </p>
+          <p>
+            Stwórzmy trzy bloki. Ustawimy środkowemu div.relative pozycjonowanie
+            względne i wizualnie przesuniemy go w prawo i w dół w stosunku do
+            pozycji początkowej.
+          </p>
+          <div class="section2-container2">
+            <div class="section2-box"></div>
+            <div class="section2-box section2-relative"></div>
+            <div class="section2-box"></div>
+          </div>
+        </div>
+      </section>
+      <!-- section4 -->
+      <section>
+        <div>
+          <div class="text section4-container">
+            <h3>Pozycjonowanie absolutne (bezwzględne)</h3>
+            <p>
+              W przypadku pozycjonowania bezwzględnego element jest wyciągany z
+              przepływu strony, to znaczy sąsiednie elementy zajmują jego
+              miejsce. Wartości top, left, bottom i right dla elementu
+              pozycjonowanego bezwzględnie są liczone względem najbliższego
+              przodka z pozycjonowaniem innym niż statyczne (szukamy
+              najbliższego elementu który ma np. position: relative i względem
+              jego pozycjonujemy). Jeśli nie ma takiego przodka, to liczenie
+              zostanie wykonane od granic elementu "body".
+            </p>
+            <div class="section4-div-img">
+              <img
+                class="section4-img"
+                src="./images/absolutePositioning.jpg"
+                alt=""
+                height="300px"
+              />
+            </div>
+            <p>
+              Samo pozycjonowanie bezwzględne nie jest zbyt użyteczne i jest
+              używane na przykład w połączeniu z pozycjonowaniem względnym do
+              dekoracyjnego pozycjonowania elementów. Oznacza to, że element
+              „bezwzględny” jest pozycjonowany jako „względny” w stosunku do
+              niektórych swoich przodków, które znajdują się w przepływie stron.
+            </p>
+            <div class="section4-div-img">
+              <img
+                class="section4-img"
+                src="./images/relativelyAbsolutePositioning.jpg"
+                alt=""
+                height="300px"
+              />
+            </div>
+            <p>
+              Następnie wartości top, left, right i bottom, dla bezwzględnie
+              pozycjonowanego elementu są liczone od granic tego przodka, a nie
+              od "body". Oznacza to, że ustawienie position: relative dla
+              przodka jest używane wyłącznie w celu umieszczenia elementu
+              pozycjonowanego bezwzględnie względem tego przodka.
+            </p>
+            <p>
+              Wpis bottom: 20px oznacza odległość między dolną granicą
+              pozycjonowanego względnie przodka a dolną granicą elementu
+              pozycjonowanego bezwzględnie. Podobnie działa right, left i top -
+              odległość jest ustawiona między stronami o takich samych nazwach
+              przodka i elementu.
+            </p>
+            <p>
+              Stwórzmy trzy bloki z obrazem i tekstem w każdym. Ustawmy
+              div.thumb na pozycjonowanie względne, a p.label na pozycjonowanie
+              bezwzględne, abyśmy mogli umieścić tekst nad obrazem w tym bloku.
+              Nie zapomnijmy usunąć z p.label margines (margin), ponieważ wpływa
+              on na przesunięcie samego elementu, ale nie innych elementów w
+              przepływie.
+            </p>
+
+            <div class="section4-container2">
+              <div class="section4-thumb">
+                <img
+                  src="https://images.pexels.com/photos/58997/pexels-photo-58997.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=320"
+                  alt="two-yellow-labrador-retriever-puppies"
+                />
+                <p class="section4-label">Dog</p>
+              </div>
+
+              <div class="section4-thumb">
+                <img
+                  src="https://images.pexels.com/photos/2558605/pexels-photo-2558605.jpeg?auto=compress&cs=tinysrgb&dpr=2&&w=320"
+                  alt="adorable-animal-blur-cat"
+                />
+                <p class="section4-label">Cat</p>
+              </div>
+
+              <div class="section4-thumb">
+                <img
+                  src="https://images.pexels.com/photos/1300361/pexels-photo-1300361.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=320"
+                  alt="black-hog-prone-lying-on-soil-under-shade-of-tree"
+                />
+                <p class="section4-label">Pig</p>
+              </div>
+            </div>
+            <p>
+              Jeśli nie ustawisz względnego pozycjonowania div.thumb, wszystkie
+              trzy p.label pojawią się w prawym górnym rogu okna, ponieważ
+              wartości top i right będą odliczane względem elementu "body".
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- section5 -->
+      <section>
+        <div class="temp">
+          <div class="text section5-container">
+            <h3>Section5: Pozycjonowanie ustalone</h3>
+            <p>
+              Przy ustalonym pozycjonowaniu element jest usuwany z przepływu
+              strony i pozycjonowany względem rzutni (okna przeglądarki).
+              Stwarza to efekt ustalania elementu w określonym miejscu na
+              ekranie podczas przewijania strony.
+            </p>
+            <div class="section5-thumb">
+              <img src="./images/fixedPositioning.jpg" alt="" />
+              <p class="section5-label">Pig</p>
+            </div>
+            <p>
+              Ustalone pozycjonowanie służy do przypinanych nagłówków z
+              nawigacją, ￼wyskakujących okienek, czatów z menedżerem na stronach
+              sklepów internetowych itp.
+            </p>
+            <p>
+              Stwórzmy przycisk czatu z menedżerem button.chat-button i umieśćmy
+              go w prawym dolnym rogu rzutni. Podczas przewijania strony
+              przycisk pozostaje na miejscu, ponieważ ma stałą pozycję.
+            </p>
+            <button class="section5-chat-button">Section5 button</button>
+          </div>
+        </div>
+      </section>
+      <!-- section6 -->
+      <section>
+        <div>
+          <div class="text section6-container">
+            <h3>Lepkie pozycjonowanie</h3>
+            <p>
+              Lepkie pozycjonowanie (sticky) jest jak połączenie właściwości
+              relative i fixed. Najpierw spójrz na ilustrację, na której
+              pozycjonowanie lepkie jest przypisane do elementów z literami A i
+              B, aby było od razu jasne.
+            </p>
+
+            <ol class="section6-number-list">
+              <li>
+                Dopóki element znajduje się w swoim kontenerze, a kontener nie
+                opuszcza obszar widoczności podczas przewijania w pionie,
+                element zachowuje się tak, jakby był umieszczony względnie
+                (relative).
+              </li>
+              <li>
+                Gdy tylko część kontenera nadrzędnego opuści obszar widoczności,
+                element jest ustalany na stronie, o ile przynajmniej część
+                kontenera znajduje się na ekranie.
+              </li>
+              <li>
+                Jeśli cały kontener opuści zasięg widoczności, to ponownie
+                włączy się zachowanie jak przy pozycjonowaniu względnym -
+                element zniknie z ekranu po kontenerze.
+              </li>
+            </ol>
+            <p>
+              Aby zaimplementować pozycjonowanie lepkie, wymagane są tylko trzy
+              warunki:
+            </p>
+            <ul class="section6-point-list">
+              <li>
+                Dla lepkiego elementu należy ustawić pozycjonowanie position:
+                sticky.
+              </li>
+              <li>Element lepki musi mieć ustawioną pozycję, np. top: 0.</li>
+              <li>
+                Element-kontener musi mieć większą wysokość niż element lepki.
+              </li>
+            </ul>
+            <p>
+              Nagłówki sekcji w przykładzie są lepkie, więc podczas przewijania
+              strony one będą "przyklejać się" do górnej części obszaru widoku,
+              o ile jakaś część ich sekcji jest widoczna.
+            </p>
+          </div>
+          <div class="section6-fixed-background section6-container2">
+            <div>
+              <h3 class="section6-sticky-h3">First section heading</h3>
+              <p class="section6-sticky-p">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat impedit natus esse eum iusto vel hic illum aperiam, a
+                minima architecto aut recusandae aliquid aliquam repellendus
+                dolore iure illo consequatur iste ex! Dignissimos sed, soluta
+                reiciendis sapiente debitis minima eius commodi voluptatem,
+                dolorum ipsa, alias veniam est laboriosam ipsam aperiam!
+              </p>
+              <p class="section6-sticky-p">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                labore nobis laboriosam consequuntur, eos fuga repellendus
+                doloribus maxime architecto a maiores necessitatibus quasi
+                nesciunt corporis, itaque debitis tenetur ex velit porro
+                veritatis officia eaque omnis voluptates quaerat! Iste
+                praesentium quod vel molestias, incidunt error dolor hic cum eos
+                temporibus aperiam placeat recusandae accusantium porro nisi
+                atque harum commodi exercitationem corrupti, saepe neque
+                quisquam doloribus repudiandae. Laudantium saepe deserunt nulla
+                velit?
+              </p>
+              <p class="section6-sticky-p">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+                deleniti doloribus earum odit amet error dolorem temporibus,
+                ipsa rerum facere corporis modi, eveniet autem commodi quia
+                reprehenderit vitae illo voluptatem.
+              </p>
+            </div>
+            <div>
+              <h3 class="section6-sticky-h3">Second section heading</h3>
+              <p class="section6-sticky-p">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Expedita iure reiciendis rerum provident quibusdam officia,
+                voluptatibus soluta nobis consequatur quos fugiat aut eos
+                blanditiis ducimus, tenetur cumque labore consequuntur fuga
+                pariatur omnis est. Consequuntur commodi in vero perspiciatis
+                placeat alias nihil, sapiente quis, itaque et amet explicabo
+                vitae unde praesentium temporibus est facere voluptate tempore
+                quam porro sed labore eaque quos! Quod reiciendis ea eveniet et,
+                voluptatem consectetur quibusdam iure suscipit quas, laborum
+                cumque doloremque eos maiores neque voluptatum odit.
+              </p>
+              <p class="section6-sticky-p">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                expedita, nesciunt reprehenderit recusandae aut nemo natus totam
+                magnam rerum esse!
+              </p>
+              <p class="section6-sticky-p">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Doloremque accusantium nulla iure, quisquam, delectus quam
+                ducimus ratione dolorum pariatur sint, quos nemo? Eos impedit
+                voluptates quis et voluptate quasi esse architecto nulla, a
+                labore, natus veniam eveniet modi at delectus aperiam beatae
+                necessitatibus? Eaque necessitatibus voluptatibus ducimus
+                architecto aliquid quod quas nam. Voluptates doloremque, culpa
+                ullam quis repudiandae repellat quo numquam, est eos tempora ab
+                unde accusamus dolores? Nisi officiis deserunt minus consequatur
+                natus similique cumque a iusto est dignissimos exercitationem
+                beatae sunt hic quod, atque, porro ea adipisci. Aspernatur
+                doloremque illum temporibus pariatur accusantium optio in
+                quibusdam fuga voluptatum.
+              </p>
+            </div>
+            <div>
+              <h3 class="section6-sticky-h3">Third section heading</h3>
+              <p class="section6-sticky-p">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                voluptate voluptates excepturi facere nostrum voluptatibus rem
+                alias consectetur provident sunt ipsa quas sed earum quidem
+                odio, vero maxime eum mollitia. Aspernatur eius inventore et ad
+                itaque molestiae reprehenderit dolores impedit modi numquam
+                autem ratione similique, aliquid sint eligendi deserunt qui odit
+                ipsa voluptas cupiditate accusamus exercitationem facere. Quia
+                placeat neque asperiores dolore, voluptate doloremque aliquid
+                omnis! Excepturi sed ratione ea, impedit nobis maiores,
+                distinctio blanditiis mollitia perferendis voluptates fugit et.
+                Corporis reprehenderit cum beatae magnam aut repudiandae in
+                tenetur ut, dolor eum amet optio eveniet sequi cumque officia
+                sint explicabo modi vero pariatur animi eligendi sunt! Sunt
+                beatae quam sed laboriosam amet impedit earum ut ratione libero.
+                Itaque, at nobis harum ab earum quidem officia laborum neque in
+                beatae? Nemo sequi animi enim eaque perferendis, voluptatem,
+                inventore iure reiciendis, recusandae a est provident vel
+                dolorem maiores sint beatae id porro.
+              </p>
+              <p class="section6-sticky-p">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam,
+                nulla consequuntur eligendi libero accusamus doloribus
+                perferendis maiores, dolores at placeat voluptas id iusto a? Eos
+                ullam expedita adipisci ratione ex ipsum modi exercitationem
+                quae culpa laudantium, id asperiores reprehenderit repudiandae
+                deserunt soluta omnis, nam inventore qui illum, magni nostrum
+                accusamus!
+              </p>
+              <p class="section6-sticky-p">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+                soluta neque autem perferendis architecto doloremque sunt!
+                Quidem temporibus, voluptatum sed vitae consectetur odio itaque,
+                ipsa, ut debitis obcaecati atque quibusdam cupiditate nostrum
+                dolor! Corrupti dolorum vero voluptas aperiam, mollitia optio
+                sint dolores asperiores facilis quaerat ipsum praesentium
+                recusandae amet magni eum quo exercitationem. Itaque impedit
+                cumque quidem qui minima, possimus error neque assumenda
+                mollitia. Quia, maiores voluptatum. Commodi labore
+                necessitatibus, impedit accusamus amet nobis non quia mollitia
+                rem possimus unde eum aliquam sint beatae, eligendi quae
+                doloremque! Consequuntur fuga sapiente voluptatem, laboriosam ad
+                modi accusantium similique nobis, ab delectus in?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section7 -->
+      <section>
+        <div>
+          <div class="text section7-container">
+            <h3>Section7: Właściwość z-index</h3>
+            <p>
+              Zanim dowiedzieliśmy się o pozycjonowanych elementach, nie
+              mieliśmy problemów z głębią. Elementy rozłożyliśmy w dwuwymiarowym
+              układzie współrzędnych - x w poziomie i y w pionie. Kolejność
+              wyświetlania została ustawiona wyłącznie przez zagnieżdżanie się
+              elementów - przodek znajdował się na dole jak kartka papieru, a
+              potomek był jak nowa kartka papieru leżąca na wierzchu.
+            </p>
+            <p>
+              Pozycjonowane elementy zachowują się inaczej. Wypadają z
+              przepływu, co oznacza, że potrzebują reguły, która określi, który
+              element jest wyższy, a który niższy na osi z - prostopadłej do
+              płaszczyzny ekranu.
+            </p>
+            <p>
+              Ta reguła ustawia właściwość z-index, która kontroluje głębokość
+              (kolejność) pozycjonowanych elementów na stronie wzdłuż osi z - od
+              oczu użytkownika do ekranu. Wartości mogą być dowolną liczbą
+              całkowitą, w tym ujemną.
+            </p>
+            <div class="section7-div">
+              <img src="./images/z-index.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section8 -->
+      <section>
+        <div>
+          <div class="text section8-container">
+            <h3>Section8: Zasady stosowania</h3>
+            <p>
+              Wspólny przodek pozycjonowanych elementów tworzy kontekst
+              (stacking context) - obszar, w którym właściwość z-index elementu
+              wpływa na inne elementy z z-index. Im większa wartość z-index
+              wewnątrz tego kontekstu, tym wyższy jest element.
+            </p>
+            <div class="section8-div">
+              <img src="./images/z-index2.jpg" alt="" width="500px" />
+            </div>
+            <p>
+              Minimalna (nawet ujemna) wartość z-index oznacza, że inne elementy
+              poza przepływem będą wyższe niż ten element. Jeśli dwa elementy
+              mają takie same wartości z-index, wyżej będzie ten element, który
+              został ostatni zadeklarowany w kodzie HTML.
+            </p>
+            <p>
+              Jest wiele zasad, ale w rzeczywistości wszystko jest bardzo
+              proste. W tym przykładzie div.container z pozycjonowaniem
+              względnym jest wspólnym przodkiem czterech div.box, które są
+              pozycjonowane w nim bezwzględnie. Używając właściwości z-index
+              możesz zmienić kolejność ich wyświetlania na osi z.
+            </p>
+            <div class="section8-container-z-index">
+              <div class="section8-box-z-index">1-2</div>
+              <div class="section8-box-z-index">2-3</div>
+              <div class="section8-box-z-index">3-4</div>
+              <div class="section8-box-z-index">4-1</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section9 -->
+      <section>
+        <div>
+          <div class="text">
+            <h3>Section9: Właściwość overflow</h3>
+            <p>
+              Wymiary elementu są definiowane przez zawartość wewnątrz niego lub
+              są wyraźnie określone. Co się dzieje, gdy zawartość zmienia się
+              wewnątrz elementu? Na przykład, jeśli nie ustawisz wysokości, ona
+              będzie rosła, aż cała zawartość zmieści się w elemencie.
+            </p>
+            <p>
+              Ale co, jeśli wysokość lub szerokość są wyraźnie określone? Wtedy
+              blok nie może się rozrosnąć, a jego zawartość przepełnia się -
+              wychodzi poza granice. Właściwość overflow kontroluje zachowanie
+              zawartości elementu, jeśli jest zbyt duża wysokość lub szerokość.
+            </p>
+            <p>overflow: visible | hidden | scroll | auto</p>
+            <ul>
+              <li>
+                <span>visible</span> - przepełniona treść jest widoczna.
+                Domyślna wartość.
+              </li>
+              <li>
+                <span>hidden</span> - wszystko, co wykracza poza granice bloku,
+                zostanie wizualnie ukryte.
+              </li>
+              <li>
+                <span>scroll</span> - przy przepełnieniu pojawiają się poziome i
+                pionowe paski przewijania, nawet jeśli potrzebny jest tylko
+                jeden.
+              </li>
+              <li>
+                <span>auto</span> - podobne do wartości scroll, ale paski
+                przewijania są wyświetlane tylko tam, gdzie są naprawdę
+                potrzebne, a nie zawsze.
+              </li>
+            </ul>
+            <p>
+              Istnieją również właściwości overflow-x i overflow-y do
+              kontrolowania przepełnienia, tylko w odpowiedniej płaszczyźnie.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- section10 -->
+      <section>
+        <div>
+          <div class="text">
+            <h3>Section10: Wartość visible</h3>
+            <p>
+              Jeśli nie określisz właściwości overflow, domyślnie jest to
+              wartość visible a przy przepełnieniu zawartość będzie wyświetlana
+              poza blokiem. W tym przykładzie obramowanie bloku jest oznaczone
+              czerwoną obwódką.
+            </p>
+          </div>
+          <div class="section10-container">
+            <div class="section10-box">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis cum
+              quibusdam similique debitis eos, fuga in ipsum quaerat impedit,
+              nam error atque sequi laudantium incidunt hic assumenda! Autem,
+              voluptatum ratione. Ab illum quasi exercitationem dignissimos,
+              quae est eaque eligendi maxime omnis laudantium quos, doloremque
+              adipisci quidem dicta recusandae facilis? Velit, commodi
+              consectetur, quas a repudiandae magni illo iure rem obcaecati quam
+              officiis cupiditate perspiciatis? Doloremque, ipsa laborum. Beatae
+              voluptate incidunt alias, possimus laudantium molestias soluta, ea
+              nihil delectus praesentium ipsum ducimus aspernatur placeat a
+              totam deserunt! Vel quaerat deleniti dolore aperiam similique nam
+              harum, aliquam fugiat adipisci aliquid laborum amet.
+            </div>
+            <button>
+              The text overflowing outside the div.box will not affect the
+              position of this button, because the overflow is only visual.
+            </button>
+          </div>
+          <p class="text">
+            Ważną rzeczą do zapamiętania jest to, że nawet jeśli widoczna treść
+            przepełnia element na zewnątrz elementu, zawartość ta nie wpływa na
+            geometrię sąsiednich elementów, jak w przypadku przycisku w
+            przykładzie.
+          </p>
+        </div>
+      </section>
+      <!-- section11 -->
+      <section>
+        <div>
+          <div class="text">
+            <h3>Section11: Wartość hidden</h3>
+            <p>
+              Wartość przeciwna to hidden. W takim przypadku zawartość
+              przepełniona, która wykracza poza granice elementu, nie jest
+              wyświetlana. To zachowanie jest przydatne w przypadku efektów
+              dekoracyjnych, którym przyjrzymy się dalej.
+            </p>
+          </div>
+          <div class="section11-container">
+            <div class="section11-box">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis cum
+              quibusdam similique debitis eos, fuga in ipsum quaerat impedit,
+              nam error atque sequi laudantium incidunt hic assumenda! Autem,
+              voluptatum ratione. Ab illum quasi exercitationem dignissimos,
+              quae est eaque eligendi maxime omnis laudantium quos, doloremque
+              adipisci quidem dicta recusandae facilis? Velit, commodi
+              consectetur, quas a repudiandae magni illo iure rem obcaecati quam
+              officiis cupiditate perspiciatis? Doloremque, ipsa laborum. Beatae
+              voluptate incidunt alias, possimus laudantium molestias soluta, ea
+              nihil delectus praesentium ipsum ducimus aspernatur placeat a
+              totam deserunt! Vel quaerat deleniti dolore aperiam similique nam
+              harum, aliquam fugiat adipisci aliquid laborum amet.
+            </div>
+            <button>
+              The text overflowing outside the div.box will not affect the
+              position of this button, because the overflow is only visual.
+            </button>
+          </div>
+          <p>
+            Pamiętaj, że w tym przypadku przepełniona treść nie jest dostępna i
+            jest ukryta przed użytkownikiem. Dlatego nigdy nie ustawiamy stałej
+            wysokości dla bloków tekstowych.
+          </p>
+        </div>
+      </section>
+      <!-- section12 -->
+      <section>
+        <div>
+          <div class="text">
+            <h3>Wartość scroll</h3>
+            <p>
+              eśli ustawiona wartość scroll, przepełniona treść zostanie ukryta,
+              ale pojawią się paski przewijania, aby można było wyświetlić całą
+              zawartość. Spowoduje to wyświetlenie zarówno poziomych, jak i
+              pionowych pasków przewijania, nawet jeśli potrzebny jest tylko
+              jeden.
+            </p>
+          </div>
+          <div class="section12-container">
+            <div class="section12-box">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis cum
+              quibusdam similique debitis eos, fuga in ipsum quaerat impedit,
+              nam error atque sequi laudantium incidunt hic assumenda! Autem,
+              voluptatum ratione. Ab illum quasi exercitationem dignissimos,
+              quae est eaque eligendi maxime omnis laudantium quos, doloremque
+              adipisci quidem dicta recusandae facilis? Velit, commodi
+              consectetur, quas a repudiandae magni illo iure rem obcaecati quam
+              officiis cupiditate perspiciatis? Doloremque, ipsa laborum. Beatae
+              voluptate incidunt alias, possimus laudantium molestias soluta, ea
+              nihil delectus praesentium ipsum ducimus aspernatur placeat a
+              totam deserunt! Vel quaerat deleniti dolore aperiam similique nam
+              harum, aliquam fugiat adipisci aliquid laborum amet.
+            </div>
+            <button>
+              The text overflowing outside the div.box will not affect the
+              position of this button, because the overflow is only visual.
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- section13 -->
+      <section>
+        <div>
+          <div class="text">
+            <h3>Wartość auto</h3>
+            <p>
+              Wartość auto jest podobna do wartości scroll, z wyjątkiem tego, że
+              wyświetlane są tylko te paski przewijania, które są rzeczywiście
+              potrzebne.
+            </p>
+          </div>
+          <div class="section12-container">
+            <div class="section12-box">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis cum
+              quibusdam similique debitis eos, fuga in ipsum quaerat impedit,
+              nam error atque sequi laudantium incidunt hic assumenda! Autem,
+              voluptatum ratione. Ab illum quasi exercitationem dignissimos,
+              quae est eaque eligendi maxime omnis laudantium quos, doloremque
+              adipisci quidem dicta recusandae facilis? Velit, commodi
+              consectetur, quas a repudiandae magni illo iure rem obcaecati quam
+              officiis cupiditate perspiciatis? Doloremque, ipsa laborum. Beatae
+              voluptate incidunt alias, possimus laudantium molestias soluta, ea
+              nihil delectus praesentium ipsum ducimus aspernatur placeat a
+              totam deserunt! Vel quaerat deleniti dolore aperiam similique nam
+              harum, aliquam fugiat adipisci aliquid laborum amet.
+            </div>
+            <button>
+              The text overflowing outside the div.box will not affect the
+              position of this button, because the overflow is only visual.
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- section14 -->
+      <section>
+        <div>
+          <div class="text section14-container">
+            <h3>Section14: Zaokrąglone obrazy</h3>
+            <p>
+              Obrazy zachowują się w taki sposób, że wizualnie wychodzą poza
+              blok, jeśli ich rozmiar jest większy. Ta funkcja pojawia się w
+              technice zaokrąglania ramek obrazu. Obraz zmienia się w
+              „krawężnik”, który służy do określenia stylu ramki i jej
+              promienia.
+            </p>
+            <p>
+              Ze względu na to, że obraz zawsze przepełnia blok, wizualnie
+              wykraczając poza jego granice, okazuje się, że to nie do końca
+              jest to, co potrzebne.
+            </p>
+            <div class="section14-thumb">
+              <img
+                src="https://images.pexels.com/photos/33492/cat-red-cute-mackerel.jpg?auto=compress&cs=tinysrgb&h=480&w=640"
+                alt=""
+              />
+            </div>
+            <p>
+              Z pomocą przychodzi właściwość overflow i jej wartość hidden,
+              która jest ustawiona dla „krawężnika” i kontroluje widoczność
+              przepełnionej treści. Kolor i rozmiar ramki w przykładzie są
+              ustawione do wizualizacji; nie jest konieczne ustawianie
+              jakichkolwiek wartości oprócz promienia.
+            </p>
+            <div class="section14-thumb-overflow">
+              <img
+                src="https://images.pexels.com/photos/33492/cat-red-cute-mackerel.jpg?auto=compress&cs=tinysrgb&h=480&w=640"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section15 -->
+      <section>
+        <div>
+          <div class="text">
+            <h3>Section15: Dekoracyjna nakładka (overlay)</h3>
+            <p>
+              Właściwość overflow z wartością hidden jest wykorzystywana przy
+              tworzeniu efektów dekoracyjnych z ukrytą zawartością pojawiającą
+              się spoza granic bloku.
+            </p>
+
+            <div class="section15-box">
+              <p>Element będzie zakryty</p>
+              <div class="section15-overlay">
+                <p>
+                  This content is hidden through transformation and only appears
+                  when hovering over div.box This content is hidden through
+                  transformation and only appears when hovering over div.boxThis
+                  content is hidden through transformation and only appears when
+                  hovering over div.boxThis content is hidden through
+                  transformation and only appears when hovering over div.boxThis
+                  content is hidden through transformation and only appears when
+                  hovering over div.boxThis content is hidden through
+                  transformation and only appears when hovering over div.boxThis
+                  content is hidden through transformation and only appears when
+                  hovering over div.box
+                </p>
+              </div>
+            </div>
+            <p>
+              Efekt ten jest realizowany w kilku prostych krokach. Przyjrzyjmy
+              się stylom, aby stworzyć efekt; pełny kod zobacz w przykładzie.
+            </p>
+            <p>
+              Najpierw należy bezwzględnie ustawić div.overlay w stosunku do
+              div.box i rozciągnąć ją do pełnej szerokości i wysokości div.box.
+            </p>
+            <p>
+              Używając właściwości transform i translateX, przesuwamy
+              div.overlay w lewo o 100% jej szerokości. Później omówimy
+              szczegółowo transformacje.
+            </p>
+            <p>
+              Po najechaniu kursorem na div.box, za pomocą transform i
+              translateX, zwrócimy elementowi div.overlay jego pierwotną
+              pozycję.
+            </p>
+            <p>
+              Ustawimy div.box na właściwość overflow z wartością hidden, aby
+              wizualnie ukryć div.overlay, gdy jest on przesunięty poza div.box.
+            </p>
+            <p>
+              W następnych lekcjach szczegółowo omówimy animację, na razie
+              używamy tylko jednej właściwości do wizualizacji pojawienia
+              overlay (nakładki). Dodajemy przejście div.overlay dla animacji
+              właściwości transform.
+            </p>
+          </div>
         </div>
       </section>
     </main>
