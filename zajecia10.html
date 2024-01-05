@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;700&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <!-- <style type="text/css">	@import url(./styles/stylStartowy.css);	</style> -->
+    <link rel="stylesheet" href="/styles/stylStartowy.css" />
+    <link rel="stylesheet" href="./styles/zajecia10style.css" />
+    <title>Zajęcia 10</title>
+  </head>
+  <body class="body-container">
+    <header>
+      <nav class="nav-container">
+        <!-- Nawigacja do innych stron -->
+        <ul class="nav-list-container">
+          <li><a class="link" href="./index.html">Index</a></li>
+          <li><a class="link" href="./listy.html">Listy</a></li>
+          <li><a href="./tabele.html">Tabele</a></li>
+          <li>
+            <a href="./obrazkiStrona.html">Multimedia</a>
+            <ul>
+              <li><a href="./obrazkiStrona.html#obrazki">Obrazki</a></li>
+              <li><a href="./obrazkiStrona.html#filmy">Film</a></li>
+              <li><a href="./obrazkiStrona.html">Dźwięk</a></li>
+            </ul>
+          </li>
+          <li><a href="./linki.html">Linki</a></li>
+          <li><a href="./rozneStrona.html">Różne</a></li>
+          <li><a href="./supplicia.html">Supplicia</a></li>
+          <li><a href="./zajecia4.html">Zajęcia4</a></li>
+          <li><a href="./zajecia5.html">Zajęcia5</a></li>
+          <li>
+            <a href="./zajecia6.html">Zajęcia6</a>
+            <ul>
+              <li><a href="./zajecia6.1.html">Zajęcia6.1</a></li>
+            </ul>
+          </li>
+          <li><a href="./zajecia7.html">Zajęcia 7</a></li>
+          <li><a href="./zajecia8.html">Zajęcia 8</a></li>
+          <li><a href="./zajecia9.html">Zajęcia 9</a></li>
+          <li><a href="./zajecia10.html">Zajęcia 10</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-container">
+      <!-- section1 -->
+      <section>
+        <div>
+          <div class="text">
+            <h3>Przejścia CSS</h3>
+            <p>
+              Przejścia CSS pozwalają animować zmianę wartości właściwości z
+              upływem czasu, kontrolując szybkość tego przejścia. Zmiana
+              właściwości następuje, gdy zachodzi określone zdarzenie, które
+              jest opisane odpowiednią pseudoklasą, np. :hover.
+            </p>
+            <p>
+              Przejście ma zawsze tylko dwa stany - początkową i końcową wartość
+              właściwości i może zmienić tę wartość A > B i B > A w ciągu
+              określonego czasu. W przypadku animacji z wieloma stanami należy
+              użyć animacji CSS.
+            </p>
+            <p>
+              Poniższe cztery właściwości sterują różnymi parametrami przejścia.
+            </p>
+            <ul class="unnumbered-list-container">
+              <li>transition-property: "właściwość"</li>
+              <li>transition-duration: "czas"</li>
+              <li>transition-timing-function: "funkcja rozkładu czasu"</li>
+              <li>transition-delay: "opóźnienie"</li>
+            </ul>
+            <p>
+              Wszystko, co należy zrobić, to określić początkowe wartości
+              animowanych właściwości i wartości właściwości przejścia, a
+              następnie, podczas zdarzenia, na przykład :hover, ustawić nowe
+              wartości dla właściwości do których chcemy animować element.
+              Najedź myszką na kwadrat, aby rozpocząć przejście.
+            </p>
+            <div class="section1-container">
+              <div class="section1-container-box">Box 1</div>
+              <div class="section1-container-box">Box 2</div>
+              <div class="section1-container-box">Box 3</div>
+              <div class="section1-container-box">Box 4</div>
+            </div>
+            <p>
+              Pamiętaj, że dodając jakiekolwiek przesunięcia (przejścia i
+              animacje), powinny one być proste, nie rzucające się w oczy i
+              logiczne. Animacja powinna przekazywać znaczenie, skupiać uwagę
+              bez odwracania uwagi użytkownika od interakcji z zawartością.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- section2 -->
+      <section>
+        <div>
+          <div class="text">
+            <h2>Właściwość transition-property</h2>
+            <p>
+              Określa właściwości, do których zostanie zastosowany efekt
+              przejścia. Wartością może być pojedyncza właściwość lub lista
+              właściwości oddzielonych przecinkami. Wartość domyślna to all -
+              animowane są wszystkie możliwe właściwości.
+            </p>
+            <p>
+              Lista właściwości, które można animować może się zmienić w
+              przyszłości. Dlatego konieczne jest określenie właściwości, która
+              ma być animowana, w przeciwnym razie wszystkie możliwe właściwości
+              elementu zostaną animowane, co doprowadzi do nieoczekiwanych
+              wyników.
+            </p>
+          </div>
+          <div class="section2-container">
+            <div class="section2-container-box">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+              deleniti voluptas maxime qui fugiat impedit iusto et. Minima amet
+              debitis ab molestias mollitia aliquam quasi nam voluptatum at ad,
+              quam culpa ea cupiditate adipisci eligendi harum assumenda dicta
+              deleniti. Laudantium.
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section3 -->
+      <section>
+        <div>
+          <div class="text">
+            <h3>Section3: Właściwość transition-duration</h3>
+            <p>
+              Jeśli czas trwania przejścia nie zostanie określony, zmiana
+              wartości nastąpi natychmiast, bez animacji. Właściwość
+              transition-duration określa czas, w którym przejście powinno mieć
+              miejsce. Podawana jest w sekundach, na przykład 2s lub 0.5s, albo
+              w milisekundach - odpowiednio - 2000ms i 500ms Jeśli różne
+              właściwości mają różne czasy przejścia, są one wymienione poprzez
+              oddzielanie przecinkami.
+            </p>
+          </div>
+          <div class="section3-container">
+            <div class="section3-container-box">500ms</div>
+            <div class="section3-container-box">1500ms</div>
+            <div class="section3-container-box">3000ms</div>
+          </div>
+        </div>
+      </section>
+      <!-- section4 -->
+      <section>
+        <div>
+          <div class="text">
+            <h3>Section4: Właściwość transition-timing-function</h3>
+            <p>
+              Ustawia funkcję rozkładu czasu, która opisuje szybkość przejścia
+              właściwości z jednej wartości do drugiej na czas określony w
+              transition-duration, czyli zachowanie animacji.
+            </p>
+            <p>
+              W CSS jest kilka słów kluczowych opisujących podstawowe funkcje
+              Beziera. Wartość domyślna to ease - przejście zaczyna się powoli,
+              szybko przyspiesza, a na końcu znowu zwalnia. Inne słowa kluczowe:
+              linear, ease-in, ease-out, i ease-in-out.
+            </p>
+          </div>
+          <div class="section4-container">
+            <div class="section4-container-box">1</div>
+            <div class="section4-container-box">2</div>
+            <div class="section4-container-box">3</div>
+            <div class="section4-container-box">4</div>
+            <div class="section4-container-box">5</div>
+            <div class="section4-container-box">6</div>
+          </div>
+        </div>
+      </section>
+      <!-- section5 -->
+      <section>
+        <div class="text">
+          <h3>Właściwość transition-delay</h3>
+          <p>
+            Opóźnienie, po którym rozpocznie się animacja przejścia. Służy do
+            budowania scenariuszy - sekwencji przejść różnych elementów. Wartość
+            domyślna to 0s.
+          </p>
+          <p>
+            W tym przykładzie opóźnienie jest ustawione na 500ms. Przesuń kursor
+            myszy nad kwadrat, a przejście rozpocznie się dopiero pół sekundy po
+            tym zdarzeniu.
+          </p>
+        </div>
+        <div class="section5-container">
+          <div class="section5-container-box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+            deleniti voluptas maxime qui
+          </div>
+        </div>
+      </section>
+      <!-- section6 -->
+      <section>
+        <div class="text">
+          <h3>Section6: Krótki zapis przejścia</h3>
+          <p>
+            Wszystkie właściwości przejścia można połączyć w jedną właściwość
+            złożoną transition.
+          </p>
+          <p>transition: [property] [duration] [timing-function] [delay]</p>
+          <p>
+            Jeśli animowanych jest kilka właściwości, zestaw wartości dla każdej
+            z nich jest oddzielony przecinkiem. Konieczne jest określenie
+            właściwości i czasu przejścia, można pominąć funkcję czasową i
+            opóźnienie, wtedy zostaną do nich użyte wartości domyślne.
+          </p>
+          <p>
+            transition: background-color 500ms linear, transform 500ms
+            ease-in-out;
+          </p>
+        </div>
+        <div class="section6-container">
+          <div class="section6-container-box">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
+            repudiandae adipisci consectetur excepturi ad maiores rerum minus
+            esse temporibus! Possimus?
+          </div>
+        </div>
+      </section>
+      <!-- section7 -->
+      <section>
+        <div class="text">
+          <h3>Section7: Scenariusz z transition-delay</h3>
+          <p>
+            Napiszmy prosty scenariusz do przejścia koloru tła i obrotu bloków.
+            Najpierw blok powinien zmienić kolor, a dopiero potem powinien
+            zacząć się obracać. Wszystko, co musisz zrobić, to powiedzieć
+            przejściu obrotu, aby czekało tak długo, jak animacja zmieni kolor
+            tła.
+          </p>
+          <p>
+            transition: background-color 500ms linear, transform 500ms
+            ease-in-out 500ms;
+          </p>
+        </div>
+        <div class="section7-container">
+          <div class="section7-container-box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+            deleniti voluptas maxime qui
+          </div>
+        </div>
+      </section>
+      <!-- section8 -->
+      <section>
+        <div class="text">
+          <h2>Animowane właściwości</h2>
+          <p>
+            Ze wszystkich właściwości, które można animować, zaleca się, jeśli
+            to możliwe, użycie tylko dwóch: opacity (przezroczystość) i
+            transform (transformacja). W większości przypadków animowanie innych
+            właściwości nie wpłynie znacząco na wydajność strony, ale najlepiej
+            jest trzymać się tej zasady, aby stworzyć najbardziej wydajną
+            animację. Chodzi o to, jak przeglądarka rysuje stronę internetową.
+          </p>
+          <div class="section8-container">
+            <img
+              class="section8-container-img"
+              src="./images/rendering-steps.jpg"
+              alt=""
+              width="600px"
+            />
+          </div>
+          <ol class="numbered-list-container">
+            <li>
+              <span>Krok JavaScript</span> - skrypt lub jakieś zdarzenie, takie
+              jak najechanie kursorem lub fokus, rozpoczyna animację stylów
+              elementu.
+            </li>
+            <li>
+              <span>Krok Style</span> - obliczane są nowe style elementów,
+              obliczane są specyficzność, konflikty, kaskadowanie i tym podobne.
+            </li>
+            <li>
+              <span>Krok Layout</span> - obliczana jest geometria elementów.
+              Podczas animacji właściwości, które wpływają na geometrię, takie
+              jak margin, przeglądarka musi obliczyć nową pozycję dla całej
+              grupy elementów.
+            </li>
+            <li>
+              <span>Krok Painting</span> - są rysowane warstwy, ponieważ
+              elementy są zagnieżdżone w siebie lub pozycjonowane, tworząc w ten
+              sposób ciasto warstwowe.
+            </li>
+            <li>
+              <span>Krok Composite</span> - ułożenie wszystkich przygotowanych
+              warstw i renderowanie ostatecznego obrazu na ekranie użytkownika.
+            </li>
+          </ol>
+          <p>
+            Na przykład, jeśli animujesz właściwość width, przeglądarka musi
+            wykonać kroki Layout > Paint > Composite, co jest dość kosztowną
+            operacją dla wydajności strony internetowej.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <div class="contener-shadow-text2">
+        <h2>Footer</h2>
+        <div class="display-footer">
+          <a
+            class="link-footer"
+            href=""
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <img src="./images/konikMaly24x24Squoosh.png" alt="logo" />
+          </a>
+          <div class="display-footer2">
+            <p class="footer-selection">All rights reserved &copy;</p>
+            <p>Konrad</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
