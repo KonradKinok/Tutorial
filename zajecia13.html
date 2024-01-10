@@ -59,7 +59,7 @@
       <!-- section1 -->
       <section>
         <div class="text">
-          <h3>Zapytania o media</h3>
+          <h3>Section1: Zapytania o media</h3>
           <p>
             <span>Zapytania o media</span> - umożliwia tworzenie nowoczesnych
             responsywnych stron internetowych, które wyglądają równie dobrze na
@@ -97,7 +97,7 @@
       <!-- section2 -->
       <section>
         <div class="text">
-          <h3>Składnia</h3>
+          <h3>Section2: Składnia</h3>
           <pre>
             @media media-type and (media-feature) {
             /*
@@ -162,7 +162,7 @@
       <!-- section3 -->
       <section>
         <div class="text">
-          <h3>Typy mediów</h3>
+          <h3>Section3: Typy mediów</h3>
           <p>
             Typ mediów służy do opisywania typów urządzeń, na których może być
             wyświetlana strona internetowa. W sumie są trzy typy obsługiwane
@@ -189,7 +189,7 @@
       <!-- section4 -->
       <section>
         <div class="text">
-          <h3>Cechy mediów</h3>
+          <h3>Section4: Cechy mediów</h3>
           <p>
             Dwie najczęściej używane cechy mediów, które pozwalają na
             zdefiniowanie szerokości rzutni przeglądarki, to min-width i
@@ -261,7 +261,7 @@
       <!-- section5 -->
       <section>
         <div class="text">
-          <h3>Operatory logiczne</h3>
+          <h3>Section5: Operatory logiczne</h3>
           <p>
             Typ i cechy mediów można oddzielić opcjonalnymi operatorami
             logicznymi not, and i only - wartość domyślna. Pełna składnia
@@ -272,7 +272,7 @@
       <!-- section6 -->
       <section>
         <div class="text">
-          <h3>Operator and</h3>
+          <h3>Section6: Operator and</h3>
           <p>
             Operator and (dosłownie "i") jest używany nie tylko między typem
             nośnika a warunkiem mediów, ale także do łączenia wielu cech media z
@@ -299,7 +299,7 @@
       <!-- section7 -->
       <section>
         <div class="text">
-          <h3>Operator ,</h3>
+          <h3>Section7: Operator ,</h3>
           <p>
             Operator , (dosłownie "albo") pozwala określić zestaw wyrażeń, gdy
             przy wykonaniu przynajmniej jednego z nich zostanie wykonane
@@ -351,7 +351,7 @@
       <!-- section8 -->
       <section>
         <div class="text">
-          <h3>Operator not</h3>
+          <h3>Section8: Operator not</h3>
           <p>
             Operator not (dosłownie "nie") umożliwia wykonanie negacji, czyli
             anulowanie zapytania o media. Słowo kluczowe not jest dołączane na
@@ -401,7 +401,7 @@
       <!-- section9 -->
       <section>
         <div class="text">
-          <h3>Nadpisywanie stylów</h3>
+          <h3>Section9: Nadpisywanie stylów</h3>
           <p>
             Nic nie stoi na przeszkodzie, aby przeglądarka mogła zastosować
             więcej niż jedno zapytanie o media w tym samym czasie, jeśli
@@ -485,7 +485,7 @@
       <!-- section10 -->
       <section>
         <div class="text">
-          <h3>Metaznacznik viewport</h3>
+          <h3>Section10: Metaznacznik viewport</h3>
           <p>
             <span>Rzutnia (viewport)</span> - to widoczny, prostokątny obszar
             strony internetowej, który nie obejmuje paska adresu, paska zakładek
@@ -511,6 +511,500 @@
               alt=""
             />
           </div>
+          <p>
+            Oznacza to, że zapytania o media przeznaczone do urządzeń mobilnych
+            po prostu nie zostaną zastosowane lub zostaną ponownie nadpisane w
+            przeglądarce mobilnej. Na przykład podczas otwierania strony
+            internetowej na ekranie o szerokości 400px, zostanie zastosowane
+            zapytanie o media z min-width: 768px nadpisując style mobilne i
+            zobaczymy wersję strony przeznaczoną dla tabletów, chociaż ona
+            została otwarta w telefonie.
+          </p>
+          <p>
+            Strony przystosowane do przeglądania na różnych urządzeniach muszą
+            zawierać w sekcji "head" metaznacznik viewport. On informuje
+            przeglądarkę, jak kontrolować rozmiar i skalę rzutni.
+          </p>
+          <pre>
+              /* Inne metaznaczniki */
+              meta name="viewport" content="width=device-width, initial-scale=1.0" />
+              title>
+              Metaznacznik viewport jest ważny w przypadku responsywnych stron
+              /title>
+              /head>
+            </pre
+          >
+          <ul class="unnumbered-list-container">
+            <li>
+              width=device-width - ustawia szerokość widocznego obszaru (width),
+              która jest równa fizycznej szerokości ekranu urządzenia
+              (device-width).
+            </li>
+            <li>
+              initial-scale=1.0 - ustawia stosunek (skalę) 1:1 między pikselami
+              CSS a pikselami sprzętowymi urządzenia
+            </li>
+          </ul>
+          <div class="section10-container-img">
+            <img
+              class="section10-img"
+              src="./images/mobile-viewport.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <!-- section11 -->
+      <section>
+        <div class="text">
+          <h3>Section11: Narzędzia deweloperskie</h3>
+          <div class="section11-container-img">
+            <img class="section11-img" src="./images/devtools-pl.jpeg" alt="" />
+          </div>
+          <p>
+            Aby przejść do trybu responsywnego w przeglądarce Chrome, musisz
+            otworzyć narzędzia programistyczne i kliknąć ikonę 1. Pojawią się
+            dodatkowe narzędzia do pracy z responsywnym układem. Aby wyjść z
+            tego trybu, musisz ponownie kliknąć ikonę 1.
+          </p>
+          <p>
+            Aby zmienić szerokość rzutni przez proste rozciągnięcie, użyj
+            elementu 2. Efekt jest taki, jakby okno przeglądarki zostało
+            rozciągnięte lub "skurczone", zmieniając w ten sposób szerokość
+            rzutni.
+          </p>
+          <p>
+            W górnej części narzędzi znajduje się zestaw dodatkowych elementów
+            sterujących.
+          </p>
+          <ul class="unnumbered-list-container">
+            <li>
+              3 - wybierz urządzenie o precyzyjnych wymiarach, takie jak iPhone,
+              iPad, Pixel itd. lub wartość domyślną - Reponsive, tryb
+              responsywny z dowolną szerokością rzutni.
+            </li>
+            <li>
+              4 - aktualne wymiary szerokości i wysokości rzutni. Możesz
+              wprowadzić wartości ręcznie.
+            </li>
+            <li>
+              5 - zmiana skali, w przypadku gdy praca przebiega z dużymi
+              rozmiarami i trzeba spojrzeć na cały układ jako całość.
+            </li>
+            <li>
+              6 - możliwość symulacji obrotu urządzenia w trybie pionowym lub
+              poziomym.
+            </li>
+          </ul>
+          <p>
+            Nieco poniżej zestawu dodatkowych elementów sterowania znajduje się
+            panel do szybkiej zmiany szerokości rzutni za pomocą standardowych
+            punktów przerwania.
+          </p>
+        </div>
+      </section>
+      <!-- section12 -->
+      <section>
+        <div class="text">
+          <h3>Section12: Typy układów</h3>
+          <p>
+            Początkowo strony internetowe miały stały układ. Jeśli pojemnik miał
+            szerokość 1200 pikseli, pozostawał szeroki na 1200 pikseli, bez
+            względu na to, na jakim ekranie go otworzysz, dużym czy małym. W
+            dzisiejszej różnorodności urządzeń mobilnych to podejście jest
+            przestarzałe.
+          </p>
+          <div class="section12-container-img">
+            <img
+              class="section12-img"
+              src="./images/responsive-intro.jpg"
+              alt=""
+            />
+          </div>
+          <p>
+            Nowoczesna sieć internetowa przyjmuje nowe podejścia do tworzenia
+            witryn internetowych. Łączą one elementy układu płynnego z nowymi,
+            nowoczesnymi technikami, takimi jak adaptacyjny (adaptive) i
+            responsywny (responsive) układ. Techniki „adaptacyjnego” i
+            „responsywnego” układu różnią się ustawieniem szerokości kontenera i
+            zagnieżdżonych elementów.
+          </p>
+          <div class="section12-container-img">
+            <img
+              class="section12-img"
+              src="./images/responsive-vs-adaptive.gif"
+              alt=""
+            />
+          </div>
+          <p>
+            <span>Responsywna (responsive) strona internetowa</span> - posiada
+            kilka opcji wyświetlania, przejścia między nimi są płynne, elementy
+            i pojemnik rozciągają się jak guma. Podczas zmiany rozmiaru rzutni
+            bloki płynnie się kurczą lub rozciągają, a gdy pojawia się punkt
+            przerwania, (breakpoint) - zmieniają swoje położenie tak, aby
+            optymalnie zajmować całą wolną przestrzeń poziomą.
+          </p>
+          <p>
+            <span>Adaptacyjna (adaptive) strona internetowa</span> - ma kilka
+            opcji wyświetlania, w przeciwieństwie do strony responsywnej -
+            dosłownie. Projekt zmienia się w szarpnięciach w sztywno określonych
+            punktach przerwania i nie rozciąga się między nimi.
+          </p>
+          <p>
+            Podczas składania zapytań o media należy skupić się na punktach
+            przerwania projektu, czyli wartościach szerokości rzutni, w których
+            projekt znacznie się zmienia. Możesz je zdefiniować zgodnie z
+            układem narysowanym przez projektanta.
+          </p>
+          <pre>
+            /* Common container styles. */
+            .container {
+              min-width: 320px;
+              margin-left: auto;
+              margin-right: auto;
+              background-color: #ffc107;
+
+              /*  Text styles  */
+              text-align: center;
+              line-height: 180px;
+              font-size: 32px;
+              white-space: nowrap;
+            }
+
+            /* Set the maximum width of the responsive container. */
+            .container.responsive {
+              max-width: 1140px;
+              margin-bottom: 40px;
+            }
+
+            /* Set the base width of a adaptive container. */
+            .container.adaptive {
+              max-width: 400px;
+            }
+
+            @media screen and (min-width: 600px) {
+              .container {
+                background-color: #00bcd4;
+              }
+
+              /* Change the current width of the adaptive container at each breakpoint. */
+              .container.adaptive {
+                max-width: 600px;
+              }
+            }
+
+            @media screen and (min-width: 900px) {
+              .container {
+                background-color: #8bc34a;
+              }
+
+              /* Change the current width of the adaptive container at each breakpoint. */
+              .container.adaptive {
+                max-width: 900px;
+              }
+            }
+
+            @media screen and (min-width: 1140px) {
+              .container {
+                background-color: #ff5252;
+              }
+
+              /* Change the current width of the adaptive container at each breakpoint. */
+              .container.adaptive {
+                max-width: 1140px;
+              }
+            }
+
+            .container .label {
+              margin-top: 0;
+            }
+          </pre>
+          <p>
+            Dla obu kontenerów ustawiana jest właściwość min-width - szerokość
+            rzutni, poniżej której projekt nie jest obsługiwany. Użytkownik z
+            węższym ekranem będzie miał poziomy pasek przewijania.
+          </p>
+          <pre>
+            .container { 
+              min-width: 320px;
+            }
+          </pre>
+          <p>
+            Kontener responsywny jest ustawiany raz na właściwość max-width w
+            stylach podstawowych, tak aby rozciągał się dowolnie, ale
+            maksymalnie nie był szerszy niż określona wartość.
+          </p>
+          <pre>
+            .container.responsive {
+              max-width: 1140px;
+            }
+          </pre>
+          <p>
+            Kontener adaptacyjny otrzymuje początkową wartość maksymalnej
+            szerokości, po czym jest ponownie definiowany w każdym punkcie
+            przerwania.
+          </p>
+          <pre>
+            /* Ustawiamy szerokość podstawową adaptacyjnego kontenera  */
+            .container.adaptive {
+              max-width: 320px;
+            }
+
+            @media screen and (min-width: 600px) {
+              .container.adaptive {
+                max-width: 600px;
+              }
+            }
+
+            @media screen and (min-width: 900px) {
+              .container.adaptive {
+                max-width: 900px;
+              }
+            }
+
+            @media screen and (min-width: 1140px) {
+              .container.adaptive {
+                max-width: 1140px;
+              }
+            }
+          </pre>
+          <p>
+            Które podejście należy zastosować? Wszystko zależy od projektu,
+            rodzaju strony internetowej i możliwości finansowych klienta. W
+            przypadku większości witryn dla małych i średnich przedsiębiorstw
+            wersja adaptacyjna jest wystarczająca. Układ responsywny jest
+            droższy w projektowaniu i rozwoju, ponieważ jego wykonanie jest
+            trudniejsze i dłuższe, ale to jest niezastąpione w interfejsach
+            nowoczesnych aplikacji internetowych. Czasami zadania biznesowe
+            można lepiej wykonać za pomocą oddzielnej wersji telefonu
+            komórkowego lub nawet natywnej aplikacji zamiast strony
+            internetowej.
+          </p>
+        </div>
+      </section>
+      <!-- section13 -->
+      <section>
+        <div class="text">
+          <h3>Section13: Strategia Mobile First</h3>
+          <p>
+            Historycznie rzecz biorąc, projektanci zaczęli opracowywać projekt
+            witryny dla dużego ekranu, to znaczy, że pierwszy i „główny” projekt
+            został wykonany dla komputera stacjonarnego, ponieważ oznacza to
+            dużą funkcjonalność.
+          </p>
+          <p>
+            Problem z tym podejściem polega na tym, że pierwszeństwo mają
+            użytkownicy komputerów i laptopów, chociaż obecnie, według
+            statystyk, dominuje ruch mobilny. Wiele elementów projektu i
+            funkcjonalności, które świetnie wyglądają i działają na pulpicie
+            komputera, trudno przenieść na ekran telefonu komórkowego.
+          </p>
+          <p>
+            Strategia Mobile First zaczyna się odwrotnie - najpierw powstaje
+            wersja mobilna, a następnie dla tabletów i wersja desktopowa. Dzięki
+            temu aktualne informacje są łatwo dostępne i można ukrywać lub
+            zmieniać elementy na dowolnym ekranie.
+          </p>
+          <div class="section13-container-img">
+            <img
+              class="section13-img"
+              src="./images/mobile-first.webp"
+              alt=""
+            />
+          </div>
+          <p>
+            Strona internetowa musi być dobrze zoptymalizowana pod kątem
+            wyszukiwarek (SEO) i spełniać wszystkie wymagania UX (user
+            experience), tak aby wejście użytkownika na stronę było jak
+            najbardziej wygodne i zrozumiałe za pośrednictwem jego urządzenia
+            mobilnego. Dlatego jednym z najważniejszych wymagań w rozwoju Mobile
+            First jest:
+          </p>
+          <ul class="unnumbered-list-container">
+            <li>Najpierw pokazać najważniejsze treści.</li>
+            <li>
+              Witryna powinna być lekka i zoptymalizowana, ponieważ prędkość
+              połączenia z siecią komórkową może być niska w zależności od
+              lokalizacji użytkownika.
+            </li>
+            <li>
+              Witryna internetowa nie powinna ładować więcej zasobów, niż
+              potrzebuje użytkownik, aby uzyskać potrzebne informacje.
+            </li>
+            <li>
+              Dodatkowe informacje powinny być ładowane tylko na żądanie
+              użytkownika.
+            </li>
+          </ul>
+          <p>
+            Takie podejście przynosi ogromne korzyści podczas projektowania
+            strony internetowej.
+          </p>
+          <ul class="unnumbered-list-container">
+            <li>
+              Jedna strona internetowa - tylko jeden projekt na wszystkie
+              urządzenia. Zmniejsza liczbę wymaganych programistów.
+            </li>
+            <li>
+              Wygodny interfejs - użytkownicy najpierw otrzymają ważną zawartość
+              strony.
+            </li>
+            <li>
+              Szybkość ładowania - strona będzie ładowała się szybciej na
+              urządzeniach mobilnych ze względu na mniejszą liczbę pobieranych i
+              wyświetlanych zasobów.
+            </li>
+            <li>
+              Ranking wyszukiwania - na przykład Google nie tylko nadaje
+              priorytet witrynom zoptymalizowanym pod kątem urządzeń mobilnych,
+              ale także bierze pod uwagę czas otwarcia strony.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- section14 -->
+      <section>
+        <div class="text">
+          <h3>Section14: Mobile-first CSS</h3>
+          <p>
+            Technicznie implementacja Mobile First jest dość prosta - style dla
+            urządzeń mobilnych to podstawowe style poza zapytaniami o media, po
+            których do każdego punktu przerwania dodawane jest zapytanie o
+            media, w którym są nadpisywane niezbędne podstawowe style, style z
+            poprzedniego zakresu lub nowe. Dlatego w zapytaniach o media używają
+            się głównie cechy media min-width.
+          </p>
+          <pre>
+            .element {
+              /* Style podstawowe */
+            }
+
+            @media screen and (min-width: szerokość-tabletu) {
+              .element {
+                /* Style tabletu */
+              }
+            }
+
+            @media screen and (min-width: szerokość-desktopu) {
+              .element {
+                /* Style desktopu */
+              }
+            }
+          </pre>
+          <p>
+            Tworzy to lekką wersję stylów dla urządzeń mobilnych i wszystkie
+            style dla szerszych ekranów są zamykane wewnątrz odpowiednich
+            zapytań o media. Nie zmienia to znaczników HTML.
+          </p>
+          <p>
+            Zaletą tego podejścia jest to, że w przypadku stylów mobilnych
+            prawie nigdy nie trzeba określać pozycji, na przykład przy użyciu
+            Flexbox, ponieważ wszystkie treści idą w jednej kolumnie po drugiej
+            - domyślne zachowanie elementów blokowych w standardowym przepływie
+            dokumentów. Oznacza to, że w zapytaniach o media dla szerszych
+            ekranów nie musisz na nowo definiować pozycjonowania.
+          </p>
+          <p>
+            Poniższa ilustracja przedstawia strukturę zapytań o media i stylów
+            dla prostej strony z 2 punktami przerwania 768px i 1024px. Reguły
+            CSS w zapytaniach o media po prostu dodają nowe style lub nadpisują
+            poprzednie.
+          </p>
+          <div class="section14-container-img">
+            <img
+              class="section14-img"
+              src="./images/mobile-first-css-pl.png"
+              alt=""
+            />
+          </div>
+          <p>
+            Przejdź do pełnej wersji przykładowego edytora pod linkiem i zmień
+            szerokość obszaru z wynikiem. Uwaga, początkowo nie ma nawet @media,
+            ponieważ style są pisane dla wąskiego ekranu jako podstawa. Później,
+            podczas pisania stylów na szersze ekrany, dodajemy zapytania o
+            media.
+          </p>
+          <p>Zalety takiego układu:</p>
+          <ul class="unnumbered-list-container">
+            <li>
+              Podstawowy kod CSS jest bardziej czysty, ponieważ przepływ
+              dokumentu i model blokowy pomagają nam w pozycjonowaniu elementów
+              interfejsu użytkownika.
+            </li>
+            <li>Dziedziczenie stylów od wąskich do szerokich ekranów.</li>
+            <li>
+              Minimalne przedefiniowanie stylów pozycjonowania wynikające z
+              pierwszego punktu.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- section15 -->
+      <section>
+        <div class="text">
+          <h3>Section15: Cecha mediów max-width</h3>
+          <p>
+            W większości sytuacji wystarczy użyć min-width i dodać lub nadpisać
+            style. Są jednak sytuacje, w których użycie cech mediów max-width
+            sprawia, że kod jest czystszy i bardziej czytelny.
+          </p>
+          <p>
+            Wyobraźmy sobie taką sytuację - w ostatnim przykładzie elementy
+            muszą dodać dolny margines tylko na urządzeniu mobilnym, czyli do
+            767px (style tabletu zaczynają się od 768). A dla odstępu w
+            przypadku tabletu, od 768px do 1023px, elementy muszą mieć
+            obramowanie.
+          </p>
+          <p>
+            Użycie tylko min-width spowoduje, że style zapytań o media z
+            min-width: 768px będą musiały wyzerować dolny margines elementów. W
+            stylach zapytania o media z min-width: 1024px wyzerujemy style
+            obramowania. Nie jest to najlepsze rozwiązanie.
+          </p>
+          <pre class="section15-pre">
+            <span class="section15-span">ŹLE:</span>
+            .box {
+              margin-bottom: 10px;
+            }
+
+            @media (min-width: 768px) {
+              .box {
+                margin-bottom: 0;
+                border: 1px solid black;
+              }
+            }
+
+            @media (min-width: 1024px) {
+              .box {
+                border: none;
+              }
+            }
+          </pre>
+          <pre>
+            DOBRZE:
+            @media (max-width: 767px) {
+              .box {
+                margin-bottom: 10px;
+              }
+            }
+
+            @media (min-width: 768px) and (max-width: 1023px) {
+              .box {
+                border: 1px solid black;
+              }
+            }
+          </pre>
+          <p>
+            W takich sytuacjach dobrą praktyką jest zamykanie określonych stylów
+            w pewnych przerwach, a cecha mediów max-width nam w tym pomoże.
+          </p>
+          <div class="section15-container-img">
+            <img
+              class="section15-img"
+              src="./images/mobile-first-composition-pl.jpeg"
+              alt=""
+            />
+          </div>
         </div>
       </section>
     </main>
@@ -521,7 +1015,7 @@
         <div class="display-footer">
           <a
             class="link-footer"
-            href="https://lukaszkonik.pl"
+            href=""
             target="_blank"
             rel="noreferrer noopener"
           >
