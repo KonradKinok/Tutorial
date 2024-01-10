@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;700&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <!-- <style type="text/css">	@import url(./styles/stylStartowy.css);	</style> -->
+    <link rel="stylesheet" href="/styles/stylStartowy.css" />
+    <link rel="stylesheet" href="./styles/zajecia13style.css" />
+    <title>Zajęcia 13</title>
+  </head>
+  <body class="body-container">
+    <header>
+      <nav class="nav-container">
+        <!-- Nawigacja do innych stron -->
+        <ul class="nav-list-container">
+          <li><a class="link" href="./index.html">Index</a></li>
+          <li><a class="link" href="./listy.html">Listy</a></li>
+          <li><a href="./tabele.html">Tabele</a></li>
+          <li>
+            <a href="./obrazkiStrona.html">Multimedia</a>
+            <ul>
+              <li><a href="./obrazkiStrona.html#obrazki">Obrazki</a></li>
+              <li><a href="./obrazkiStrona.html#filmy">Film</a></li>
+              <li><a href="./obrazkiStrona.html">Dźwięk</a></li>
+            </ul>
+          </li>
+          <li><a href="./linki.html">Linki</a></li>
+          <li><a href="./rozneStrona.html">Różne</a></li>
+          <li><a href="./supplicia.html">Supplicia</a></li>
+          <li><a href="./zajecia4.html">Zajęcia4</a></li>
+          <li><a href="./zajecia5.html">Zajęcia5</a></li>
+          <li>
+            <a href="./zajecia6.html">Zajęcia6</a>
+            <ul>
+              <li><a href="./zajecia6.1.html">Zajęcia6.1</a></li>
+            </ul>
+          </li>
+          <li><a href="./zajecia7.html">Zajęcia7</a></li>
+          <li><a href="./zajecia8.html">Zajęcia8</a></li>
+          <li><a href="./zajecia9.html">Zajęcia9</a></li>
+          <li><a href="./zajecia10.html">Zajęcia10</a></li>
+          <li><a href="./zajecia13.html">Zajęcia13</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-container">
+      <!-- section1 -->
+      <section>
+        <div class="text">
+          <h3>Zapytania o media</h3>
+          <p>
+            <span>Zapytania o media</span> - umożliwia tworzenie nowoczesnych
+            responsywnych stron internetowych, które wyglądają równie dobrze na
+            każdym ekranie, czy to na komputerze stacjonarnym, czy smartfonie.
+            Wszystko sprowadza się do zastosowania jednej lub drugiej reguły
+            CSS, w zależności od wielkości okna przeglądarki (rzutni), ustawień
+            przeglądarki lub możliwości urządzenia.
+          </p>
+          <div class="section1-container-img">
+            <img
+              class="section1-img"
+              src="./images/media-queries-intro.png"
+              alt=""
+            />
+          </div>
+          <p>Algorytm stosowania stylów jest następujący:</p>
+          <ul class="unnumbered-list-container">
+            <li>
+              Deweloper opisuje zestaw zapytań o media i zawarte w nich reguły
+              CSS.
+            </li>
+            <li>Przeglądarka śledzi zmiany rozmiaru rzutni.</li>
+            <li>
+              Przeglądarka stosuje reguły CSS z zapytań o media, które pasują do
+              bieżącego rozmiaru rzutni.
+            </li>
+          </ul>
+          <p>
+            Oznacza to, że zapytania o media to instrukcje w postaci: „gdy
+            strona została otwarta na pulpicie, chcę, aby kolor tekstu był
+            czerwony, a po otwarciu w telefonie - zielony”.
+          </p>
+        </div>
+      </section>
+      <!-- section2 -->
+      <section>
+        <div class="text">
+          <h3>Składnia</h3>
+          <pre>
+            @media media-type and (media-feature) {
+            /*
+            * Zestaw reguł CSS do zastosowania w dokumencie,
+            * jeśli warunek sprawdzenia typu media i wyrażenia jest prawdziwy
+            */
+            }
+          </pre>
+          <p>
+            Zapytanie o media to specjalna konstrukcja CSS, zadeklarowana przez
+            dyrektywę @media, po której może znajdować się typ mediów
+            (media-type) i cecha mediów (media-feature) - wyrażenia testujące
+            właściwości urządzenia (na przykład szerokość rzutni). Cecha mediów
+            jest wyrażeniem logicznym, którе zwraca prawdę lub fałsz.
+          </p>
+          <p>
+            Na przykład jeśli chcesz, aby tło "body" było pomarańczowe, gdy
+            szerokości rzutni 900px i szersza, trzeba napisać następujące
+            zapytanie o media.
+          </p>
+          <pre>
+            @media screen and (min-width: 900px) {
+            body {
+            background-color: orange;
+                }
+            }</pre
+          >
+          <p>
+            Mówiąc prostymi słowami można to odczytać jako: „jeśli strona jest
+            wyświetlana na ekranie o szerokości co najmniej 900 pikseli, należy
+            zastosować określoną regułę CSS”.
+          </p>
+          <p>
+            Warunek sprawdzania może być tak złożony lub tak prosty, jak wymaga
+            tego sytuacja. W większości przypadków wystarczy określić typ mediów
+            urządzenia (najczęściej screen), i sprawdzić tylko szerokość rzutni.
+          </p>
+          <pre>
+            /*
+            To zapytanie o media zostanie zastosowane podczas drukowania dokumentu.
+            */
+            @media print {
+                /* ... */
+            }
+            
+            /*
+            To zapytanie o media zostanie zastosowane, gdy rzutnia będzie szersza niż 400 pikseli.
+            */
+            @media screen and (min-width: 400px) {
+                /* ... */
+            }
+
+            /*
+            Typ screen można pominąć, jeśli style są pisane tylko dla ekranów.
+            */
+            @media (min-width: 400px) {
+                /* ... */
+            }
+          </pre>
+        </div>
+      </section>
+      <!-- section3 -->
+      <section>
+        <div class="text">
+          <h3>Typy mediów</h3>
+          <p>
+            Typ mediów służy do opisywania typów urządzeń, na których może być
+            wyświetlana strona internetowa. W sumie są trzy typy obsługiwane
+            przez wszystkie nowoczesne przeglądarki.
+          </p>
+          <ul>
+            <li>
+              <span>all</span> - jeśli nie określisz typu nośnika, domyślnie
+              będzie używana ta wartość, która oznacza dowolne urządzenie.
+            </li>
+            <li>
+              <span>print</span> - pasuje do drukarek i urządzeń przeznaczonych
+              dla odtwarzania wersji drukowanej, na przykład przeglądarka
+              internetowa wyświetlająca dokument w trybie podglądu.
+            </li>
+            <li>
+              <span>screen</span> - opisuje urządzenia z fizycznym ekranem:
+              smartfony, tablety, monitory, telewizory itp. czyli wszystko co
+              nie obejmuje typu print
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- section4 -->
+      <section>
+        <div class="text">
+          <h3>Cechy mediów</h3>
+          <p>
+            Dwie najczęściej używane cechy mediów, które pozwalają na
+            zdefiniowanie szerokości rzutni przeglądarki, to min-width i
+            max-width. Określa się minimalna (min-width) lub maksymalna
+            (max-width) dopuszczalna szerokość rzutni, przy której są stosowane
+            reguły z zapytań o media.
+          </p>
+          <pre>
+            * Będzie używany, gdy szerokość widocznego obszaru (rzutni) jest większa niż 900 pikseli */
+            @media (min-width: 900px) {
+                body {
+                    background-color: green;
+                }
+            }
+
+            /* Będzie używany, gdy szerokość widocznego obszaru jest mniejsza niż 600 pikseli */
+            @media (max-width: 600px) {
+                body {
+                    background-color: yellow;
+                }
+            }
+          </pre>
+          <p>
+            Jeśli reprezentujemy szerokość rzutni jako linię prostą od 0 do
+            nieskończoności, to opisujemy przerwę (odstęp), w którym konieczne
+            jest zastosowanie jakichś stylów.
+          </p>
+          <div class="section2-container-img">
+            <img
+              class="section2-img"
+              src="./images/min-max-queries.png"
+              alt=""
+            />
+          </div>
+          <p>
+            Rozmiar rzutni, w którym cały układ lub jego poszczególne części
+            zmieniają swoje style, czyli zmienia się projekt (design) nazywa się
+            punktem przerwania (breakpoint).
+          </p>
+          <p>
+            Przy zmianie szerokości rzutni w przykładzie, przed 600px tło "body"
+            będzie żółte, a po 900px zielone. W zakresie od 601 do 899 pikseli
+            kolor jest biały, wartość domyślna, ponieważ żadne zapytanie o media
+            nie będzie pasować.
+          </p>
+          <pre>
+            body {
+                background-color: #fff;
+            }
+
+            @media screen and (max-width: 600px) {
+                body {
+                    background-color: #ffc107;
+                }
+            }
+
+            @media screen and (min-width: 900px) {
+                body {
+                    background-color: #388e3c;
+                }
+            }
+          </pre>
+          <p>
+            Jak opisać przerwę, na przykład od 600px do 900px? W przypadku
+            złożonych cech media należy używać operatorów logicznych.
+          </p>
+        </div>
+      </section>
+      <!-- section5 -->
+      <section>
+        <div class="text">
+          <h3>Operatory logiczne</h3>
+          <p>
+            Typ i cechy mediów można oddzielić opcjonalnymi operatorami
+            logicznymi not, and i only - wartość domyślna. Pełna składnia
+            zapytania o media jest następująca.
+          </p>
+        </div>
+      </section>
+      <!-- section6 -->
+      <section>
+        <div class="text">
+          <h3>Operator and</h3>
+          <p>
+            Operator and (dosłownie "i") jest używany nie tylko między typem
+            nośnika a warunkiem mediów, ale także do łączenia wielu cech media z
+            kontrolami wartości.
+          </p>
+          <pre>
+            @media screen and (min-width: 400px) and (max-width: 800px) {
+                body {
+                    background-color: red;
+                }
+            }
+        </pre
+          >
+          <p>
+            Takie zapytanie o media zostanie wykonane tylko wtedy, gdy strona
+            internetowa jest otwarta na ekranie, a szerokość rzutni mieści się w
+            zakresie od 400px do 800px.
+          </p>
+          <div class="section6-container-img">
+            <img class="section6-img" src="./images/query-segment.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- section7 -->
+      <section>
+        <div class="text">
+          <h3>Operator ,</h3>
+          <p>
+            Operator , (dosłownie "albo") pozwala określić zestaw wyrażeń, gdy
+            przy wykonaniu przynajmniej jednego z nich zostanie wykonane
+            zapytanie o media.
+          </p>
+          <p>Na przykład musisz zastosować style do 600px lub po 900px.</p>
+
+          <div class="section7-container-img">
+            <img
+              class="section7-img"
+              src="./images/min-max-queries.png"
+              alt=""
+            />
+            <div class="section7-emerging-text">
+              <pre class="section7-pre">
+ @media (max-width: 600px), (min-width: 900px) {
+     body {
+         background-color: orange;
+     }
+ }
+          </pre
+              >
+            </div>
+          </div>
+          <p>
+            Oznacza to, że jest to po prostu wyliczenie zestawu zapytań o media,
+            do których należy zastosować style. Można to zapisać jako dwa różne
+            zapytania o media. Ale wtedy kod stylu "body" zostanie zduplikowany.
+          </p>
+          <pre>
+            @media (max-width: 600px) {
+              body {
+                background-color: orange;
+              }
+            }
+
+            @media (min-width: 900px) {
+              body {
+                background-color: orange;
+              }
+            }
+          </pre>
+          <p>
+            W przyszłych wersjach CSS, operator , zostanie zastąpiony przez
+            operator or.
+          </p>
+        </div>
+      </section>
+      <!-- section8 -->
+      <section>
+        <div class="text">
+          <h3>Operator not</h3>
+          <p>
+            Operator not (dosłownie "nie") umożliwia wykonanie negacji, czyli
+            anulowanie zapytania o media. Słowo kluczowe not jest dołączane na
+            początku zapytania o media i dotyczy całego zapytania. Jest używany
+            bardzo rzadko, w niektórych szczególnych przypadkach.
+          </p>
+          <p>
+            Na przykład napiszmy warunek, w którym style powinny być stosowane
+            wszędzie z wyjątkiem drukowania.
+          </p>
+          <pre>
+            @media not print {
+              /* ... */
+            }
+          </pre>
+          <p>
+            Używając operatora not należy określić typ nośnika, ponieważ
+            domyślnie zostanie ustawiony na all a wyrażenie not all będzie
+            dosłownie odczytywane jak „nie wszystkie”, a zapytanie o media nigdy
+            nie zostało wykonane.
+          </p>
+          <pre>
+            /* Nigdy nie zostanie wykonany */
+            @media not (max-width: 500px) {
+              /* ... */
+            }
+
+            /* Zostanie wykonany, jeśli szerokość będzie większa niż 500 pikseli. */
+            @media not screen and (max-width: 500px) {
+              body {
+                background-color: tomato;
+              }
+            }
+
+            /*
+            W tym przypadku, aby ułatwić odczytanie kodu,
+            lepiej używać min-width: 500px.
+            */
+            @media (min-width: 500px) {
+              body {
+                background-color: tomato;
+              }
+            }
+          </pre>
+        </div>
+      </section>
+      <!-- section9 -->
+      <section>
+        <div class="text">
+          <h3>Nadpisywanie stylów</h3>
+          <p>
+            Nic nie stoi na przeszkodzie, aby przeglądarka mogła zastosować
+            więcej niż jedno zapytanie o media w tym samym czasie, jeśli
+            spełniają one warunek. Zapytania o media nie dodają specyficzności
+            do selektorów, które zawierają, ale kolejność reguł nadal ma
+            znaczenie. Oznacza to, że reguły występujące w zapytaniach o media
+            uczestniczą w standardowym kaskadowaniu podczas tworzenia
+            ostatecznych stylów elementu.
+          </p>
+          <pre>
+              /* Podstawowy styl */
+              body {
+                background-color: #fff;
+              }
+
+              /* Przy 900px i więcej nadpisujemy tło  */
+              @media screen and (min-width: 900px) {
+                body {
+                  background-color: #388e3c;
+                }
+              }
+            </pre
+          >
+          <p>
+            W narzędziach programistycznych możesz zobaczyć, jak stosowane są
+            reguły CSS, a kolor tła elementu "body" jest nadpisywany.
+          </p>
+          <div class="section9-container-img">
+            <img
+              class="section9-img"
+              src="./images/overriding-styles.png"
+              alt=""
+            />
+          </div>
+          <p>
+            W takim przypadku nadpisywane są tylko jednakowe właściwości, a nie
+            cała reguła. Dzięki temu możesz zrobić ciasto warstwowe ze stylów
+            bez powielania poprzednich, które pasują również do aktualnego
+            zapytania o media.
+          </p>
+          <pre>
+              /* Base styles */
+              body {
+                color: #2a2a2a;
+                background-color: #fff;
+                font-size: 16px;
+                line-height: 1.5;
+                font-family: sans-serif;
+              }
+
+              /* From 600px and wider, override the background, font and color. */
+              @media (min-width: 600px) {
+                body {
+                  background-color: #2196f3;
+                  font-size: 20px;
+                  color: #fff;
+                }
+              }
+
+              /* From 900px and wider, override the background. */
+              @media (min-width: 900px) {
+                body {
+                  background-color: #4caf50;
+                }
+              }
+            </pre
+          >
+          <p>
+            Tak będą wyglądać style elementu "body" w narzędziach
+            programistycznych, gdy szerokość rzutni jest większa niż 900px.
+          </p>
+          <div class="section9-container-img">
+            <img
+              class="section9-img section9-img2"
+              src="./images/overriding-multiple.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <!-- section10 -->
+      <section>
+        <div class="text">
+          <h3>Metaznacznik viewport</h3>
+          <p>
+            <span>Rzutnia (viewport)</span> - to widoczny, prostokątny obszar
+            strony internetowej, który nie obejmuje paska adresu, paska zakładek
+            i innych elementów usługowych przeglądarki.
+          </p>
+          <div class="section10-container-img">
+            <img class="section10-img" src="./images/viewport.png" alt="" />
+          </div>
+
+          <p>
+            Przeglądarki mobilne renderują stronę internetową w widocznym
+            obszarze, który jest szerszy niż fizyczny ekran urządzenia.
+            Domyślnie szerokość obszaru (rzutni) w przeglądarkach mobilnych
+            zależy od producenta urządzenia, nie odpowiada rozmiarowi ekranu
+            urządzenia i najczęściej wynosi 980px. Oznacza to, że przeglądarka
+            mobilna traktuje ten rozmiar jako rozmiar, względem którego powinna
+            stosować zapytania o media.
+          </p>
+          <div class="section10-container-img">
+            <img
+              class="section10-img"
+              src="./images/layout-viewport.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <div class="contener-shadow-text2">
+        <h2>Footer</h2>
+        <div class="display-footer">
+          <a
+            class="link-footer"
+            href="https://lukaszkonik.pl"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <img src="./images/konikMaly24x24Squoosh.png" alt="logo" />
+          </a>
+          <div class="display-footer2">
+            <p class="footer-selection">All rights reserved &copy;</p>
+            <p>Konrad</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
