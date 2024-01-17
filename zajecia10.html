@@ -258,7 +258,7 @@
       <!-- section8 -->
       <section>
         <div class="text">
-          <h2>Animowane właściwości</h2>
+          <h2>Section8: Animowane właściwości</h2>
           <p>
             Ze wszystkich właściwości, które można animować, zaleca się, jeśli
             to możliwe, użycie tylko dwóch: opacity (przezroczystość) i
@@ -301,11 +301,430 @@
               warstw i renderowanie ostatecznego obrazu na ekranie użytkownika.
             </li>
           </ol>
+          <div class="section8-container-animating-width">
+            <div class="section8-box">
+              <img
+                class="section8-img"
+                src="./images/animating-width.jpg"
+                alt=""
+              />
+              <div class="section8-overlay">
+                <p>
+                  Na przykład, jeśli animujesz właściwość width, przeglądarka
+                  musi wykonać kroki Layout > Paint > Composite, co jest dość
+                  kosztowną operacją dla wydajności strony internetowej.
+                </p>
+              </div>
+            </div>
+            <div class="section8-box">
+              <img
+                class="section8-img"
+                src="./images/animating-background.jpg"
+                alt=""
+              />
+              <div class="section8-overlay">
+                <p>
+                  Animacja właściwości background nie wpływa na geometrię
+                  elementów, więc przeglądarka musi tylko wykonać kroki Paint >
+                  Composite.
+                </p>
+              </div>
+            </div>
+            <div class="section8-box">
+              <img
+                class="section8-img"
+                src="./images/animating-opacity-transform.jpg"
+                alt=""
+              />
+              <div class="section8-overlay">
+                <p>
+                  Aby animować właściwości opacity i transform przeglądarka nie
+                  musi obliczać nowej geometrii ani przerysowywać warstw,
+                  wystarczy wykonać krok Composite.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section9 -->
+      <section>
+        <div class="text">
+          <h3>Section9: Animacja CSS</h3>
           <p>
-            Na przykład, jeśli animujesz właściwość width, przeglądarka musi
-            wykonać kroki Layout > Paint > Composite, co jest dość kosztowną
-            operacją dla wydajności strony internetowej.
+            Podobnie jak przejścia, animacje sprawiają, że strony internetowe są
+            dynamiczne, ale w przeciwieństwie do przejść animacje nie wymagają
+            obowiązkowego inicjatora (zdarzenia), można je powtarzać
+            nieskończoną liczbę razy, a między stanem początkowym i końcowym
+            może występować dowolna liczba stanów pośrednich.
           </p>
+          <div class="section9-container-img">
+            <img src="./images/trendering-steps-pl.jpeg" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- secion10 -->
+      <section>
+        <div class="text">
+          <h3>Section10: Deklaracja animacji</h3>
+          <p>
+            Animacja jest deklarowana za pomocą dyrektywy @keyframes, która
+            będzie opisywać zestaw klatek (frames, stanów) animacji, których
+            musi być co najmniej dwie (początek i koniec).
+          </p>
+          <pre>
+            /* Nazwa powinna być opisowa, czyli jaki to rodzaj animacji. */
+            @keyframes nazwaAnimacji {
+              /* Klatki zostaną opisane tutaj  */
+            }
+          </pre>
+          <p>
+            Klatki określają, w jakim momencie zmieniają się animowane
+            właściwości i są opisywane przez słowa kluczowe from (alias 0%) i to
+            (alias 100%) lub, najczęściej, jako procenty w zakresie 0%-100%,
+            ponieważ procenty pozwalają określić dowolną wartość.
+          </p>
+          <pre>
+            /* Nazwa powinna być opisowa, czyli jaki to rodzaj animacji. */
+            @keyframes nazwaAnimacji {
+              0% {
+                /* Właściwości do zmiany */
+              }
+
+              /* Dowolna liczba klatek pośrednich */
+              100% {
+                /* Właściwości do zmiany */
+              }
+            }
+          </pre>
+          <p>
+            W animacji nie jest określony czas ani element, do którego zostanie
+            zastosowana, co oznacza, że ta sama animacja może zostać ponownie
+            wykorzystana dla różnych elementów.
+          </p>
+          <p>
+            Zadeklarujmy animację do zmiany koloru tła elementu w trzech
+            punktach: 0%, 50% i 100%
+          </p>
+          <div class="section10-container">
+            <div class="section10-box"></div>
+            <pre>
+            @keyframes changeBgColor {
+              0% {
+                background-color: teal; 
+              }
+              50% {
+                background-color: orange; 
+              }
+              100% {
+                background-color: deepskyblue;
+              }
+            }
+          </pre
+            >
+          </div>
+        </div>
+      </section>
+      <!-- section11 -->
+      <section>
+        <div class="text">
+          <h2>Właściwości animacji</h2>
+          <h3>Section11: animation-name</h3>
+          <p>
+            Aby użyć już zadeklarowanej animacji, musisz określić jej nazwę jako
+            wartość dla właściwości animation-name.
+          </p>
+          <pre>
+            .box {
+              animation-name: changeBgColor;
+            }
+          </pre>
+          <p>
+            Animację można dodać do selektora, zostanie ona zastosowana
+            natychmiast podczas załadowania strony. Możesz także zastosować
+            animację po zdarzeniu, na przykład najechaniu kursorem lub fokusie,
+            używając odpowiednich pseudoklas.
+          </p>
+          <pre>
+            .box {
+              /* Podstawowe style elementów */
+            }
+
+            /* Dodajemy animację najechania kursorem  */
+            .box:hover {
+              animation-name: changeBgColor;
+            }
+          </pre>
+          <p>
+            Domyślnie animacja odbywa się raz, a ostateczne wartości animowanych
+            właściwości nie są zapisywane; zamiast tego element wraca do swojego
+            pierwotnego stanu.
+          </p>
+        </div>
+      </section>
+      <!-- section12 -->
+      <section>
+        <div class="text">
+          <h3>Section12: animation-timing-function</h3>
+          <p>
+            Ustawia funkcję rozkładu czasu dla animacji, wartości są analogiczne
+            transition-timing-function w przejściach CSS.
+          </p>
+          <div class="section12-container">
+            <div class="section12-container-box"></div>
+            <pre>
+              .box {
+                animation-name: changeBgColor;
+                animation-duration: 3000ms;
+                animation-timing-function: linear;
+              }
+            </pre>
+          </div>
+        </div>
+      </section>
+      <!-- section13 -->
+      <section>
+        <div class="text">
+          <h3>Section13: animation-delay</h3>
+          <p>
+            Ustawia opóźnienie przed rozpoczęciem animacji w sekundach lub
+            milisekundach.
+          </p>
+          <div class="section13-container">
+            <div class="section13-container-box"></div>
+            <pre>
+              .box {
+                animation-name: changeBgColor;
+                animation-duration: 3000ms;
+                animation-timing-function: linear;
+                animation-delay: 1000ms;
+              }
+            </pre>
+          </div>
+        </div>
+      </section>
+      <!-- section14 -->
+      <section>
+        <div class="text">
+          <h3>Section14: animation-iteration-count</h3>
+          <p>Ustawia liczbę pełnych powtórzeń animacji.</p>
+          <div class="section14-container">
+            <div class="section14-container-box"></div>
+            <pre>
+              .box {
+                animation-name: changeBgColor;
+                animation-duration: 3000ms;
+                animation-timing-function: linear;
+                animation-iteration-count: 5;
+              }
+            </pre>
+          </div>
+          <p>
+            Wartość może być dodatnią liczbą całkowitą lub słowem kluczowym
+            infinite - dzięki temu animacja będzie nieskończona.
+          </p>
+          <div class="section14-container">
+            <div class="section14-container-sun">
+              <img src="./images/sun.png" alt="Sun" width="300" height="300" />
+            </div>
+            <pre>
+              img {
+                animation-name: spin;
+                animation-duration: 5s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+              }
+
+              @keyframes spin {
+                0% {
+                  transform: rotate(0deg);
+                }
+                100% {
+                  transform: rotate(360deg);
+                }
+              }
+            </pre>
+          </div>
+          <div class="section14-container-sun section14-fixed-sun">
+            <img src="./images/sun.png" alt="Sun" />
+          </div>
+        </div>
+      </section>
+      <!-- section15 -->
+      <section>
+        <div class="text">
+          <h3>Section15: animation-direction</h3>
+          <p>
+            Kontroluje kierunek, w którym odtwarzana jest animacja - od początku
+            do końca klatki, odwrotnie od końca klatki do początku, lub może być
+            konieczne, aby kolejność zmieniała się przy każdym powtórzeniu.
+          </p>
+          <div class="section15-container">
+            <div class="section15-container-sun">
+              <img src="./images/sun.png" alt="Sun" width="300" height="300" />
+            </div>
+            <pre>
+              img {
+                animation-name: spin;
+                animation-duration: 5s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+              }
+
+              @keyframes spin {
+                0% {
+                  transform: rotate(0deg);
+                }
+                100% {
+                  transform: rotate(360deg);
+                }
+              }
+            </pre>
+          </div>
+          <ul class="unnumbered-list-container">
+            <li>
+              <span>normal</span> - animacja jest odtwarzana od początku do
+              końca klatki, a następnie natychmiast powraca do klatki
+              początkowej dla następnego powtórzenia (resetuje do stanu
+              początkowego). To jest wartość domyślna.
+            </li>
+            <li>
+              <span>reverse</span> - animacja jest odtwarzana wstecz, począwszy
+              od klatki końcowej do klatki początkowej, po czym natychmiast
+              powraca do klatki końcowej w celu następnego powtórzenia.
+            </li>
+            <li>
+              <span>alternate</span> - za pierwszym razem odtwarzanie rozpocznie
+              się od początku do ostatniej klatki, potem kierunek zmienia się
+              przy każdym kolejnym powtórzeniu.
+            </li>
+            <li>
+              <span>alternate-reverse</span> - za pierwszym razem odtwarzanie
+              rozpoczyna się od końcowej do początkowej klatki, po czym kierunek
+              zmienia się przy każdym kolejnym powtórzeniu.
+            </li>
+          </ul>
+          <div class="section15-container-animation-direction">
+            <div class="section15-container-animation-direction-box">
+              normal
+            </div>
+            <div class="section15-container-animation-direction-box">
+              reverse
+            </div>
+            <div class="section15-container-animation-direction-box">
+              alternate
+            </div>
+            <div class="section15-container-animation-direction-box">
+              alternate-reverse
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section16 -->
+      <section>
+        <div class="text">
+          <h3>Section16: animation-fill-mode</h3>
+          <p>
+            Określa, co dzieje się ze stylami elementu przed i po rozpoczęciu
+            animacji. Oznacza to, że pozwala określić, czy style animacji mają
+            być stosowane do elementu poza animacją.
+          </p>
+          <p>animation-fill-mode: none | forwards | backwards | both</p>
+          <ul>
+            <li>
+              <span>none</span> - style animacji wpływają na element tylko
+              podczas animacji. Przed animacją i po animacji element jest w
+              swoim pierwotnym stanie. Wartość domyślna.
+            </li>
+            <li>
+              <span>forwards</span> - style zastosowane na końcu animacji
+              pozostają w elemencie po jej zakończeniu.
+            </li>
+            <li>
+              <span>backwards</span> - style początkowe animacji zostaną
+              zastosowane do elementu jeszcze przed rozpoczęciem animacji.
+            </li>
+            <li>
+              <span>both</span> - łączy <span>forwards</span> i
+              <span>backwards</span>, style są stosowane przed i po animacji.
+            </li>
+          </ul>
+          <div class="section16-container">
+            <div class="section16-container-box">
+              <div class="section16-box">none</div>
+              <div class="section16-box">forwards</div>
+              <div class="section16-box">backwards</div>
+              <div class="section16-box">both</div>
+            </div>
+            <div class="section16-container-pre">
+              <pre>
+.section16-box:hover {
+    animation-name: changeBgColor;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+  }
+            </pre
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section17 -->
+      <section>
+        <div class="text">
+          <h3>Section17: animation-play-state</h3>
+          <p>
+            Umożliwia wstrzymanie animacji. Wartością domyślną jest running.
+            Jeśli ustawione na paused, na przykład przy :hover, animacja
+            zatrzyma się, dopóki kursor myszy znajduje się nad elementem.
+          </p>
+          <div class="section17-container">
+            <div class="section17-box">animation-play-state</div>
+          </div>
+        </div>
+      </section>
+      <!-- section18 -->
+      <section>
+        <div class="text">
+          <h3>Section18: Właściwość animation</h3>
+          <p>
+            Właściwość złożona umożliwia bardziej zwięzłe zapisywanie
+            właściwości animacji.
+          </p>
+          <p>
+            animation: [name] [duration] [timing-function] [delay]
+            [iteration-count] [direction] [fill-mode] [play-state]
+          </p>
+          <p>
+            Opcjonalne wartości właściwości można pominąć lub zamienić.
+            Wyjątkami są właściwości duration i delay - wartość czasu trwania
+            animacji należy zawsze określać przed opóźnieniem.
+          </p>
+          <div class="section18-container">
+            <div class="section18-box">
+              <p>.box { animation: magic 2s infinite; }</p>
+            </div>
+            <div class="section18-box">
+              <p>.box { animation: magic 2s 0.5s ease-in-out; }</p>
+            </div>
+            <div class="section18-box">
+              <p>.box { animation: magic 2s ease-in-out 0.5s forwards; }</p>
+            </div>
+            <div class="section18-box">
+              <p>
+                .box { animation: magic 2s forwards infinite ease-out 0.5s; }
+              </p>
+            </div>
+            <div class="section18-box">
+              <p>
+                @keyframes section18-changecolor{ 0% { background-color:
+                deeppink; } 50% { background-color: orange; } 100% {
+                background-color: deepskyblue; } }
+              </p>
+            </div>
+          </div>
+          <pre></pre>
         </div>
       </section>
     </main>

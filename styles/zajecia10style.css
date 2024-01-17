@@ -353,3 +353,408 @@ background-color: red;
     width: 80%;
     height: 80%;
 }
+
+.section8-container-animating-width{
+    display: flex;
+}
+
+.section8-box {
+    
+    position: relative;
+    width: 350px;
+    height: 142px;
+    margin: 0 auto;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.section8-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3f51b5;
+    transform: translatey(100%);
+    transition: transform 500ms ease-in-out;
+}
+
+.section8-box:hover .section8-overlay {
+    transform: translatey(0);
+}
+
+.section8-img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.section8-overlay p {
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    font-size: 16px;
+}
+
+/* section9 */
+.section9-container-img{
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+/* section10 */
+.section10-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+@keyframes changeBgColor {
+    0% {
+        background-color: teal;
+    }
+
+    50% {
+        background-color: orange;
+    }
+
+    100% {
+        background-color: deepskyblue;
+    }
+}
+.section10-box{
+    width: 300px;
+    height: 300px;
+    border: 1px solid white;
+}
+
+.section10-box:hover{
+    animation-name: changeBgColor;
+    animation-duration: 3000ms;
+}
+
+/* section12 */
+.section12-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        padding-top: 20px;
+}
+
+.section12-container-box{
+    width: 300px;
+    height: 300px;
+    border: 1px solid white;
+}
+
+.section12-container-box:hover {
+    animation-name: changeBgColor;
+    animation-duration: 3000ms;
+}
+
+/* section13 */
+.section13-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.section13-container-box {
+    width: 300px;
+    height: 300px;
+    border: 1px solid white;
+}
+
+.section13-container-box:hover {
+    animation-name: changeBgColor;
+    animation-duration: 3000ms;
+    animation-timing-function: linear;
+    animation-delay: 1000ms;
+}
+
+/* section14 */
+.section14-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.section14-container-box {
+    width: 300px;
+    height: 300px;
+    border: 1px solid white;
+}
+
+.section14-container-box:hover {
+    animation-name: changeBgColor;
+    animation-duration: 3000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 5;
+}
+
+.section14-container-sun {
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.section14-fixed-sun {
+    position: fixed;
+    right: 50px;
+    bottom: 30px;
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: 0;
+    padding: 0;
+}
+
+.section14-fixed-sun:hover {
+    animation-play-state: paused;
+}
+/* section15 */
+.section15-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.section15-container-sun {
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.section15-container-animation-direction{
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 12px;
+    border: 2px solid white;
+}
+
+.section15-container-animation-direction-box {
+    width: 150px;
+    padding: 4px 8px;
+    border: 2px solid #212121;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.section15-container-animation-direction-box:nth-child(1) {
+    animation-direction: normal;
+    background-color: #3f51b5;
+}
+
+.section15-container-animation-direction-box:nth-child(2) {
+    animation-direction: reverse;
+    background-color: #f57c00;
+}
+
+.section15-container-animation-direction-box:nth-child(3) {
+    animation-direction: alternate;
+    background-color: #009688;
+}
+
+.section15-container-animation-direction-box:nth-child(4) {
+    animation-direction: alternate-reverse;
+    background-color: #e91e63;
+}
+
+@keyframes move {
+    0% {
+        transform: translatex(0);
+    }
+
+    100% {
+        transform: translatex(calc(100vw - 450px ));
+        
+    }
+}
+
+/* section16 */
+.section16-container{
+    display: flex;
+    justify-content: center;
+        align-items: center;
+        gap: 15px;
+}
+.section16-container-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:15px;
+    flex-shrink: 0;
+}
+
+.section16-container-pre {
+    gap: 15px;
+flex-shrink: 1;
+}
+.section16-box{
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    border-radius: 5vh;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.section16-box:hover {
+    animation-name: section16-changeBgColor;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
+.section16-box:nth-child(1) {
+    /* Default value  */
+    animation-fill-mode: none;
+}
+
+.section16-box:nth-child(2) {
+    animation-fill-mode: forwards;
+}
+
+.section16-box:nth-child(3) {
+    animation-fill-mode: backwards;
+}
+
+.section16-box:nth-child(4) {
+    animation-fill-mode: both;
+}
+
+@keyframes section16-changeBgColor {
+    0% {
+        background-color: teal;
+    }
+
+    50% {
+        background-color: orange;
+    }
+
+    100% {
+        background-color: deepskyblue;
+    }
+}
+
+/* section17 */
+.section17-container{
+    display: flex;
+    justify-content: center;
+}
+
+.section17-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    font-size: 12px;
+    animation-name: section17-changeBgColor;
+    animation-duration: 3000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.section17-box:hover {
+    animation-play-state: paused;
+}
+
+@keyframes section17-changeBgColor {
+    0% {
+        background-color: deeppink;
+    }
+
+    50% {
+        background-color: orange;
+    }
+
+    100% {
+        background-color: deepskyblue;
+    }
+}
+
+/* section18 */
+.section18-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px 0;
+}
+
+.section18-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    border: 2px solid white;
+    font-size: 12px;
+    overflow: auto;
+}
+
+.section18-box:nth-child(1)
+{
+    animation: section16-changeBgColor 2s infinite;
+}
+
+.section18-box:nth-child(2) {
+    animation: section16-changeBgColor 2s 0.5s ease-in-out;;
+}
+
+.section18-box:nth-child(3) {
+    animation: section16-changeBgColor 2s ease-in-out 0.5s forwards;;
+}
+.section18-box:nth-child(4) {
+    animation: section16-changeBgColor 2s forwards infinite ease-out 0.5s;;
+}
+@keyframes section18-changecolor{
+    0% {
+            background-color: deeppink;
+        }
+    
+        50% {
+            background-color: orange;
+        }
+    
+        100% {
+            background-color: deepskyblue;
+        }
+}
