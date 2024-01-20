@@ -1,0 +1,192 @@
+.text {
+    color: #fff;
+    font-size: 18px;
+    padding: 20px 20px 40px;
+}
+
+
+span {
+    color: #fff;
+}
+
+
+
+.unnumbered-list-container {
+    list-style: square inside none;
+}
+
+.numbered-list-container {
+    margin: 20px;
+    list-style: decimal inside none;
+}
+
+.nav-list-container {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 0 5px;
+    padding: 10px 30px 20px;
+}
+
+.nav-list-container a {
+    display: flex;
+    background: beige;
+    gap: 10px;
+    margin: 10px auto;
+    padding: 10px;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.nav-list-container a:hover {
+    color: black;
+    background: #6d0ee9;
+
+}
+
+.body-container {
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.nav-container {
+    background: #6d0ee9;
+}
+
+.main-container {
+    width: 1250px;
+    background-image: linear-gradient(to bottom, #6d0ee9, #301212);
+    background-size: 1250px;
+    min-height: 50vh;
+}
+
+/* section4 */
+.section4-container{
+    display: flex;
+    justify-content: center;
+    gap:10px;
+}
+
+.section4-label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+}
+
+.section4-button {
+    display: inline-flex;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2196f3;
+    color: #fff;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+.section4-button:hover,
+.section4-button:focus {
+    background-color: #1976d2;
+}
+
+/* section5 */
+.section5-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* section6 */
+.section6-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.section6-label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+}
+
+.section6-button {
+    display: inline-flex;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2196f3;
+    color: #fff;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+.section6-button:hover,
+.section6-button:focus {
+    background-color: #1976d2;
+}
+
+/* section7 */
+.section7-container{
+    display: flex;
+    justify-content: center;
+}
+.section7-btn {
+    display: inline-flex;
+    padding: 12px 24px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+    background-color: cyan;
+    color: black;
+    cursor: pointer;
+}
+
+.section7-btn:hover,
+.section7-btn:focus {
+    background-color: orange;
+}
+
+.section7-btn:disabled {
+    background-color: lightgray;
+    cursor: not-allowed;
+}
+
+/* section9 */
+.section9-container {
+    display: flex;
+    justify-content: center;
+}
+
+.section9-form-input:checked {
+    outline: 2px solid #2196f3;
+    outline-offset: 2px;
+}
+
+/* Selecting .form-label when the checkbox preceding it in markup is checked */
+.section9-form-input:checked+.form-label {
+    color: #2196f3;
+}
+
+.section9-form {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.section9-form-caption {
+    margin: 0;
+    font-weight: 700;
+}
+
+.section9-form-field {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.section9-form-label {
+    cursor: pointer;
+}

@@ -724,7 +724,440 @@
               </p>
             </div>
           </div>
-          <pre></pre>
+        </div>
+      </section>
+      <!-- section19 -->
+      <section>
+        <div class="text">
+          <h3>Section19: Perspektywa</h3>
+          <p>
+            Domyślnie element jest renderowany w przestrzeni 2D i podczas
+            transformacjach wzdłuż osi X i Y, np. rotate, zniekształca i wygląda
+            nienaturalnie.
+          </p>
+          <div class="section19-container-img">
+            <img src="./images/perspective-intro.png" alt="" />
+          </div>
+          <p>
+            W tym przykładzie elementy div.box są obrócone o 45 stopni w osiach
+            X i Y. Wyglądają na płaskie i zniekształcone, ponieważ brakuje im
+            perspektywy, czyli głębi sceny.
+          </p>
+          <div class="section19-container-perspective">
+            <div class="section19-scene-perspective">
+              <div class="section19-box-perspective rotate-x">
+                rotateX(60deg);
+              </div>
+            </div>
+            <div class="section19-scene-perspective">
+              <div class="section19-box-perspective rotate-y">
+                rotateY(60deg)
+              </div>
+            </div>
+            <div class="section19-scene-perspective">
+              <img
+                class="section19-picture-perspective rotate-x"
+                src="./images/pictures/rower.jpg"
+                alt=""
+              />
+            </div>
+            <div class="section19-scene-perspective">
+              <img
+                class="section19-picture-perspective rotate-y"
+                src="./images/pictures/rower.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section20 -->
+      <section>
+        <div class="text">
+          <h3>Section20: Funkcja perspective()</h3>
+          <p>
+            Jest to kolejna funkcja transformacji dla właściwości transform,
+            która umożliwia ustawienie perspektywy dla jednego elementu, do
+            którego jest stosowana.
+          </p>
+          <div class="section20-container-perspective">
+            <div class="section20-scene-perspective">
+              <div class="section20-box-perspective rotate-x">
+                rotateX(60deg);
+              </div>
+            </div>
+            <div class="section20-scene-perspective">
+              <div class="section20-box-perspective rotate-y">
+                rotateY(60deg)
+              </div>
+            </div>
+            <div class="section20-scene-perspective">
+              <img
+                class="section20-picture-perspective rotate-x"
+                src="./images/pictures/rower.jpg"
+                alt=""
+              />
+            </div>
+            <div class="section20-scene-perspective">
+              <img
+                class="section20-picture-perspective rotate-y"
+                src="./images/pictures/rower.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <p>
+            Ustawiając perspective(400px) mówimy przeglądarce, aby renderowała
+            div.box w przestrzeni 3D, dodając głębię sceny i wymiar do elementu.
+            Wartość 400px to odległość od sceny, na której znajduje się element.
+            Im niższa wartość, tym bliżej sceny jest widz i odwrotnie.
+          </p>
+          <p>
+            W przypadku użycia na kilku elementach jednocześnie każdy ma swoją
+            własną scenę i perspektywę, to znaczy, że widz wydaje się patrzeć na
+            każdy element z innego punktu.
+          </p>
+
+          <div class="section20-scene-many">
+            <div class="section20-scene-many-box">01</div>
+            <div class="section20-scene-many-box">02</div>
+            <div class="section20-scene-many-box">03</div>
+            <div class="section20-scene-many-box">04</div>
+            <div class="section20-scene-many-box">05</div>
+            <div class="section20-scene-many-box">06</div>
+            <div class="section20-scene-many-box">07</div>
+            <div class="section20-scene-many-box">08</div>
+            <div class="section20-scene-many-box">09</div>
+            <div class="section20-scene-many-box">10</div>
+          </div>
+        </div>
+      </section>
+      <!-- section21 -->
+      <section>
+        <div class="text">
+          <h3>Section21: Właściwość perspective</h3>
+          <p>
+            Umożliwia tworzenie tej samej perspektywy dla całej grupy elementów
+            w scenie. Ta właściwość jest ustawiona na wspólny kontener grupy
+            elementów (scenę), w naszym przypadku div.scene.
+          </p>
+          <div class="section21-scene-many">
+            <div class="section21-scene-many-box">01</div>
+            <div class="section21-scene-many-box">02</div>
+            <div class="section21-scene-many-box">03</div>
+            <div class="section21-scene-many-box">04</div>
+            <div class="section21-scene-many-box">05</div>
+            <div class="section21-scene-many-box">06</div>
+            <div class="section21-scene-many-box">07</div>
+            <div class="section21-scene-many-box">08</div>
+            <div class="section21-scene-many-box">09</div>
+            <div class="section21-scene-many-box">10</div>
+          </div>
+        </div>
+      </section>
+      <!-- section22 -->
+      <section>
+        <div class="text">
+          <h3>Section22: Transformacja 2D</h3>
+          <p>
+            Transformacje CSS umożliwiają przesuwanie, skalowanie i obracanie
+            elementów, czyli dodawanie efektów dekoracyjnych. Transformacje
+            zmieniają kształt i położenie elementu bez wpływu na pozostałe
+            elementy strony. Domyślnie transformacja następuje względem środka
+            elementu, ale można to zmienić.
+          </p>
+          <h3>Właściwość transform</h3>
+          <p>
+            Odpowiedzialna za zastosowanie jednej lub więcej transformacji do
+            elementu.
+          </p>
+          <p>transform: none | "typ transformacji" "typ transformacji" ...</p>
+          <p>
+            Przekształcony element - to element z dowolną ustawioną wartością
+            właściwości transform, inną niż none.
+          </p>
+        </div>
+      </section>
+      <!-- section23 -->
+      <section>
+        <div class="text">
+          <h3>Section23: Skalowanie</h3>
+          <p>
+            Funkcje scaleX(tx), scaleY(ty) i scale(tx, ty) skalują szerokość i /
+            lub wysokość bloku bez wpływu na geometrię otaczających elementów.
+            Jeśli dla scale() określona jest jedna wartość, druga będzie taka
+            sama.
+          </p>
+          <pre>
+            .box {
+              transform: scale(1.15);
+            }
+          </pre>
+          <p>
+            Początkowa skala elementu to 1. Wartości od 1 do 0 zmniejszają
+            element, wartości większe niż 1 - zwiększają. Na przykład wartość
+            scale(1.25) to 125% rozmiaru początkowego, a scale(0.75) - 75%.
+          </p>
+          <div class="section23-container">
+            <div class="section23-box">scale(2.00)</div>
+            <div class="section23-box"></div>
+            <div class="section23-box"></div>
+          </div>
+          <div class="section23-container">
+            <div>
+              <img
+                class="section23-box-pictures pictures1"
+                src="./images/pictures/rower.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="section23-box-pictures pictures2"
+                src="./images/pictures/rower.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="section23-box-pictures pictures3"
+                src="./images/pictures/rower.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section24 -->
+      <section>
+        <div class="text">
+          <h3>Section24: Obrót</h3>
+          <p>
+            Funkcja rotate(kąt) obraca elementy o podaną liczbę stopni
+            (jednostka deg). Wartości dodatnie obracają element zgodnie z ruchem
+            wskazówek zegara, wartości ujemne przeciwnie do ruchu wskazówek
+            zegara.
+          </p>
+          <pre>
+            .box {
+              transform: rotate(45deg);
+            }
+          </pre>
+          <div class="section24-container">
+            <div class="section24-box"></div>
+            <div class="section24-box"></div>
+            <div class="section24-box"></div>
+          </div>
+          <div class="section24-container">
+            <div>
+              <img
+                class="section24-box-pictures section24-pictures1"
+                src="./images/pictures/rower.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="section24-box-pictures section24-pictures2"
+                src="./images/pictures/rower.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="section24-box-pictures section24-pictures3"
+                src="./images/pictures/rower.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <p>
+            Wartości można ustawić nie tylko w stopniach, ale także w „obrotach”
+            (jednostka turn). Na przykład rotate(0.5turn) to pół obrotu, analog
+            rotate(180deg).
+          </p>
+        </div>
+      </section>
+      <!-- section25 -->
+      <section>
+        <div class="text">
+          <h3>Section25: Przesunięcie</h3>
+          <p>
+            Funkcje translateX(tx), translateY(ty) i translate(tx, ty)
+            przesuwają element w kierunku poziomym (oś X) i/lub pionowym (oś Y)
+            względem pozycji początkowej.
+          </p>
+          <ul class="unnumbered-list-container">
+            <li>
+              Dodatnie wartości X przesuwają element w prawo, ujemne wartości -
+              w lewo.
+            </li>
+            <li>
+              Dodatnie wartości Y przesuwają element w dół, ujemne - w górę.
+            </li>
+          </ul>
+          <p>
+            Wartości mogą być w pikselach lub procentach. Jeśli wartość jest
+            określona w procentach, to jest obliczana z rozmiaru przesuwanego
+            elementu.
+          </p>
+          <pre>
+            .box {
+              transform: translate(100px, 200px);
+            }
+          </pre>
+          <div class="section25-container">
+            <div class="section25-box"></div>
+            <div class="section25-box"></div>
+            <div class="section25-box"></div>
+          </div>
+          <div class="section25-container">
+            <div>
+              <img
+                class="section25-box-pictures section25-pictures1"
+                src="./images/pictures/rower.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="section25-box-pictures section25-pictures2"
+                src="./images/pictures/rower.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="section25-box-pictures section25-pictures3"
+                src="./images/pictures/rower.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section26 -->
+      <section>
+        <div class="text">
+          <h3>Section26: Centrowanie elementu</h3>
+          <p>
+            Rozważmy technikę, za pomocą której możemy umieścić element
+            pozycjonowany absolutnie (za pomocą position: absolute) dokładnie w
+            środku bloku, względem którego jest on umieszczony. Technika jest
+            bardzo prosta i składa się z trzech kroków.
+          </p>
+          <pre>
+            .box {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          </pre>
+          <ol class="numbered-list-container">
+            <li>Absolutnie ustawiamy element względem elementu-przodka.</li>
+            <li>
+              Ustawimy dla elementu właściwości top i left z wartością 50%,
+              spowoduje to umieszczenie lewego górnego rogu elementu dokładnie w
+              środku elementu-przodka.
+            </li>
+            <li>
+              Ustawimy element na ujemne przesunięcie (translate) o 50% jego
+              wysokości i szerokości. Spowoduje to przesunięcie elementu w górę
+              i w lewo oraz wyśrodkowanie go wewnątrz przodka.
+            </li>
+          </ol>
+          <div class="section26-parent">
+            <div class="section26-box"></div>
+          </div>
+        </div>
+      </section>
+      <!-- section27 -->
+      <section>
+        <div class="text">
+          <h3>Section27 Zniekształcenie</h3>
+          <p>
+            Funkcje skewX(kąt), skewY(kąt) i skew(x-kąt, y-kąt) służą do
+            zniekształcania (przechylania, deformowania) boków elementu względem
+            osi współrzędnych. Jeśli tylko jedna wartość jest określona dla
+            skew() druga będzie równa 0, to znaczy, będzie to analog skewX()
+          </p>
+
+          <pre>
+          .box {
+            transform: skew(30deg);
+          }
+        </pre
+          >
+          <div class="section27-container">
+            <div class="section27-box"></div>
+            <div class="section27-box"></div>
+            <div class="section27-box"></div>
+          </div>
+          <div class="section27-container">
+            <div>
+              <img
+                class="section27-box-pictures section27-pictures1"
+                src="./images/pictures/rower.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="section27-box-pictures section27-pictures2"
+                src="./images/pictures/rower.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="section27-box-pictures section27-pictures3"
+                src="./images/pictures/rower.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section28 -->
+      <section>
+        <div class="text">
+          <h3>Section28: Punkt początkowy transformacji</h3>
+          <p>
+            Właściwość transform-origin umożliwia przesunięcie punktu
+            transformacji, względem którego zmienia się pozycja, rozmiar lub
+            kształt elementu. Wartość domyślna — center albo 50% 50%. Jest
+            ustawiana tylko dla przekształconych elementów. Nie dziedziczy.
+          </p>
+          <p>
+            W tym przykładzie punkt transformacji każdego elementu jest
+            oznaczony niebieską etykietą. Wartości można określić nie tylko za
+            pomocą słów kluczowych, ale także w pikselach lub procentach.
+          </p>
+          <div class="section28-container">
+            <div class="section28-box">top left</div>
+            <div class="section28-box">top center</div>
+            <div class="section28-box">top right</div>
+            <div class="section28-box">center left</div>
+            <div class="section28-box">center center</div>
+            <div class="section28-box">center right</div>
+            <div class="section28-box">bottom left</div>
+            <div class="section28-box">bottom center</div>
+            <div class="section28-box">bottom right</div>
+          </div>
+          <div class="section28-container-picture">
+            <div class="section28-pictures1">
+              <img class="" src="./images/pictures/rower.jpg" alt="" />
+            </div>
+            <div class="section28-box-picture">top center</div>
+            <div class="section28-box-picture">top right</div>
+            <div class="section28-box-picture">center left</div>
+            <div class="section28-box-picture">center center</div>
+            <div class="section28-box-picture">center right</div>
+            <div class="section28-box-picture">bottom left</div>
+            <div class="section28-box-picture">bottom center</div>
+            <div class="section28-box-picture">bottom right</div>
+          </div>
         </div>
       </section>
     </main>

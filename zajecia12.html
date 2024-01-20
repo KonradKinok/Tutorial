@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<body lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;700&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <!-- <style type="text/css">	@import url(./styles/stylStartowy.css);	</style> -->
+    <link rel="stylesheet" href="/styles/stylStartowy.css" />
+    <link rel="stylesheet" href="./styles/zajecia12style.css" />
+    <title>Zajęcia 12</title>
+  </head>
+  <body class="body-container">
+    <header>
+      <nav class="nav-container">
+        <!-- Nawigacja do innych stron -->
+        <ul class="nav-list-container">
+          <li><a class="link" href="./index.html">Index</a></li>
+          <li><a class="link" href="./listy.html">Listy</a></li>
+          <li><a href="./tabele.html">Tabele</a></li>
+          <li>
+            <a href="./obrazkiStrona.html">Multimedia</a>
+            <ul>
+              <li><a href="./obrazkiStrona.html#obrazki">Obrazki</a></li>
+              <li><a href="./obrazkiStrona.html#filmy">Film</a></li>
+              <li><a href="./obrazkiStrona.html">Dźwięk</a></li>
+            </ul>
+          </li>
+          <li><a href="./linki.html">Linki</a></li>
+          <li><a href="./rozneStrona.html">Różne</a></li>
+          <li><a href="./supplicia.html">Supplicia</a></li>
+          <li><a href="./zajecia4.html">Zajęcia4</a></li>
+          <li><a href="./zajecia5.html">Zajęcia5</a></li>
+          <li>
+            <a href="./zajecia6.html">Zajęcia6</a>
+            <ul>
+              <li><a href="./zajecia6.1.html">Zajęcia6.1</a></li>
+            </ul>
+          </li>
+          <li><a href="./zajecia7.html">Zajęcia 7</a></li>
+          <li><a href="./zajecia8.html">Zajęcia 8</a></li>
+          <li><a href="./zajecia9.html">Zajęcia 9</a></li>
+          <li><a href="./zajecia10.html">Zajęcia 10</a></li>
+          <li><a href="./zajecia11.html">Zajęcia 11</a></li>
+          <li><a href="./zajecia12.html">Zajęcia 12</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-container">
+      <!-- section1 -->
+      <section>
+        <div class="text">
+          <h3>Section1: Walidacja</h3>
+          <p>
+            Za każdym razem, gdy wypełniamy pola formularza w formacie, którego
+            nie oczekują (niepoprawnie), otrzymujemy informację zwrotną w
+            postaci alertów. Tak działają formularze rejestracji, zamawiania i
+            inne, w których ważny jest format danych wejściowych.
+          </p>
+          <p>
+            Nazywa się to walidacją formularza - sprawdzenie poprawności
+            wprowadzonych wartości. Jeśli dane są poprawne, formularz zostanie
+            przesłany, w przeciwnym razie zostanie wyświetlony komunikat o
+            błędzie wyjaśniający wymagane zmiany.
+          </p>
+          <p>
+            Istnieją dwa typy walidacji: po stronie klienta (w przeglądarce) i
+            po stronie serwera (backend). W praktyce te dwa podejścia są zawsze
+            używane razem.
+          </p>
+          <p>
+            Walidacja po stronie klienta - jest to sprawdzenie, które odbywa się
+            w przeglądarce zanim dane z formularza zostaną przesłane na serwer.
+            Jest to wygodne dla UX (user experience), ponieważ użytkownik
+            otrzymuje natychmiastową informację zwrotną podczas lub natychmiast
+            po wprowadzeniu wartości do pola.
+          </p>
+          <p>
+            Walidacja po stronie serwera - jest to ostatnia linia obrony
+            aplikacji internetowej przed nieprawidłowymi lub złośliwymi danymi.
+            Sprawdzenie, które jest wykonywane na back-end, po przesłaniu danych
+            i przed zapisaniem ich w bazie danych. Jeśli dane nie przejdą
+            walidacji, odpowiedź jest wysyłana z powrotem do klienta, aby
+            poinformować użytkownika, jakie poprawki należy wprowadzić.
+          </p>
+        </div>
+      </section>
+      <!-- section2 -->
+      <section>
+        <div class="text">
+          <h2>Section2: Atrybuty walidacji</h2>
+          <p>
+            Każda nowoczesna przeglądarka ma wbudowaną możliwość walidacji
+            zawartości pól formularza bez użycia JavaScript. Do tego używamy
+            połączenia różnych typów pól i ich atrybutów. Jeśli użytkownik
+            wprowadził nieprawidłową wartość, przeglądarka wyświetli alert.
+          </p>
+          <p>
+            Zachowanie wbudowanej walidacji formularzy różni się w zależności od
+            przeglądarki, dlatego w praktyce używane są biblioteki JavaScript.
+            Mimo to warto poznać podstawy walidacji HTML5.
+          </p>
+        </div>
+      </section>
+      <!-- section3 -->
+      <section>
+        <div class="text">
+          <h3>Section3: Wymagane pola</h3>
+          <p>
+            Atrybut logiczny required oznacza pole formularza jako wymagane.
+            Jeśli pole jest puste, przeglądarka wyświetli monit i formularz nie
+            zostanie przesłany. Wygląd wiadomości zależy od przeglądarki i nie
+            może być zmieniony z CSS. Spróbuj przesłać przykładowy formularz bez
+            wypełniania pól adresu e-mail lub hasła.
+          </p>
+          <div>
+            <form>
+              <label>
+                Email
+                <input type="email" name="email" required />
+              </label>
+              <label>
+                Password
+                <input type="password" name="password" required />
+              </label>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <p>
+            Aby grupa przycisków opcji lub pól wyboru była wymagana, musisz
+            ustawić atrybut required dla każdego elementu grupy.
+          </p>
+        </div>
+      </section>
+      <!-- section4 -->
+      <section>
+        <div class="text">
+          <h3>Section4: Ograniczenie długości</h3>
+          <p>
+            Atrybuty minlength i maxlength nakładają ograniczenia na liczbę
+            znaków, które można wprowadzić, takich jak hasło lub nazwa
+            użytkownika.
+          </p>
+          <div class="section4-container">
+            <form>
+              <label class="section4-label">
+                Username
+                <input type="text" name="username" required minlength="3" />
+              </label>
+              <label class="section4-label">
+                Password
+                <input
+                  type="password"
+                  name="password"
+                  required
+                  minlength="6"
+                  maxlength="12"
+                />
+              </label>
+              <button class="section4-button" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- section5 -->
+      <section>
+        <div class="text">
+          <h3>Section5: Ograniczanie wartości</h3>
+          <p>
+            Atrybuty min i max pozwalają sprawdzić występowanie wartości
+            liczbowej w określonym przedziale. Może być używany tylko w polach
+            typu number, range albo date.
+          </p>
+          <div class="section5-container">
+            <form>
+              <label>
+                How many pizzas do you want to order?
+                <input type="number" name="amount" required min="1" max="10" />
+              </label>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- section6 -->
+      <section>
+        <div class="text">
+          <h3>Section6: Wyrażenie regularne</h3>
+          <p>
+            Atrybut pattern umożliwia określenie wyrażenia regularnego
+            (szablonu), względem którego będzie sprawdzana wartość pola. Służy
+            do rozszerzenia podstawowej walidacji. Na przykład, jeśli chcesz,
+            aby nazwa użytkownika składała się z dwóch słów lub hasło zawierało
+            co najmniej jedną wielką literę, jedną małą literę i jedną cyfrę.
+          </p>
+          <p>
+            Wyrażenia regularne - jest to specjalny język do opisywania
+            szablonów, który używany w językach programowania do poszukiwania,
+            zastępowania lub dopasowywania sekwencji znaków w wierszach.
+          </p>
+          <p>
+            Domyślnie, jeśli wystąpi błąd walidacji, przeglądarka wyświetli
+            standardowy tekst «Please match the requested format». Dodatkowy
+            tekst-podpowiedź, który będzie wyświetlany w wiadomości z
+            przeglądarki, można określić w atrybucie title.
+          </p>
+          <div class="section6-container">
+            <form>
+              <label class="section6-label">
+                Username
+                <input
+                  type="text"
+                  name="text"
+                  required
+                  pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+                  title="Username must be two words separated by space."
+                />
+              </label>
+              <label class="section6-label">
+                Password
+                <input
+                  type="password"
+                  name="password"
+                  required
+                  minlength="6"
+                  maxlength="12"
+                  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                  title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number."
+                />
+              </label>
+              <button class="section6-button" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- section7 -->
+      <section>
+        <div class="text">
+          <h2>Section7 Pseudoklasy stanu</h2>
+          <p>
+            Istnieje zestaw pseudoklas utworzonych specjalnie dla elementów
+            formularza, które nie mają wpływu na inne elementy. Za ich pomocą
+            można zaprojektować pola formularza zgodnie ze stanem walidności
+            wprowadzonych danych lub obowiązkowości wypełnienia.
+          </p>
+        </div>
+      </section>
+      <!-- section8 -->
+      <section>
+        <div class="text">
+          <h3>Section8: :enabled i :disabled</h3>
+          <p>
+            Umożliwia wybranie elementu w stanie aktywnym lub wyłączonym, który
+            jest określany przez obecność lub brak atrybutu boolowskiego
+            disabled. Można zastosować do elementów input, select i button.
+          </p>
+          <div class="section7-container">
+            <button class="section7-btn">Active button</button>
+            <button class="section7-btn" disabled>Disabled button</button>
+          </div>
+          <p>
+            Elementy z atrybutem disabled nie otrzymują efektów najechania
+            kursorem i fokusu, a także ignorują kliknięcia myszą. Można to
+            wykorzystać na przykład, aby zapobiec przesłaniu formularza, dopóki
+            wszystkie pola nie zostaną wypełnione, ale wymaga to użycia
+            JavaScript.
+          </p>
+        </div>
+      </section>
+      <!-- section9 -->
+      <section>
+        <div class="text">
+          <h3>Section9: :checked</h3>
+          <p>
+            Można zastosować do przycisków opcji i pól wyboru oraz umożliwia
+            wybranie tylko zaznaczonych pól. Na przykład niech po zaznaczeniu
+            pola wyboru tekst etykiety zmieni kolor na niebieski. Używając
+            selektora + możesz wybrać etykietę, gdy pole wyboru jest zaznaczone,
+            ale to wymaga, aby tag label znajdował się w znacznikach po polu
+            wyboru.
+          </p>
+          <pre>
+            input type="checkbox" name="hobby" value="music" id="music" />
+            label for="music">Muzyka/label>
+          </pre>
+          <div class="section9-container">
+            <form class="section9-form">
+              <p class="section9-form-caption">What are your hobbies?</p>
+              <div class="section9-form-field">
+                <input
+                  type="checkbox"
+                  class="section9-form-input"
+                  name="hobby"
+                  value="sports"
+                  id="sports"
+                />
+                <label class="section9-form-label" for="sports">Sports</label>
+              </div>
+              <div class="section9-form-field">
+                <input
+                  type="checkbox"
+                  class="section9-form-input"
+                  name="hobby"
+                  value="music"
+                  id="music"
+                />
+                <label class="section9-form-label" for="music">Music</label>
+              </div>
+              <div class="section9-form-field">
+                <input
+                  type="checkbox"
+                  class="section9-form-input"
+                  name="hobby"
+                  value="books"
+                  id="books"
+                />
+                <label class="section9-form-label" for="books">Books</label>
+              </div>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <div class="contener-shadow-text2">
+        <h2>Footer</h2>
+        <div class="display-footer">
+          <a
+            class="link-footer"
+            href=""
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <img src="./images/konikMaly24x24Squoosh.png" alt="logo" />
+          </a>
+          <div class="display-footer2">
+            <p class="footer-selection">All rights reserved &copy;</p>
+            <p>Konrad</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</body>

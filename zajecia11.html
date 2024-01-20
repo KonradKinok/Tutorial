@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;700&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <!-- <style type="text/css">	@import url(./styles/stylStartowy.css);	</style> -->
+    <link rel="stylesheet" href="/styles/stylStartowy.css" />
+    <link rel="stylesheet" href="./styles/zajecia11style.css" />
+    <title>Zajęcia 11</title>
+  </head>
+  <body class="body-container">
+    <header>
+      <nav class="nav-container">
+        <!-- Nawigacja do innych stron -->
+        <ul class="nav-list-container">
+          <li><a class="link" href="./index.html">Index</a></li>
+          <li><a class="link" href="./listy.html">Listy</a></li>
+          <li><a href="./tabele.html">Tabele</a></li>
+          <li>
+            <a href="./obrazkiStrona.html">Multimedia</a>
+            <ul>
+              <li><a href="./obrazkiStrona.html#obrazki">Obrazki</a></li>
+              <li><a href="./obrazkiStrona.html#filmy">Film</a></li>
+              <li><a href="./obrazkiStrona.html">Dźwięk</a></li>
+            </ul>
+          </li>
+          <li><a href="./linki.html">Linki</a></li>
+          <li><a href="./rozneStrona.html">Różne</a></li>
+          <li><a href="./supplicia.html">Supplicia</a></li>
+          <li><a href="./zajecia4.html">Zajęcia4</a></li>
+          <li><a href="./zajecia5.html">Zajęcia5</a></li>
+          <li>
+            <a href="./zajecia6.html">Zajęcia6</a>
+            <ul>
+              <li><a href="./zajecia6.1.html">Zajęcia6.1</a></li>
+            </ul>
+          </li>
+          <li><a href="./zajecia7.html">Zajęcia 7</a></li>
+          <li><a href="./zajecia8.html">Zajęcia 8</a></li>
+          <li><a href="./zajecia9.html">Zajęcia 9</a></li>
+          <li><a href="./zajecia10.html">Zajęcia 10</a></li>
+          <li><a href="./zajecia11.html">Zajęcia 11</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-container">
+      <!-- section1 -->
+      <section>
+        <div class="text">
+          <h3>Section1: Formularze</h3>
+          <p>
+            Formularze umożliwiają otrzymywanie informacji od odwiedzających
+            stronę internetową. Listy mailingowe, dane kontaktowe, profil
+            użytkownika, logowanie i rejestracja, komentarze na blogu, wszystko
+            to realizowane jest za pomocą formularzy i ich elementów.
+          </p>
+          <div class="section1-container-img">
+            <img src="./images/form-elements.png" alt="" />
+          </div>
+          <p>
+            Formularze to „strony z pieniędzmi”, za pośrednictwem których sklepy
+            internetowe sprzedają swoje produkty, a usługi online otrzymują
+            zapłatę za świadczone usługi. Firmy mierzą sukces swojej witryny
+            internetowej skutecznością jej formularzy, ponieważ odpowiadają na
+            pytania typu „Ile potencjalnych klientów wysłała nasza witryna do
+            sprzedaży?” i „ile osób podpisało się na nasz produkt w zeszłym
+            tygodniu?” Dlatego formularze są ciągle odnawiane i ulepszane.
+          </p>
+          <div class="section1-container-img">
+            <img src="./images/form-frontend-and-backend.png" alt="" />
+          </div>
+          <p>
+            Funkcjonalny formularz HTML składa się z dwóch części: interfejsu
+            użytkownika i serwera (backend). Pierwszy to wygląd formularza
+            (znaczniki i projektowanie), a drugi to kod do przetwarzania
+            wprowadzonych danych (walidacja, przechowywanie danych, wysyłanie
+            e-mail itp.).
+          </p>
+          <p>
+            Teraz naszym zadaniem jest nauczyć się tworzenia interfejsu, czyli
+            oznaczania i projektowania elementów formularzy. Nauka przetwarzania
+            danych wykracza poza zakres kursu z układu i wymaga znajomości
+            języków programowania przeglądarki i serwera (JavaScript, Node.js,
+            Python, PHP itp.).
+          </p>
+        </div>
+      </section>
+      <!-- section2 -->
+      <section>
+        <div class="text">
+          <h3>Section2: Element "form"</h3>
+          <p>
+            Element "form" jest kontenerem dla grupy powiązanych elementów
+            formularza. Na przykład formularz do recenzji, rejestracji,
+            płatności za zamówienie w sklepie internetowym. Każdy z tych
+            elementów interfejsu składa się z grupy elementów interaktywnych
+            zgrupowanych za pomocą formularza.
+          </p>
+          <pre>
+            form name="signup_form" autocomplete="on" novalidate>
+            label>
+            Email
+            input type="email" name="email" />
+            /label>
+            label>
+            Password
+            input type="password" name="password" />
+            /label>
+            button type="submit">Submit/button>
+            /form>
+          </pre>
+          <p>
+            Element "form" nie ma wymaganych atrybutów, więc powyższy przykład
+            zawiera kilka atrybutów które mogą być przydatne i są w pełni
+            opcjonalne.
+          </p>
+          <ul class="unnumbered-list-container">
+            <li>
+              <span>name</span> - nazwa formularza, która jest unikalna na
+              bieżącej stronie internetowej. Jest używana zarówno na serwerze,
+              jak i na kliencie (przeglądarka) podczas pracy z formularzem. Może
+              zawierać angielskie wielkie i małe litery, cyfry, podkreślenie i
+              myślnik. W nazwie nie można używać spacji.
+            </li>
+            <li>
+              <span>autocomplete</span> - określa, czy przeglądarka może
+              automatycznie wypełniać wartości wszystkich elementów formularza.
+              Ma tylko dwie wartości off i on. To zachowanie można zmienić dla
+              każdego elementu formularza.
+            </li>
+            <li>
+              <span>novalidate</span> - atrybut-flaga, nie ma wartości.
+              Informuje przeglądarkę, aby nie sprawdzała wprowadzonych danych
+              podczas przesyłania formularza. Jeśli atrybut nie zostanie
+              określony, przeprowadzana jest weryfikacja po stronie klienta.
+            </li>
+          </ul>
+          <p>
+            Po kliknięciu na button type="submit"> lub naciśnięciu klawisza
+            Enter w dowolnym polu formularza, jest ono „przesłane”, co powoduje
+            ponowne załadowanie bieżącej strony. Jest to domyślne zachowanie i
+            można je zmienić za pomocą JavaScript.
+          </p>
+        </div>
+      </section>
+      <!-- section3 -->
+      <section>
+        <div class="text">
+          <h3>Element label></h3>
+          <p>
+            Element label> łączy opis (etykietę) z interaktywnym elementem
+            formularza. Tekst etykiety jest powiązany z elementem nie tylko
+            wizualnie, ale także logicznie. Na przykład czytnik ekranu odczyta
+            tekst etykiety, gdy użytkownik ustawi fokus na powiązanym elemencie.
+            Po kliknięciu etykiety podłączony element automatycznie otrzyma
+            efekt fokusu.
+          </p>
+          <p>
+            Jeśli element formularza, taki jak pole wejściowe, jest zagnieżdżony
+            w label>, połączenie jest tworzone automatycznie przez przeglądarkę.
+            Kliknięcie tekstu «Email» lub «Password» ustawi fokus na odpowiednie
+            pole wejściowe.
+          </p>
+          <pre>
+            form>
+            label>
+            Email
+            input type="email" name="email" />
+            /label>
+            label>
+            Password
+            input type="password" name="password" />
+            /label>
+            button type="submit">Submit/button>
+            /form>
+          </pre>
+          <p>
+            Jeśli element formularza nie jest zagnieżdżony w label>, musisz
+            jawnie powiązać je za pomocą atrybutu id elementu związanego (czyli
+            w tym przypadku inputa) i atrybutu for etykiety.
+          </p>
+          <div class="section3-container">
+            <img src="./images/label-element-for-attribute.png" alt="" />
+          </div>
+          <pre>
+            form>
+            label for="user_email">Email/label>
+            input type="email" name="email" id="user_email" />
+            label for="user_password">Password/label>
+            input type="password" name="password" id="user_password" />
+            button type="submit">Submit/button>
+            /form>
+          </pre>
+        </div>
+      </section>
+      <!-- section4 -->
+      <section>
+        <div class="text">
+          <h3>Section4: Element input</h3>
+          <p>
+            Wszechstronny element do tworzenia różnych pól wejściowych. Typ pola
+            określany jest przez atrybut type, którego domyślną wartością jest
+            text - jednowierszowe pole tekstowe przyjmujące dowolne znaki.
+          </p>
+          <p>input type="text" name="username" /></p>
+          <p>
+            Koncepcyjnie tag input> reprezentuje wpis w słowniku, który jest
+            wysyłany do serwera. Atrybut name określa nazwę tego wpisu, a
+            wartość jest wpisana przez użytkownika. Nazwa pola musi być unikalna
+            w formularzu. Wartość atrybutu name jest również używana podczas
+            pracy z formularzem w JavaScript.
+          </p>
+          <div class="section4-container">
+            <img src="./images/sending-input-variable-to-server.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- section5 -->
+      <section>
+        <div class="text">
+          <h3>Atrybut placeholder</h3>
+          <p>
+            Umożliwia wyświetlenie tekstu podpowiedzi o tym, jakie dane
+            wprowadzić w polu, gdy element input> jest pusty. Tego atrybutu
+            można używać w każdym elemencie formularza, który zawiera pole
+            tekstowe.
+          </p>
+
+          <div class="section5-container-form">
+            <form>
+              <label class="section5-label">
+                Username
+                <input
+                  class="section5-input"
+                  type="text"
+                  name="username"
+                  placeholder="Jacob Mercer"
+                />
+              </label>
+              <button type="submit">Submit feedback</button>
+            </form>
+          </div>
+          <p>
+            Tekst podpowiedzi nie zastępuje dobrego label>, ale uzupełnia go
+            przykładem typu danych do wprowadzenia.
+            <span
+              ><a
+                href="https://youtu.be/jrigp2L-P-0"
+                target="_blank"
+                rel="noreferrer noopener"
+                >Placeholders in Form Fields Are Harmful</a
+              >
+            </span>
+            - filmik o tym, jak prawidłowo zaprojektować dostępne, łatwe w
+            użyciu elementy formularzy z etykietami i wskazówkami.
+          </p>
+        </div>
+      </section>
+      <!-- section6 -->
+      <section>
+        <div class="text">
+          <h3>Section6: Poczta i hasło</h3>
+          <p>
+            Wartość atrybutu type wpływa na typ pola, zestaw znaków, które można
+            do niego wprowadzić oraz późniejszą walidację wartości. Na przykład,
+            gdy przeglądarka smartfona widzi pole typu email, prezentuje
+            użytkownikowi specjalną klawiaturę do wpisywania e-maila z łatwo
+            dostępnym symbolem @. Przeglądarka umożliwia również wybranie adresu
+            e-mail z książki adresowej.
+          </p>
+          <div class="section6-container-form">
+            <form class="section6-container-form">
+              <label>
+                Email
+                <input type="email" name="email" />
+              </label>
+              <label>
+                Password
+                <input
+                  type="password"
+                  name="pwd"
+                  minlength="5"
+                  maxlength="12"
+                />
+              </label>
+              <label>
+                Phone number
+                <input type="tel" name="phone" />
+              </label>
+              <button type="submit">Register</button>
+            </form>
+          </div>
+          <p>
+            W przypadku typu password, wprowadzona wartość hasła zostanie
+            zastąpiona tokenami () ze względów bezpieczeństwa. Atrybuty
+            minLength i maxLength są opcjonalne. Pozwalają ograniczyć liczbę
+            znaków, które można wprowadzić do pola.
+          </p>
+        </div>
+      </section>
+      <!-- section7 -->
+      <section>
+        <div class="text">
+          <h3>Section7: Przyciski radiowe (przełączniki)</h3>
+          <p>
+            Jeśli ustawisz atrybut type na wartość radio - wejście zmieni się w
+            przełącznik (przycisk radiowy, radio button). Przyciski radiowe są
+            zawsze podzielone na grupy, co pozwala użytkownikowi wybrać jedną z
+            wielu wstępnie zdefiniowanych wartości.
+          </p>
+          <p>
+            Każdy przycisk radiowy w grupie ma przypisaną tę samą wartość
+            atrybutu name, w przeciwnym razie przeglądarka nie będzie wiedzieć,
+            że jest to grupa.
+          </p>
+          <div class="section7-container-form">
+            <form>
+              <p>Choose a color:</p>
+              <label>
+                <input type="radio" name="color" value="red" />
+                Red
+              </label>
+              <label>
+                <input type="radio" name="color" value="white" checked />
+                White
+              </label>
+              <label>
+                <input type="radio" name="color" value="green" />
+                Green
+              </label>
+              <p>Select size:</p>
+              <label>
+                <input type="radio" name="size" value="sm" />
+                Small
+              </label>
+              <label>
+                <input type="radio" name="size" value="md" />
+                Medium
+              </label>
+              <label>
+                <input type="radio" name="size" value="lg" checked />
+                Large
+              </label>
+            </form>
+          </div>
+          <p>
+            W przeciwieństwie do pól tekstowych, nie można wprowadzać danych do
+            przycisków radiowych, więc każdy z nich musi mieć określoną wartość
+            w atrybucie value. Jest to wartość, która zostanie wysłana do
+            serwera, gdy użytkownik prześle formularz.
+          </p>
+          <p>
+            Atrybut logiczny checked określa, który przełącznik będzie domyślnie
+            wybrany (zaznaczony). W grupie przycisków radiowych w stanie checked
+            może znajdować się tylko jeden element.
+          </p>
+        </div>
+      </section>
+      <!-- section8 -->
+      <section>
+        <div class="text">
+          <h3>Section8: Pole wyboru (pole ze znacznikiem)</h3>
+          <p>
+            Pole ze znacznikiem (pola wyboru, checkbox) są podobne do
+            przełączników, ale pozwalają wybrać dowolną liczbę wartości, czyli
+            wiele z wielu. Może istnieć cała grupa checkboxów np. wybór hobby
+            lub tylko jeden np. akceptacja umowy użytkownika przy rejestracji.
+          </p>
+          <div class="section8-container-form">
+            <form>
+              <p>What are your hobbies?</p>
+              <label>
+                <input type="checkbox" name="hobby" value="music" checked />
+                Music
+              </label>
+              <label>
+                <input type="checkbox" name="hobby" value="sports" checked />
+                Sports
+              </label>
+              <label>
+                <input type="checkbox" name="hobby" value="reading" />
+                Reading
+              </label>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- section9 -->
+      <section>
+        <div class="text">
+          <h3>Section9: Liczby</h3>
+          <p>
+            Zwykłe pola tekstowe akceptują dosłownie wszystko: cyfry, litery,
+            spacje, znaki interpunkcyjne itp. W celu umożliwienia wpisywania
+            tylko liczb, z możliwością ograniczenia zakresu, stosuje się pole
+            typu number. Podczas wprowadzania danych do pola numerycznego
+            przeglądarka automatycznie ignoruje wszystkie znaki oprócz cyfr.
+          </p>
+          <pre>
+            label>
+            Age
+            input type="number" name="age" value="0" min="18" max="120" />
+            /label>
+          </pre>
+          <p>
+            Oczywiście istnieje wiele liczb, które nie są odpowiednie dla
+            każdego typu danych liczbowych. Na przykład może być konieczny zakaz
+            wprowadzania zbyt dużych lub ujemnych liczb. Ten problem jest
+            rozwiązywany za pomocą atrybutów min i max, które definiują granice
+            wprowadzania danych.
+          </p>
+          <p>
+            Domyślnie pola numeryczne akceptują tylko liczby całkowite. To
+            zachowanie można zmienić za pomocą atrybutu step, który określa krok
+            zmiany liczby. Domyślna wartość kroku to 1.
+          </p>
+          <div class="section9-container-form">
+            <form>
+              <label class="section9-label">
+                Weight with 0.5 step value:
+                <input
+                  type="number"
+                  name="weight"
+                  min="0"
+                  max="200"
+                  step="0.5"
+                  value="0"
+                />
+              </label>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- section10 -->
+      <section>
+        <div class="text">
+          <h3>Section10: Numery telefoniczne</h3>
+          <p>
+            Typ tel tworzy pole do wpisania numerów telefonów, które mogą być
+            prezentowane w różnych formatach. Obecnie jedyną zaletą używania
+            pola tel jest wyświetlenie wirtualnej klawiatury do wprowadzania
+            numerów telefonicznych w przeglądarkach komórkowych, które zawierają
+            cyfry, ale nie zawierają liter.
+          </p>
+          <pre>
+            form>
+            label>
+            Phone number
+            input type="tel" name="phone_number" />
+            /label>
+            button type="submit">Submit/button>
+            /form>
+          </pre>
+        </div>
+      </section>
+      <!-- section11 -->
+      <section>
+        <div class="text">
+          <h3>Section11: Suwaki</h3>
+          <p>
+            Typ range służy do tworzenia suwaków z wartościami całkowitymi i
+            ułamkowymi. Atrybuty min i max określają zakres wartości, a step
+            kontroluje krok. Aby ustawić wartość, wystarczy przeciągnąć suwak do
+            wymaganej pozycji między wartością minimalną i maksymalną.
+          </p>
+          <div>
+            <label class="section11-label">
+              Interest rate:
+              <input
+                type="range"
+                name="interest_rate"
+                value="40"
+                min="0"
+                max="100"
+                step="20"
+              />
+            </label>
+            <p>Selected value: <span>40</span></p>
+          </div>
+        </div>
+      </section>
+      <!-- section12 -->
+      <section>
+        <div class="text">
+          <h3>Section12: Data i czas</h3>
+          <p>
+            Przeglądarki mają wbudowany kalendarz, w którym użytkownik może
+            wybrać żądaną datę i/lub godzinę. Atrybuty min i max pozwalają
+            ustawić minimalną i maksymalną datę, pod warunkiem, że używany jest
+            poprawny format.
+          </p>
+          <div class="section12-container-form">
+            <label>
+              Date
+              <input type="date" />
+            </label>
+            <label>
+              Time
+              <input type="time" />
+            </label>
+            <label>
+              Date and time
+              <input type="datetime-local" />
+            </label>
+          </div>
+          <p>
+            Ze względu na różny wygląd w różnych przeglądarkach i złożoność
+            zmiany go przez CSS, zamiast natywnego kalendarza najczęściej
+            używane są gotowe biblioteki JavaScript.
+          </p>
+        </div>
+      </section>
+      <!-- section13 -->
+      <section>
+        <div class="text">
+          <h3>Section13: Element textarea</h3>
+          <p>
+            Tworzy wielowierszowe pole tekstowe do wprowadzania dużej ilości
+            tekstu. Na przykład w celu uzyskania opinii, komentarzy,
+            publikowania w sieciach społecznościowych, wyjaśniania szczegółów
+            zamówienia itp.
+          </p>
+          <div class="section13-container-form">
+            <form>
+              <label>
+                Username
+                <input type="text" name="username" placeholder="Jack Meadows" />
+              </label>
+              <label>
+                Feedback
+                <textarea
+                  name="feedback"
+                  rows="5"
+                  placeholder="Enter your message here..."
+                ></textarea>
+              </label>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <p>
+            Atrybut rows określa liczbę wierszy (wysokość), a cols - liczbę
+            kolumn (szerokość). W praktyce określa się tylko rows, a szerokość
+            elementu jest kontrolowana przez CSS.
+          </p>
+          <p>
+            Domyślnie element textarea może być rozciągany w poziomie i w
+            pionie. Aby kontrolować możliwość zmiany rozmiaru przez użytkownika,
+            w CSS jest właściwość resize.
+          </p>
+          <p>resize: both | horizontal | vertical | none</p>
+        </div>
+      </section>
+      <!-- section14 -->
+      <section>
+        <div class="text">
+          <h3>Section14: Element select</h3>
+          <p>
+            Menu rozwijane jest alternatywą dla przycisków opcji, ponieważ
+            pozwala domyślnie wybrać jedną z wielu opcji. Element select to menu
+            rozwijane z atrybutem name, które zawiera zestaw elementów option z
+            atrybutem value.
+          </p>
+          <p>
+            Tekst wewnątrz elementu option jest wyświetlany użytkownikowi, a
+            wartość atrybutu value jest tym, co zostanie użyte podczas
+            przesyłania formularza.
+          </p>
+          <div class="section14-container-form">
+            <label for="size">Size</label>
+            <select id="size" name="size">
+              <option value="xs">Extra Small</option>
+              <option value="s">Small</option>
+              <option value="m" selected>Medium</option>
+              <option value="l">Large</option>
+            </select>
+          </div>
+          <p>
+            Domyślnie wybrany jest pierwszy element option z listy. Można to
+            zmienić, ustawiając żądaną opcję na atrybut selected.
+          </p>
+        </div>
+      </section>
+      <!-- section15 -->
+      <section>
+        <div class="text">
+          <h3>Section15: Grupowanie opcji</h3>
+          <p>
+            Czasami konieczne jest podzielenie listy na oddzielne grupy, które
+            nie są ze sobą powiązane. W tym celu istnieje znacznik optgroup. Aby
+            dodać nagłówek grupy, użyj atrybutu label.
+          </p>
+          <div class="section15-container-form">
+            <label for="month">Month</label>
+            <select name="month" id="month">
+              <optgroup label="Summer">
+                <option value="s6">June</option>
+                <option value="s7">July</option>
+                <option value="s8">August</option>
+              </optgroup>
+
+              <optgroup label="Autumn">
+                <option value="s9">September</option>
+                <option value="s10">October</option>
+                <option value="s11">November</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+      </section>
+      <!-- section16 -->
+      <section>
+        <div class="text">
+          <h3>Section16: Element datalist</h3>
+          <p>
+            Autouzupełnianie to technika znana wszystkim użytkownikom. Podczas
+            wpisywania znaków w polu tekstowym wyszukiwarka oferuje różne opcje
+            automatycznego uzupełniania. Podczas wpisywania nowej wiadomości
+            e-mail klient poczty elektronicznej oferuje listę odbiorców itp.
+          </p>
+          <p>
+            Element datalist tworzy listę wstępnie zdefiniowanych wartości,
+            które można wybrać podczas pisania w powiązanym polu tekstowym. Ta
+            lista jest ukryta i staje się dostępna, gdy wejście otrzyma fokus i
+            zostanie w nim wpisane. Lista utworzona przez element datalist, jest
+            powiązana z polem tekstowym za pośrednictwem atrybutu id. Jego
+            wartość musi odpowiadać wartości atrybutu list znacznika input.
+          </p>
+          <div class="section16-container-form">
+            <label for="fav">Choose your favourite browser</label>
+            <input list="browsers" name="fav" id="fav" />
+            <datalist id="browsers">
+              <option>Edge</option>
+              <option>Firefox</option>
+              <option>Chrome</option>
+              <option>Opera</option>
+              <option>Safari</option>
+            </datalist>
+          </div>
+          <p>
+            Elementy option mogą mieć również atrybut value. Jest to przydatne,
+            gdy tekst opcji i wartość nie pasują do siebie. Na przykład
+            użytkownik może nie znać skrótu stanu USA. W menu rozwijanym zobaczy
+            listę stanów i ich skrótów, a po wybraniu opcji w polu tekstowym
+            pojawi się tylko wartość opcji.
+          </p>
+          <div class="section16-container-form">
+            <label for="state">Choose your state</label>
+            <input type="text" name="state" id="state" list="states" />
+            <datalist id="states">
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="AR">Arkansas</option>
+            </datalist>
+          </div>
+        </div>
+      </section>
+      <!-- section17 -->
+      <section>
+        <div class="text">
+          <h2>Section17: Grupowanie pól</h2>
+          <p>
+            Grupowanie powiązanych elementów sprawia, że formularze są
+            łatwiejsze do zrozumienia dla użytkowników. Pomaga również
+            użytkownikowi skupić się na małych uporządkowanych grupach pól
+            zamiast próbować zrozumieć cały formularz na raz. Grupowanie odbywa
+            się zarówno wizualnie w interfejsie, jak i logicznie w kodzie.
+          </p>
+        </div>
+      </section>
+      <!-- section18 -->
+      <section>
+        <div class="text">
+          <h3>Section18: Elementy fieldset i legend</h3>
+          <p>
+            Element fieldset jest kontenerem do grupowania wielu powiązanych
+            elementów w formularzu, a zagnieżdżony element legend będzie działał
+            jako nagłówek grupy. Powiązane przyciski opcji i pola wyboru powinny
+            być zawsze grupowane, inne typy pól są grupowane w razie potrzeby.
+          </p>
+          <div class="section18-container-form">
+            <form class="form">
+              <fieldset class="form-group">
+                <legend class="group-title">Enter your contact details</legend>
+                <label class="form-label">
+                  Name
+                  <input type="text" name="username" />
+                </label>
+                <label class="form-label">
+                  Email
+                  <input type="email" name="email" />
+                </label>
+              </fieldset>
+              <fieldset class="form-group">
+                <legend class="group-title">
+                  Your favourite programming language
+                </legend>
+                <div class="form-field">
+                  <input
+                    type="checkbox"
+                    name="language"
+                    value="python"
+                    id="python"
+                  />
+                  <label class="form-label" for="python">Python</label>
+                </div>
+                <div class="form-field">
+                  <input type="checkbox" name="language" value="js" id="js" />
+                  <label class="form-label" for="js">JavaScript</label>
+                </div>
+                <div class="form-field">
+                  <input
+                    type="checkbox"
+                    name="language"
+                    value="ruby"
+                    id="ruby"
+                  />
+                  <label class="form-label" for="ruby">Ruby</label>
+                </div>
+              </fieldset>
+              <fieldset class="form-group">
+                <legend class="group-title">I want to receive</legend>
+                <div class="form-field">
+                  <input
+                    type="checkbox"
+                    name="newsletter"
+                    value="weekly"
+                    id="weekly"
+                  />
+                  <label class="form-label" for="weekly"
+                    >The weekly newsletter</label
+                  >
+                </div>
+                <div class="form-field">
+                  <input
+                    type="checkbox"
+                    name="newsletter"
+                    value="offers"
+                    id="offers"
+                  />
+                  <label class="form-label" for="offers"
+                    >Offers from the company</label
+                  >
+                </div>
+                <div class="form-field">
+                  <input
+                    type="checkbox"
+                    name="newsletter"
+                    value="associated_offers"
+                    id="associated_offers"
+                  />
+                  <label class="form-label" for="associated_offers"
+                    >Offers from associated companies</label
+                  >
+                </div>
+              </fieldset>
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- section19 -->
+      <section>
+        <div class="text">
+          <h3>Section19: Grupowanie z możliwością projektowania</h3>
+          <p>
+            Elementy fieldset i legend mają doskonałą semantykę, ale ograniczone
+            możliwości projektowania. W większości przypadków do grupowania
+            elementów formularza używany jest element div z atrybutami
+            dostępności role i aria-labelledby.
+          </p>
+          <pre>
+            div role="group" arial-labelby="contact-details-head">
+            p id="contact-details-head">Enter your contact details/p>
+            Related elements
+            /div>
+          </pre>
+          <ul class="unnumbered-list-container">
+            <li>
+              Atrybut role="group" wskazuje, że elementy wewnątrz tego div są
+              częścią grupy.
+            </li>
+            <li>
+              Atrybut aria-labelledby="contact-details-head" zawiera
+              identyfikator elementu z opisem grupy.
+            </li>
+          </ul>
+          <div class="section19-container-form">
+            <form class="form">
+              <div
+                class="form-group"
+                role="group"
+                aria-labelledby="contact-details-head"
+              >
+                <p id="contact-details-head">Enter your contact details</p>
+                <label>
+                  Name
+                  <input type="text" name="username" />
+                </label>
+                <label>
+                  Email
+                  <input type="email" name="email" />
+                </label>
+              </div>
+              <div
+                class="form-group"
+                role="group"
+                aria-labelledby="language-head"
+              >
+                <p id="language-head">Your favourite programming language</p>
+                <label>
+                  <input type="checkbox" name="language" value="python" />
+                  Python
+                </label>
+                <label>
+                  <input type="checkbox" name="language" value="js" />
+                  JavaScript
+                </label>
+                <label>
+                  <input type="checkbox" name="language" value="ruby" />
+                  Ruby
+                </label>
+              </div>
+              <div
+                class="form-group"
+                role="group"
+                aria-labelledby="newsletter-head"
+              >
+                <p id="newsletter-head">I want to receive</p>
+                <label>
+                  <input type="checkbox" name="newsletter" value="weekly" />
+                  The weekly newsletter
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="newsletter"
+                    value="company_offers"
+                  />
+                  Offers from the company
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="newsletter"
+                    value="associated_offers"
+                  />
+                  Offers from associated companies
+                </label>
+              </div>
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <div class="contener-shadow-text2">
+        <h2>Footer</h2>
+        <div class="display-footer">
+          <a
+            class="link-footer"
+            href=""
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <img src="./images/konikMaly24x24Squoosh.png" alt="logo" />
+          </a>
+          <div class="display-footer2">
+            <p class="footer-selection">All rights reserved &copy;</p>
+            <p>Konrad</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
