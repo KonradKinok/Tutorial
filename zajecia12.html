@@ -331,6 +331,302 @@
           </div>
         </div>
       </section>
+      <!-- section10 -->
+      <section>
+        <div class="text">
+          <h3>Section10: :in-range i :out-of-range</h3>
+          <p>
+            Te pseudoklasy są stosowane do elementów range, number i date, jeśli
+            mają określone atrybuty min i max.
+          </p>
+          <p>
+            Stwórzmy formularz zamówienia pizzy z polem do wpisania ilości
+            sztuk. Jeśli wprowadzisz liczbę mniejszą niż 1 lub większą niż 10,
+            ramka wejściowa zmieni kolor na czerwony. Jeśli wartość pozostanie w
+            zakresie, kolor będzie zielony.
+          </p>
+          <div class="section10-container">
+            <form class="section10-form">
+              <div class="section10-form-field">
+                <label for="amount-1" class="section10-form-label"
+                  >How many pizzas do you want to order?</label
+                >
+                <input
+                  type="number"
+                  required
+                  min="1"
+                  max="10"
+                  step="1"
+                  value="0"
+                  name="amount-1"
+                  id="amount-1"
+                  class="section10-form-input"
+                />
+              </div>
+              <div class="section10-form-field">
+                <label for="amount-2" class="section10-form-label"
+                  >How many pizzas do you want to order?</label
+                >
+                <input
+                  type="number"
+                  required
+                  min="1"
+                  max="10"
+                  step="1"
+                  value="3"
+                  name="amount-2"
+                  id="amount-2"
+                  class="section10-form-input"
+                />
+              </div>
+              <div class="section10-form-field">
+                <label for="amount-3" class="section10-form-label"
+                  >How many pizzas do you want to order?</label
+                >
+                <input
+                  type="number"
+                  required
+                  min="1"
+                  max="10"
+                  step="1"
+                  name="amount-3"
+                  id="amount-3"
+                  class="section10-form-input"
+                />
+              </div>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <p>
+            Te selektory mają ograniczenia. Kolor ramki wejściowej w przykładzie
+            jest od razu czerwony, jeśli wartość początkowa jest mniejsza niż 1
+            lub większa niż 10, i zielony, jeśli wartość początkowa nie jest
+            określona lub mieści się w zakresie od 1 do 10. Oznacza to, że
+            selektory są stosowane nawet przed wpowadzeniem jakiejkolwiek
+            wartości do pola. Dowiemy się później, jak rozwiązać ten problem.
+          </p>
+        </div>
+      </section>
+      <!-- section11 -->
+      <section>
+        <div class="text">
+          <h3>Section11 :required i :optional</h3>
+          <p>
+            Stosowany do elementów w zależności od obecności lub braku atrybutu
+            required. Przeglądarki pokazują, że pole jest wymagane tylko podczas
+            próby przesłania formularza. Pseudoklasa :required umożliwia
+            stylizowanie pola i pokazywanie użytkownikowi, że jest ono wymagane
+            przed przesłaniem. Pseudoklasa :optional w praktyce jest używana
+            bardzo rzadko.
+          </p>
+          <div class="section11-container">
+            <form class="section11-form">
+              <label class="section11-form-label">
+                <span class="section11-label-text">Username (optional)</span>
+                <input
+                  type="text"
+                  class="section11-form-input"
+                  name="username"
+                />
+              </label>
+
+              <label class="section11-form-label">
+                <span class="section11-label-text">Email (required)</span>
+                <input
+                  type="email"
+                  class="section11-form-input"
+                  name="mail"
+                  required
+                />
+              </label>
+              <button class="section11-button" type="submit">Submit</button>
+            </form>
+          </div>
+          <p>
+            Problemy są takie same, jak w przypadku poprzedniej grupy pseudoklas
+            - style są stosowane przed wprowadzeniem jakiejkolwiek wartości.
+          </p>
+        </div>
+      </section>
+      <!-- section12 -->
+      <section>
+        <div class="text">
+          <h3>Section12: :valid i :invalid</h3>
+          <p>
+            Pozwala wybrać elementy z poprawną lub niepoprawną wprowadzoną
+            wartością. Ograniczenia sprawdzania są określane przez atrybuty
+            type, minlength, maxlength i pattern.
+          </p>
+          <div class="section12-container">
+            <form class="section12-form">
+              <label class="section12-form-label">
+                <span class="section12-label-text">Username</span>
+                <input
+                  type="text"
+                  class="section12-form-input"
+                  name="username"
+                  required
+                  minlength="3"
+                />
+              </label>
+
+              <label class="section12-form-label">
+                <span class="section12-label-text">Email</span>
+                <input
+                  type="email"
+                  class="section12-form-input"
+                  name="mail"
+                  required
+                />
+              </label>
+              <button class="section12-button" type="submit">Submit</button>
+            </form>
+          </div>
+          <p>
+            Problemy są takie same, jak w poprzedniej grupie - jeśli pole ma
+            atrybut required, to selektor :invalid jest stosowany nawet przed
+            wprowadzeniem wartości, ponieważ wymagane pole nie może być puste.
+          </p>
+        </div>
+      </section>
+      <!-- section13 -->
+      <section>
+        <div class="text">
+          <h3>Section13 :placeholder-shown</h3>
+          <p>
+            Jest używany w zależności od widoczności symbolu zastępczego -
+            wartości atrybutu placeholder. Wprowadź tekst w polach formularza, a
+            kolor obramowania pola zmieni się na niebieski, gdy tylko symbol
+            zastępczy zniknie.
+          </p>
+          <div class="section13-container">
+            <form class="section13-form">
+              <label class="section13-form-label">
+                <span class="section13-label-text">Username</span>
+                <input
+                  type="text"
+                  class="section13-form-input"
+                  name="username"
+                  placeholder="Jacob Mercer"
+                />
+              </label>
+
+              <button class="section13-button" type="submit">Submit</button>
+            </form>
+          </div>
+          <p>
+            Zwróć uwagę na selektor .form-input::placeholder, służy on do
+            stylizacji tekstu symbolu zastępczego.
+          </p>
+        </div>
+      </section>
+      <!-- section14 -->
+      <section>
+        <div class="text">
+          <h3>Section14: Kompozycja pseudoklas</h3>
+          <p>
+            Problem stosowania stylów przed wprowadzeniem wartości rozwiązuje
+            się, łącząc kilka pseudoklas w jednym selektorze. Ustawmy selektor
+            tak, aby był stosowany tylko wtedy, gdy coś zostanie wpisane do
+            pola. Gdy pole jest puste, a symbol zastępczy jest widoczny - style
+            nie będą stosowane.
+          </p>
+          <pre>
+            .form-input:not(:placeholder-shown):required:valid {
+              /* ... */
+            }
+          </pre>
+          <p>
+            Selektor okazuje się nieporęczny, ale nie jest skomplikowany i
+            będzie stosował się do elementu z klasą .form-input.
+          </p>
+          <ul class="unnumbered-list-container">
+            <li>Jeśli element jest wymagany - :required.</li>
+            <li>Wprowadzona wartość jest prawidłowa - :valid.</li>
+            <li>
+              Tekst symbolu zastępczego nie jest widoczny -
+              :not(:placeholder-shown).
+            </li>
+          </ul>
+          <p>
+            Gdy tylko coś zostanie wprowadzone, a symbol zastępczy zniknie,
+            następuje walidacja i selektor jest stosowany do elementu.
+            Obowiązkową częścią tej techniki jest obecność atrybutu placeholder,
+            którego wartością może być tekst lub tylko ciąg znaków z jedną
+            spacją, najważniejsze jest to, że nie jest pusty.
+          </p>
+          <div class="section14-container">
+            <form class="section14-form">
+              <label class="section14-form-label">
+                <span class="section14-label-text">Username</span>
+                <input
+                  type="text"
+                  class="section14-form-input"
+                  name="username"
+                  placeholder="Jacob Mercer"
+                  minlength="3"
+                  required
+                />
+              </label>
+              <label class="section14-form-label">
+                <span class="section14-label-text">Email</span>
+                <input
+                  type="email"
+                  class="section14-form-input"
+                  name="mail"
+                  placeholder="jacob@mail.com"
+                  required
+                />
+              </label>
+              <button class="section14-button" type="submit">Submit</button>
+            </form>
+          </div>
+          <p>
+            Bardziej złożona walidacja i prezentacja wyników wymaga dodatkowych
+            znaczników i JavaScript. Nie ma sensu konfigurować złożonej
+            walidacji w HTML, takie rozwiązanie nie skaluje się i jest słabo
+            obsługiwane.
+          </p>
+        </div>
+      </section>
+      <!-- section15 -->
+      <section>
+        <div class="text">
+          <h3>Section15: :focus-within</h3>
+          <p>
+            Ma zastosowanie do elementu, gdy on lub elementy w nim znajdują się
+            na focusie. W przeciwieństwie do :focus, który wybiera sam element,
+            który otrzymał focus :focus-within działa w przypadku przodków.
+            Pozwala to na stosowanie stylów do etykiety, formularza lub ich
+            części, gdy użytkownik wchodzi w interakcję z polami.
+          </p>
+          <p>
+            Dodaj efekt zmiany koloru obramowania kształtu i tekstu powiązanej
+            etykiety na niebieski, gdy mamy focus na dowolnym polu.
+          </p>
+          <div class="section15-container">
+            <form class="section15-form">
+              <label class="section15-form-label">
+                <span class="section15-label-text">First name</span>
+                <input
+                  class="section15-form-input"
+                  type="text"
+                  name="firstName"
+                />
+              </label>
+              <label class="section15-form-label">
+                <span class="section15-label-text">Last name</span>
+                <input
+                  class="section15-form-input"
+                  type="text"
+                  name="lastName"
+                />
+              </label>
+              <button class="section15-button" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="container footer">

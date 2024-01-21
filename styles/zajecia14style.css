@@ -23,6 +23,7 @@ span {
     flex-wrap: wrap;
     gap: 0 5px;
     padding: 10px 30px 20px;
+    background: #6d0ee9;
     
 }
 
@@ -45,15 +46,27 @@ span {
 .body-container {
     width: 1250px;
     margin: 0 auto;
-    background-image: linear-gradient(to bottom, #6d0ee9 , #301212);
+    
     background-size: 50px;
     background-size: 50% 150%;
 }
 
 .main-container {
+    position: relative;
     width: 1250px;
-    
+    background-image: linear-gradient(to bottom, #6d0ee9, #301212);
     background-size: 1250px;
+}
+
+/* section0 */
+.section0-fixed-horse-img{
+    position: fixed;
+        width: 24px;
+        height: 24px;
+        /* margin-top: 550px; */
+        margin-top: 1%;
+        margin-left: 5px;
+        z-index: 10;
 }
 
 /* section1 */
@@ -69,4 +82,98 @@ span {
     text-transform: uppercase;
     box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
     background-image: repeating-linear-gradient(-45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
+    z-index: 1;
+}
+
+.section1-container-img{
+    width:400px;
+    margin: 0 auto;
+}
+
+.section1-container-img-animation {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+            0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    animation-name: section1-animation-rotateY;
+    animation-duration: 20000ms;
+    animation-delay: 2000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 5;
+    animation-direction: alternate;
+    animation-fill-mode: none;
+}
+.section1-container-img-animation:hover {
+    animation-play-state: paused;
+}
+
+@keyframes section1-animation-rotateY {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(90deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+/* section2 */
+.section2-sticky-h3 {
+    width: 100%;
+    position: sticky;
+    top: -1px;
+    margin: 0;
+    padding: 16px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    background-image: repeating-linear-gradient(-45deg, #aa60bc, #03168c 10px, #465298 10px, #465298 20px);
+}
+
+.section2-container-img {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.section2-container-img-animation {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    animation-name: section1-animation-rotateY;
+    animation-duration: 20000ms;
+    animation-delay: 3000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 5;
+    animation-direction: alternate;
+    animation-fill-mode: none;
+}
+
+.section2-container-img-animation:hover {
+    animation-play-state: paused;
+}
+
+.section2-container-animation-direction {
+    width: 500px;
+    display: flex;
+    margin:0 auto;
+}
+
+.section15-container-animation-direction-box {
+    width: 400px;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+}
+
+@keyframes move {
+    0% {
+        transform: translatex(0);
+    }
+    100% {
+        transform: translatex(calc(100vh - 400px));
+    }
+
 }
