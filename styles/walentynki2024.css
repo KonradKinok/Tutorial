@@ -74,7 +74,7 @@ a {
 .body-container {
     width: 360px;
     margin: 0 auto;
-    background-image: linear-gradient(to bottom, #2cbb19, #d321c4);
+    /* background-image: linear-gradient(to bottom, #7f0407, #d321c4); */
     background-repeat: no-repeat;
     /* background-image: url("../images/walentynki/walentynki-tlo.jpg");
         background-repeat: repeat;
@@ -89,6 +89,28 @@ a {
     justify-content: center;
 }
 
+.header-h1 {
+    padding: 0 10px;
+    font-family: 'Dancing Script', cursive;
+    color: #02ff71;
+    font-size: 37px;
+    font-weight: 500;
+}
+
+.header-background {
+    min-width: 320px;
+    min-height: 130px;
+
+    background-image: url("../images/walentynki/walentynki-header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main-background{
+background-image: linear-gradient(to bottom, #a5161c, #db3122);
+padding-bottom: 10px;
+}
 .main-container{
     display: flex;
     min-height: 180px;
@@ -102,23 +124,40 @@ a {
     position: absolute;
     top: 10px;
     left: 5px;
+    z-index: 1;
 }
 
 .section1-img2-container {
     position: absolute;
     top: 80px;
     left: 140px;
+    z-index: 2;
 }
 
 .section1-img3-container {
     position: absolute;
     top: 5px;
     left: 220px;
+    z-index: 3;
 }
+
+.section1-img1-container:hover{
+    z-index: 4;
+}
+
+.section1-img2-container:hover {
+    z-index: 4;
+}
+
+.section1-img3-container:hover {
+    z-index: 4;
+}
+
+
 .section1-img1-animation {
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
         0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-    animation-name: section1-img1-animation;
+    animation-name: section2-img1-animation;
     animation-duration: 20000ms;
     animation-delay: 2000ms;
     animation-timing-function: linear;
@@ -126,6 +165,7 @@ a {
     animation-direction: alternate;
     animation-fill-mode: forwards;
     opacity: 0;
+    
 }
 
 @keyframes section1-img1-animation {
@@ -142,12 +182,13 @@ a {
     
     40% {
         opacity:1;
-        transform: translatex(0);
+        /* transform: translatex(0); */
+        transform: translate(100px, 100px);
     }
 
     60% {
         
-        transform: rotateY(0deg);
+        /* transform: rotateY(0deg); */
     }
 
     70% {
@@ -178,6 +219,7 @@ a {
     animation-direction: alternate;
     animation-fill-mode: forwards;
     opacity: 0;
+    z-index: 2;
 }
 
 @keyframes section1-img2-animation {
@@ -230,6 +272,7 @@ a {
     animation-direction: alternate;
     animation-fill-mode: forwards;
     opacity: 0;
+    z-index: 3;
 }
 
 @keyframes section1-img3-animation {
@@ -243,10 +286,12 @@ a {
         opacity: 0.80;
         
     }
-30% {
-    opacity: 0.80;
-transform: translatex(-150px);
-}
+
+    30% {
+        opacity: 0.80;
+        transform: translatex(-150px);
+    }
+
     40% {
         opacity: 1;
         
@@ -276,75 +321,240 @@ transform: translatex(-150px);
     }
 }
 
-.section15-container-animation-direction-box {
-    width: 400px;
-    animation-name: move;
-    animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-iteration-count: 2;
-    animation-direction: alternate;
-    animation-fill-mode: forwards;
+
+/* animation */
+/* section2 */
+.section2-img1-container {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    z-index: 1;
 }
 
-@keyframes move {
+.section2-img2-container {
+    position: absolute;
+    top: 80px;
+    left: 140px;
+    z-index: 2;
+}
+
+.section2-img3-container {
+    position: absolute;
+    top: 5px;
+    left: 220px;
+    z-index: 3;
+}
+
+.section2-img1-container:hover {
+    z-index: 4;
+}
+
+.section2-img2-container:hover {
+    z-index: 4;
+}
+
+.section2-img3-container:hover {
+    z-index: 4;
+}
+
+
+.section2-img1-animation {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    animation-name: section1-img1-animation;
+    animation-duration: 20000ms;
+    animation-delay: 5000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+}
+
+@keyframes section2-img1-animation {
     0% {
-        
+        opacity: 0.40;
+        transform: translatex(-150px);
+
+    }
+
+    20% {
+        opacity: 0.80;
+        transform: translatex(150px);
+    }
+
+    40% {
+        opacity: 1;
+        /* transform: translatex(0); */
+        transform: translate(100px, 100px);
+    }
+
+    60% {
+
+        /* transform: rotateY(0deg); */
+    }
+
+    70% {
+
+        transform: rotateY(90deg);
+
+    }
+
+    80% {
+        transform: scale(2);
     }
 
     100% {
-        
+        opacity: 1;
+        transform: rotateY(0deg);
+        transform: scale(1);
     }
-
 }
 
-
-
-
-
-
-
-
-
-
-.section15-container-animation-direction-box {
-    width: 400px;
-    animation-name: move;
-    animation-duration: 5s;
+.section2-img2-animation {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    animation-name: section2-img2-animation;
+    animation-duration: 20000ms;
+    animation-delay: 6000ms;
     animation-timing-function: linear;
-    animation-iteration-count: 2;
+    animation-iteration-count: 1;
     animation-direction: alternate;
     animation-fill-mode: forwards;
+    opacity: 0;
+    z-index: 2;
 }
 
-.header-h1{
-    padding: 0 10px ;
-    
+@keyframes section2-img2-animation {
+    0% {
+        opacity: 0.40;
+        transform: translatex(500px);
+
+    }
+
+    20% {
+        opacity: 0.80;
+        transform: translatex(-150px);
+    }
+
+    40% {
+        opacity: 1;
+        transform: translatex(0);
+    }
+
+    60% {
+
+        transform: rotate(145deg);
+    }
+
+    70% {
+
+        transform: rotate(125deg);
+
+    }
+
+    80% {
+        transform: scale(2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+        transform: scale(1);
+    }
 }
 
-.header-background {
-    min-width: 320px;
-    min-height: 130px;
-   
-    background-image: url("../images/walentynki/walentynki-header.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.section2-img3-animation {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    animation-name: section2-img3-animation;
+    animation-duration: 20000ms;
+    animation-delay: 7000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    z-index: 3;
+}
+
+@keyframes section2-img3-animation {
+    0% {
+        opacity: 0.40;
+        transform: translatex(500px);
+
+    }
+
+    20% {
+        opacity: 0.80;
+
+    }
+
+    30% {
+        opacity: 0.80;
+        transform: translatex(-150px);
+    }
+
+    40% {
+        opacity: 1;
+
+        transform: perspective(400px) rotateY(60deg);
+    }
+
+    60% {
+        transform: translatex(0);
+        transform: rotate(145deg);
+    }
+
+    70% {
+
+        transform: rotate(125deg);
+        transform: perspective(400px) rotateX(60deg);
+
+    }
+
+    80% {
+        transform: scale(2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+        transform: scale(1);
+    }
 }
 
 
 
 
-.img-zyczenia {
-    border-radius: 15px;
-    border: 2px solid white;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* //zyczenia */
+
 
 .box-zyczenia {
     position: relative;
     overflow: hidden;
     margin: 0 auto;
     background-color: transparent;
-    
+}
+
+.img-zyczenia {
+    border-radius: 15px;
+    border: 2px solid white;
 }
 
 .overlay-zyczenia {
@@ -355,29 +565,50 @@ transform: translatex(-150px);
     width: 100%;
     height: 100%;
     border-radius: 15px;
-    background-color: #3ce612;
+    background-color: #7f0407;
     transform: translatey(100%);
     transition: transform 250ms ease-in-out;
     
+    font-family: 'Great Vibes', cursive;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 24px;
     line-height: 1.5;
     padding: 10px;
     color: #ffffff;
     text-shadow: 2px 2px 8px black;
 }
 
+.overlay-zyczenia2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: #db3122;
+    transform: translatey(100%);
+    transition: transform 250ms ease-in-out;
+
+    
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.5;
+    padding: 10px;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px black;
+}
+.box-zyczenia:hover .overlay-zyczenia2,
 .box-zyczenia:hover .overlay-zyczenia {
     transform: translatey(0);
-    
 }
 
-
+/* footer */
 .footer-container {
     display: flex;
     flex-direction: column;
     justify-content: end;
-
+    
 
 }
 
