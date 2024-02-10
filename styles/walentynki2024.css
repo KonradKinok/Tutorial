@@ -73,11 +73,9 @@ a {
 
 .body-container {
     width: 360px;
-    
     margin: 0 auto;
     background-image: linear-gradient(to bottom, #2cbb19, #d321c4);
     background-repeat: no-repeat;
-
     /* background-image: url("../images/walentynki/walentynki-tlo.jpg");
         background-repeat: repeat;
         background-size: cover;
@@ -93,7 +91,7 @@ a {
 
 .main-container{
     display: flex;
-    min-height: 300px;
+    min-height: 180px;
     
    position: relative;
 }
@@ -108,8 +106,8 @@ a {
 
 .section1-img2-container {
     position: absolute;
-    top: 40px;
-    left: 150px;
+    top: 80px;
+    left: 140px;
 }
 
 .section1-img3-container {
@@ -158,7 +156,7 @@ a {
         
     }
        
-    70% {
+    80% {
         transform: scale(2);
     }
         
@@ -169,7 +167,114 @@ a {
     }
 }
 
+.section1-img2-animation {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    animation-name: section1-img2-animation;
+    animation-duration: 20000ms;
+    animation-delay: 3000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
 
+@keyframes section1-img2-animation {
+    0% {
+        opacity: 0.40;
+        transform: translatex(500px);
+
+    }
+
+    20% {
+        opacity: 0.80;
+        transform: translatex(-150px);
+    }
+
+    40% {
+        opacity: 1;
+        transform: translatex(0);
+    }
+
+    60% {
+
+        transform: rotate(145deg);
+    }
+
+    70% {
+
+        transform: rotate(125deg);
+
+    }
+
+    80% {
+        transform: scale(2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+        transform: scale(1);
+    }
+}
+
+.section1-img3-animation {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    animation-name: section1-img3-animation;
+    animation-duration: 20000ms;
+    animation-delay: 4000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes section1-img3-animation {
+    0% {
+        opacity: 0.40;
+        transform: translatex(500px);
+
+    }
+
+    20% {
+        opacity: 0.80;
+        
+    }
+30% {
+    opacity: 0.80;
+transform: translatex(-150px);
+}
+    40% {
+        opacity: 1;
+        
+        transform: perspective(400px) rotateY(60deg);
+    }
+
+    60% {
+        transform: translatex(0);
+        transform: rotate(145deg);
+    }
+
+    70% {
+
+        transform: rotate(125deg);
+        transform: perspective(400px) rotateX(60deg);
+
+    }
+
+    80% {
+        transform: scale(2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+        transform: scale(1);
+    }
+}
 
 .section15-container-animation-direction-box {
     width: 400px;
@@ -226,23 +331,7 @@ a {
     background-position: center;
 }
 
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    
-    
-}
 
-.footer-background {
-    min-width: 320px;
-    min-height: 130px;
-
-    background-image: url("../images/konikMaly24x24.png"), url("../images/walentynki/walentynki-footer.jpg");
-    background-repeat: no-repeat, no-repeat;
-    background-size: auto auto, cover;
-    background-position: bottom 10px left 10px, bottom 0 left 0;
-}
 
 
 .img-zyczenia {
@@ -281,4 +370,23 @@ a {
 .box-zyczenia:hover .overlay-zyczenia {
     transform: translatey(0);
     
+}
+
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+
+}
+
+.footer-background {
+    min-width: 320px;
+    min-height: 130px;
+
+    background-image: url("../images/konikMaly24x24.png"), url("../images/walentynki/walentynki-footer.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto auto, cover;
+    background-position: bottom 10px left 10px, bottom 0 left 0;
 }
