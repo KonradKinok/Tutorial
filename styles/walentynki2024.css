@@ -77,6 +77,11 @@ a {
     margin: 0 auto;
     background-image: linear-gradient(to bottom, #2cbb19, #d321c4);
     background-repeat: no-repeat;
+
+    background-image: url("../images/walentynki/walentynki-tlo.jpg");
+        background-repeat: repeat;
+        background-size: cover;
+        background-position: center;
 }
 
 .container-h1{
@@ -86,6 +91,125 @@ a {
     justify-content: center;
 }
 
+.main-container{
+    display: flex;
+    min-height: 300px;
+    
+   position: relative;
+}
+
+/* animation */
+/* section1 */
+.section1-img1-container{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+
+.section1-img2-container {
+    position: absolute;
+    top: 40px;
+    left: 80px;
+}
+
+.section1-img3-container {
+    position: absolute;
+    top: 30px;
+    left: 160px;
+}
+.section1-img1-animation {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    animation-name: section1-img1-animation;
+    animation-duration: 20000ms;
+    animation-delay: 2000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes section1-img1-animation {
+    0% {
+        opacity: 0.40;
+        transform: translatex(-150px);
+        
+    }
+    
+    20% {
+        opacity: 0.80;
+        transform: translatex(150px);
+    }
+    
+    40% {
+        opacity:1;
+        transform: translatex(0);
+    }
+
+    60% {
+        
+        transform: rotateY(0deg);
+    }
+
+    70% {
+        
+        transform: rotateY(90deg);
+        
+    }
+       
+    70% {
+        transform: scale(2);
+    }
+        
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+        transform: scale(1);
+    }
+}
+
+
+
+.section15-container-animation-direction-box {
+    width: 400px;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move {
+    0% {
+        
+    }
+
+    100% {
+        
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+.section15-container-animation-direction-box {
+    width: 400px;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
 
 .header-h1{
     padding: 0 10px ;
@@ -98,7 +222,7 @@ a {
    
     background-image: url("../images/walentynki/walentynki-header.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
 }
 
