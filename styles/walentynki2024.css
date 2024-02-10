@@ -72,16 +72,16 @@ a {
 }
 
 .body-container {
-    width: 320px;
+    width: 360px;
     
     margin: 0 auto;
     background-image: linear-gradient(to bottom, #2cbb19, #d321c4);
     background-repeat: no-repeat;
 
-    background-image: url("../images/walentynki/walentynki-tlo.jpg");
+    /* background-image: url("../images/walentynki/walentynki-tlo.jpg");
         background-repeat: repeat;
         background-size: cover;
-        background-position: center;
+        background-position: center; */
 }
 
 .container-h1{
@@ -109,13 +109,13 @@ a {
 .section1-img2-container {
     position: absolute;
     top: 40px;
-    left: 80px;
+    left: 150px;
 }
 
 .section1-img3-container {
     position: absolute;
-    top: 30px;
-    left: 160px;
+    top: 5px;
+    left: 220px;
 }
 .section1-img1-animation {
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
@@ -230,7 +230,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    align-items: end;
+    
     
 }
 
@@ -240,8 +240,8 @@ a {
 
     background-image: url("../images/konikMaly24x24.png"), url("../images/walentynki/walentynki-footer.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-size: auto auto, contain;
-    background-position: bottom 10px left 10px, bottom 0 right 0;
+    background-size: auto auto, cover;
+    background-position: bottom 10px left 10px, bottom 0 left 0;
 }
 
 
